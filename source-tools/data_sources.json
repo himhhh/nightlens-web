@@ -1,0 +1,12 @@
+{
+  "observer": {
+    "url": "https://raw.githubusercontent.com/stockholm754-source/nightreign-seed-observer/main/data/nightreign-data.json",
+    "sha256": "375302f473f2d7623f86ed369594be69870e9c75f57a03bbb0bc3d54dcf333fc",
+    "cacheFile": "observer.snapshot"
+  },
+  "crystalConfig": {
+    "url": "https://raw.githubusercontent.com/luismartinezs/nightreign-guides/main/features/great-hollow/config.ts",
+    "sha256": "8b19bceb1b4c77994949640891e634b403b821dfbf5e5c34e375d89216f66d63",
+    "cacheFile": "crystalConfig.snapshot"
+  }
+}

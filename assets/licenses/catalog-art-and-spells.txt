@@ -1,0 +1,28 @@
+Catalogue data and artwork credits
+
+Nightreign spell costs and casting-weapon tables:
+Aero / dash512 Nightreign Calculator, revision 399c0cc243cefb02d002e272eb636372c2ea4a60 (GPL-3.0).
+https://github.com/dash512/Nightreign-Calculator
+
+Simplified Chinese spell names and short effect excerpts:
+BWiki Elden Ring contributors, collected 2026-10-21. Each entry links to its source page.
+https://wiki.biligame.com/eldenring/
+Community page text retains its attribution/license; original game text belongs to its rights holders.
+
+Base-game icon identifiers were matched by item ID and English game-text entries from ERDB:
+https://github.com/EldenRingDatabase/erdb/tree/e2028a6e044b920a471388fb4e1c468b31b64350
+The item images are from the game's original artwork and remain the property of FromSoftware / Bandai Namco and their respective rights holders.
+
+Base-game extracted artwork:
+https://github.com/elden-ring-playground/elden-ring-media/tree/2d40cc439ae748d4a6b7147c113a268cc6d4369b
+
+Nightreign-specific starting weapons:
+https://eldenring.wiki.gg/wiki/Nightreign:Weapons
+
+Forsaken Hollows starting weapons:
+https://github.com/pymmog/NR-FH/tree/1549bf00c8c1797dbc81212c01f1502940ce044f
+Image identity cross-checked against the corresponding Scholar's Thrusting Sword and Undertaker's Hammer entries at https://eldenring.fandom.com/.
+
+This is an independent fan-made reference. No official affiliation is implied.
+Source URLs, item/icon identifiers and image SHA-256 checksums are recorded in tools/data/equipment/images.json.
+No user photographs are included in this dataset or its illustrations.

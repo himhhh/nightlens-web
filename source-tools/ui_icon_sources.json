@@ -1,0 +1,181 @@
+{
+  "license": "AGPL-3.0",
+  "gameAssets": "original rights holders",
+  "files": [
+    {
+      "file": "web_app/assets/icons/damage-fire.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/attribute/0.png",
+      "sha256": "10f02d530095a51eac5d73d1c24412fc211fde60a031dcadb28433aefe232bbc"
+    },
+    {
+      "file": "web_app/assets/icons/damage-magic.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/attribute/1.png",
+      "sha256": "38dd4b2976c2eddecb8e7269b0e4bd21a7dddfeef2f43b5f7ead1e22593dcf86"
+    },
+    {
+      "file": "web_app/assets/icons/damage-lightning.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/attribute/2.png",
+      "sha256": "69a700ae1650f9cfcaa16d56af64c2d24f7e900908b9fd6d40297bb8b431fb28"
+    },
+    {
+      "file": "web_app/assets/icons/damage-holy.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/attribute/3.png",
+      "sha256": "d7c25114ef4e74961e69b9ef9955c4718c5f96d003b72a6082d9f6b845c5a6ec"
+    },
+    {
+      "file": "web_app/assets/icons/condition-bleed.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/0.png",
+      "sha256": "4bb047f3c9bd7a25bdae3dc33b7028f1ff26d56948a9bb12dc9ed13065f15bdf"
+    },
+    {
+      "file": "web_app/assets/icons/condition-frostbite.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/1.png",
+      "sha256": "913d6043b45808c1a85ad37b78b9c5b11eacad3405dafe4f37b868615a9cdadd"
+    },
+    {
+      "file": "web_app/assets/icons/condition-blight.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/2.png",
+      "sha256": "d71a55cdb8ad37b2ef4cd9193de6dde75fe9f2b36b713de27297e1f4802e23ae"
+    },
+    {
+      "file": "web_app/assets/icons/condition-madness.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/3.png",
+      "sha256": "2d179b03b55b836cb27d93f5aefad0ac1ec4e7da2ae52b4fa1dec8c0a7c07084"
+    },
+    {
+      "file": "web_app/assets/icons/condition-rot.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/4.png",
+      "sha256": "ce95eb3a534f7286b09925913dfcea2e27a0ace636aeb8bcee29c30f75487d11"
+    },
+    {
+      "file": "web_app/assets/icons/condition-poison.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/5.png",
+      "sha256": "ca70ebb4702e6697394c1dcc6d6f0ee9bb852498693cf3c04ec18d61eddef4f6"
+    },
+    {
+      "file": "web_app/assets/icons/condition-sleep.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/condition/6.png",
+      "sha256": "c5954a8e7023c827db93e25b24ffeac17ba2fd242dd741cb99a826f5b15dc29b"
+    },
+    {
+      "file": "web_app/assets/icons/category-30.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/30.png",
+      "sha256": "37550a24bb0630765dec0e4639ee01e32b3284045a3f71871751d238535f193c"
+    },
+    {
+      "file": "web_app/assets/icons/category-32.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/32.png",
+      "sha256": "3dff51a92394555c5f4bea41c3a86bb84b2535696d76982bf05a845192b1702e"
+    },
+    {
+      "file": "web_app/assets/icons/category-34.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/34.png",
+      "sha256": "f0d93f6e87b8dfaf6c07ad6946756c2a906d309bfe3c0a2af5533dae4ee227e0"
+    },
+    {
+      "file": "web_app/assets/icons/category-37.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/37.png",
+      "sha256": "dde636d433e23feb6516da36addd21647efa2f65e29f38bca3d731c73ce093c2"
+    },
+    {
+      "file": "web_app/assets/icons/category-38.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/38.png",
+      "sha256": "326c07179f02cb67fd88473a24fa3a425f40cc7564f6c7bcb496473eebd8691d"
+    },
+    {
+      "file": "web_app/assets/icons/category-40.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/40.png",
+      "sha256": "27de6a119168c13d8e1ac333d27bf83d817539b65fdff4676ec41aa04a1102e0"
+    },
+    {
+      "file": "web_app/assets/icons/category-41.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/41.png",
+      "sha256": "d1c536b6aaefbeb72a5383fb2107bd6c8107fd64c359f3cf1e07ad477901f187"
+    },
+    {
+      "file": "web_app/assets/icons/category-500.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/500.png",
+      "sha256": "3e8348e9b1893f5f59e615d7c4d7abc48ea535c1197decddaca520ae19cde823"
+    },
+    {
+      "file": "web_app/assets/icons/category-501.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/501.png",
+      "sha256": "fc7bfe632f95b9d2b7b3dd4753bd51664be4d02ff48015bb4d441eba7acf0dd0"
+    },
+    {
+      "file": "web_app/assets/icons/category-535.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/535.png",
+      "sha256": "60a2c4af1123f11078a19fa80488dc24cf3430f6cbf1a41d3eb820238f9c1e0d"
+    },
+    {
+      "file": "web_app/assets/icons/category-536.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/construct/536.png",
+      "sha256": "9f03c0d8ef28cbfad861ca604ce06c626098d66d7602026b43b8fbf6a0cf52bd"
+    },
+    {
+      "file": "web_app/assets/icons/boss-field.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/boss1.png",
+      "sha256": "d87b46478580ee639ae9295641463bdc3122dbbc2f4a66823fdf0fd17210b8de"
+    },
+    {
+      "file": "web_app/assets/icons/boss-strong-field.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/boss2.png",
+      "sha256": "2e905b731763cf873d8785e15bb189866fe3f5b9edd92c5591816324ded92076"
+    },
+    {
+      "file": "web_app/assets/icons/boss-evergaol.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/prison.png",
+      "sha256": "3aa167f4d89b22ce6b34479074b00ea0fa725c1e00a615fe6aabe50e032ab469"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Gladius.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/0.png",
+      "sha256": "0af5497813855edda6676f239d10fecfea6c58f412c2f85db36beab9d2543af1"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Adel.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/1.png",
+      "sha256": "c0d9a778a1f34c4a589b18963dcf53c89b7c1862d81e45cfaf3aed04153135b2"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Gnoster.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/2.png",
+      "sha256": "28358b1fca237b55778b5cb14f24157289699430b594fce27b6054e808e7166a"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Maris.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/3.png",
+      "sha256": "d2d7ac9f0459ca52af92785411fda74b149bc429ac06f84d0ecbe4047721b031"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Libra.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/4.png",
+      "sha256": "7ee906b26992fe48f670c19d612e2ad50b45d4aa995c887a611cf1d8fa014812"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Fulghor.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/5.png",
+      "sha256": "e3b4e9ec4b51dac79fabba3e71f5e7f623d7b2d028f2dbdc9f452f7087513e18"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Caligo.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/6.png",
+      "sha256": "10c66fb81567e359433a3efc2fa11fb3870c4ea69d42d4a3b52084484761a839"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Heolstor.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/7.png",
+      "sha256": "2354bd6f8f4776937eb0fb29ee631b1dffe497a75c99a67f3d0e7d0e8671f1c0"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Harmonia.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/8.png",
+      "sha256": "31017fec94bdb30470cc04345ef6e472d6fdd92d05c0ece838075256a358dbcf"
+    },
+    {
+      "file": "web_app/assets/icons/nightlord-Straghess.png",
+      "url": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/9.png",
+      "sha256": "51816bd850bbc0163ca139f4306d706488daacae544214cc7a6c6b9e70a0ae65"
+    }
+  ]
+}

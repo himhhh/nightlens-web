@@ -1,0 +1,146 @@
+{
+  "source": {
+    "id": "nightfarer-ledger",
+    "title": "Nightfarer Ledger · Nightreign首领资料（成员与1.03.5血量）",
+    "url": "https://nightfarerledger.com/codex/bosses",
+    "game": "nightreign",
+    "retrievedAt": "2026-10-21"
+  },
+  "pages": {
+    "putrid_avatar": "https://nightfarerledger.com/codex/bosses/putrid-avatar",
+    "beastly_brigade": "https://nightfarerledger.com/codex/bosses/beastly-brigade"
+  },
+  "inputHashes": {
+    "putrid": "533a1edfc4ed54985b91377cef1796e100cf736a786b6d37403e4a3884734aa2",
+    "brigade": "a0778b39351ab7bf4959dd00d3a54dce67b74f2cf9a270c282dd5fa5d293a632"
+  },
+  "patches": {
+    "putrid_avatar": {
+      "variants": [
+        {
+          "variantKey": "ledger-putrid-avatar",
+          "npcParamId": null,
+          "label": "腐败化身 · 野外",
+          "labelZh": "腐败化身 · 野外",
+          "context": "field",
+          "healthByPlayers": {
+            "1": 5617,
+            "2": 9774,
+            "3": 13930
+          },
+          "basePoise": 120,
+          "damageNegation": {
+            "standard": null,
+            "strike": null,
+            "slash": null,
+            "pierce": null,
+            "magic": 20,
+            "fire": -100,
+            "lightning": 20,
+            "holy": 40
+          },
+          "statusResistance": {
+            "poison": "immune",
+            "scarletRot": "immune",
+            "bleed": "immune",
+            "frostbite": 154,
+            "sleep": "immune",
+            "madness": "immune",
+            "deathBlight": "immune"
+          },
+          "sourceIds": [
+            "nightfarer-ledger"
+          ],
+          "scope": "named-community-table"
+        }
+      ],
+      "nameZh": "腐败化身",
+      "notes": [
+        "按独立的Nightreign腐败化身条目补充，未复制黄金树化身。来源未列出的物理减伤保持未知。",
+        "来源注明血量/韧性读取1.03.5游戏资料；弱点与Nightmap卡片一致，不能将这句话扩展成所有字段均核验同一补丁。"
+      ]
+    },
+    "beastly_brigade": {
+      "nameZh": "混种军团",
+      "variants": [
+        {
+          "variantKey": "ledger-scaly",
+          "npcParamId": null,
+          "label": "鳞片混种 · 军团成员",
+          "labelZh": "鳞片混种 · 军团成员",
+          "context": "evergaol",
+          "healthByPlayers": {
+            "1": 1752,
+            "2": 2278,
+            "3": 2804
+          },
+          "basePoise": null,
+          "damageNegation": {
+            "standard": null,
+            "strike": null,
+            "slash": null,
+            "pierce": -10,
+            "magic": null,
+            "fire": -20,
+            "lightning": null,
+            "holy": null
+          },
+          "statusResistance": {
+            "poison": 112,
+            "scarletRot": 112,
+            "bleed": 112,
+            "frostbite": 112,
+            "sleep": 112,
+            "madness": "immune",
+            "deathBlight": "immune"
+          },
+          "sourceIds": [
+            "nightfarer-ledger"
+          ],
+          "scope": "named-community-table"
+        },
+        {
+          "variantKey": "ledger-misbegotten",
+          "npcParamId": null,
+          "label": "混种 · 军团成员",
+          "labelZh": "混种 · 军团成员",
+          "context": "evergaol",
+          "healthByPlayers": {
+            "1": 634,
+            "2": 824,
+            "3": 1014
+          },
+          "basePoise": null,
+          "damageNegation": {
+            "standard": null,
+            "strike": null,
+            "slash": null,
+            "pierce": null,
+            "magic": null,
+            "fire": -20,
+            "lightning": null,
+            "holy": null
+          },
+          "statusResistance": {
+            "poison": 112,
+            "scarletRot": 112,
+            "bleed": 112,
+            "frostbite": 112,
+            "sleep": 112,
+            "madness": "immune",
+            "deathBlight": "immune"
+          },
+          "sourceIds": [
+            "nightfarer-ledger"
+          ],
+          "scope": "named-community-table"
+        }
+      ],
+      "incompleteGroup": true,
+      "notes": [
+        "组合包含鳞片混种、混种与有翼混种。当前可分别查看前两者；有翼混种未取得独立抗性表，不将成员数值平均或冒充全组通用。",
+        "请在成员选择中切换；生命值是单个成员参考，不是军团总生命值。未列出的伤害类型仍保留未知。"
+      ]
+    }
+  }
+}

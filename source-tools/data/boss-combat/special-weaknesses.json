@@ -1,0 +1,114 @@
+{
+  "Gladius": {
+    "attributes": [
+      "holy"
+    ],
+    "note": "神圣属性可触发特殊克制。",
+    "source": {
+      "id": "weakness-gladius",
+      "title": "中文资料站 · 格拉狄乌斯 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/格拉狄乌斯",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "385b25a420cb933c544c8210884bc9ff8b851af4d6a40106fad83b4fd1f28b0a"
+  },
+  "Adel": {
+    "attributes": [
+      "poison"
+    ],
+    "note": "未被紫电缠绕时，中毒可使其呕吐并硬直；不同阶段效果有条件。",
+    "source": {
+      "id": "weakness-adel",
+      "title": "中文资料站 · 艾德雷 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/艾德雷",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "276774ac071ad2711082127d2ecae3ea2e43cf671497fc71748ba37f64240bd3"
+  },
+  "Gnoster": {
+    "attributes": [
+      "fire"
+    ],
+    "note": "火焰为普通形态的特化弱点。",
+    "source": {
+      "id": "weakness-gnoster",
+      "title": "中文资料站 · 格诺斯塔 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/格诺斯塔",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "904707f31500389f45719404811303f8a09dbdb065bd6d153f041e7c51befa00"
+  },
+  "Maris": {
+    "attributes": [
+      "lightning"
+    ],
+    "note": "释放全屏睡眠技能时可积累雷异常并打断。",
+    "source": {
+      "id": "weakness-maris",
+      "title": "中文资料站 · 玛利斯 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/玛利斯",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "a142cca014570833c7d9a7399fd170b2b47b81494139129a1f1d0482d0810381"
+  },
+  "Libra": {
+    "attributes": [
+      "madness"
+    ],
+    "note": "可受发狂影响，特定招式期间带发狂的攻击可增加削韧。",
+    "source": {
+      "id": "weakness-libra",
+      "title": "中文资料站 · 利普拉 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/利普拉",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "94f6535f683339a3d70411adff18f09ed0e9b8bcb26b18c99ec590fa25be3b14"
+  },
+  "Fulghor": {
+    "attributes": [
+      "lightning"
+    ],
+    "note": "雷电为普通形态的特化弱点。",
+    "source": {
+      "id": "weakness-fulghor",
+      "title": "中文资料站 · 弗格尔 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/弗格尔",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "1a558d43686c30cc44615516cf6963bba9691aed153bb92e6c7eb0acafb0d1fb"
+  },
+  "Caligo": {
+    "attributes": [
+      "fire"
+    ],
+    "note": "火焰为普通形态的特化弱点。",
+    "source": {
+      "id": "weakness-caligo",
+      "title": "中文资料站 · 卡莉果 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/卡莉果",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "a6f1ddcc17c94a02b5394b8561c474cffcb9c2544b151009c262729ee6cd4f35"
+  },
+  "Harmonia": {
+    "attributes": [
+      "sleep"
+    ],
+    "note": "优先寻找睡眠；普通形态基础首次睡眠阈值采用1.03.2后的154。",
+    "source": {
+      "id": "weakness-harmonia",
+      "title": "中文资料站 · 哈尔莫妮亚 · 特化弱点",
+      "url": "https://wiki.biligame.com/nightreign/哈尔莫妮亚",
+      "game": "nightreign"
+    },
+    "form": "normal",
+    "sourceHash": "378a9bb70d1a7dea47c523fa134f08ce793ed2ad11835567f0b9265d1608f74b"
+  }
+}

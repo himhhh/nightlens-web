@@ -1,0 +1,4079 @@
+{
+  "upstreamCommit": "399c0cc243cefb02d002e272eb636372c2ea4a60",
+  "upstreamSha256": "58492925c1198bd5ffc824e4d6525ee28c7b8fbd12a2872d2858a4563a6a0d2b",
+  "rows": {
+    "21000020": {
+      "type": "Black Knife Assassin (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "21000030": {
+      "type": "Black Knife Assassin (Castle)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "21000040": {
+      "type": "Black Knife Assassin (Noklateo)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "21300010": {
+      "type": "Morgott (Random Encounter)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "21300510": {
+      "type": "Morgott (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "21400210": {
+      "type": "Omen (Evergaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "22700100": {
+      "type": "Giant Crab",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 1.0,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 84,
+        "sleep": 84,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "25000020": {
+      "type": "Crucible Knight (Night Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "25000030": {
+      "type": "Crucible Knight (Evergaol- Sword)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "25000040": {
+      "type": "Crucible Knight (Castle- Sword)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "25001020": {
+      "type": "Crucible Knight (Evergaol- Treespear)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "25001030": {
+      "type": "Crucible Knight (Castle- Treespear)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30100010": {
+      "type": "Banished Knight (Castle- Shield)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 1.0,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30100190": {
+      "type": "Banished Knight (Evergaol- Shield)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 1.4,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30101010": {
+      "type": "Banished Knight (Castle- Dual Swords)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 1.0,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30101110": {
+      "type": "Banished Knight (Evergaol- Dual Swords)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 1.4,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30102010": {
+      "type": "Banished Knight (Castle- Halberd)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 1.0,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30102130": {
+      "type": "Banished Knight (Evergaol- Halberd)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 1.4,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30500010": {
+      "type": "Outland Commander (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30500100": {
+      "type": "Battlefield Commander",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "30500110": {
+      "type": "Battlefield Commander (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31000010": {
+      "type": "Bell Bearing Hunter (Field Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31000020": {
+      "type": "Bell Bearing Hunter (Night Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31000030": {
+      "type": "Bell Bearing Hunter (Castle Basement)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31500010": {
+      "type": "Night's Cavalry (Field Boss; Glaive)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31500020": {
+      "type": "Night's Cavalry (Night Boss; Glaive)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31501020": {
+      "type": "Night's Cavalry (Night Boss; Flail)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31810010": {
+      "type": "Red Wolf of Radagon (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "31810020": {
+      "type": "Red Wolf of Radagon (Castle)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "32500090": {
+      "type": "Draconic Tree Sentinel (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "32500110": {
+      "type": "Draconic Tree Sentinel (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "32510020": {
+      "type": "Tree Sentinel (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "32510110": {
+      "type": "Tree Sentinel (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "32520010": {
+      "type": "Royal Carian Knight (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 1.0,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "33000020": {
+      "type": "Nox Monk (Evergaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "33001020": {
+      "type": "Nox Swordstress (Evergaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "33500010": {
+      "type": "Crystalian (Evergaol- Ringblade)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "33500020": {
+      "type": "Crystalian (Fort)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "33501010": {
+      "type": "Crystalian (Evergaol- Spear)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "33502010": {
+      "type": "Crystalian (Evergaol- Staff)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "34001010": {
+      "type": "Grave Warden Duelist (Evergaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 84,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "34600010": {
+      "type": "Leonine Misbegotten (Encampment)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.0,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 1.0,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "34600020": {
+      "type": "Leonine Misbegotten (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.0,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 1.0,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "34600040": {
+      "type": "Leonine Misbegotten (Castle)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.0,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 1.0,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "35600010": {
+      "type": "Godskin Apostle (Duo Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "35600020": {
+      "type": "Godskin Apostle (Evergaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "35600110": {
+      "type": "Godskin Apostle (The Oldest Gaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "35700010": {
+      "type": "Godskin Noble (Duo Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.65,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "35700020": {
+      "type": "Godskin Noble (Evergaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.65,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "35700110": {
+      "type": "Godskin Noble (The Oldest Gaol)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.65,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "36000020": {
+      "type": "Alabaster Lord (Evergaol)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 999,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "36001020": {
+      "type": "Onyx Lord (Evergaol)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 999,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "38000010": {
+      "type": "Cleanrot Knight - Spear (Marsh Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "39100140": {
+      "type": "Fire Prelate (Crater)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "39101120": {
+      "type": "Fire Prelate (Crater)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "39701110": {
+      "type": "Azula Beastman (Evergaol- Cleaver)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 84,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "39702310": {
+      "type": "Azula Beastman (Evergaol- Shield)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 84,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "39703010": {
+      "type": "Azula Beastman (Evergaol- Curved Sword)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 84,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "40210010": {
+      "type": "Royal Revenant (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "40210020": {
+      "type": "Royal Revenant (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "40210030": {
+      "type": "Royal Revenant (Castle)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "41300020": {
+      "type": "Demi-Human Queen (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 84,
+        "scarletRot": 84,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "41300030": {
+      "type": "Demi-Human Queen (Crater)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 84,
+        "scarletRot": 84,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "41301010": {
+      "type": "Demi-Human Queen (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 84,
+        "scarletRot": 84,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "41402210": {
+      "type": "Spiritcaller Snail (Great Church Boss)",
+      "damageTaken": {
+        "standard": 1.1,
+        "strike": 1.1,
+        "slash": 1.4,
+        "pierce": 1.1,
+        "magic": 0.6,
+        "fire": 1.0,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "42700020": {
+      "type": "Elder Lion (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "42700030": {
+      "type": "Elder Lion (Encampment)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "42700040": {
+      "type": "Elder Lion (Castle)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "42900010": {
+      "type": "Bloodhound Knight (Evergaol)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "42900030": {
+      "type": "Bloodhound Knight (Western Underground Fort Elite)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "43531110": {
+      "type": "Leyndell Knight (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "43531400": {
+      "type": "Leyndell Knight (Night Boss Spirit)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "44800020": {
+      "type": "Miranda Blossom (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.65,
+        "slash": 1.4,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.4,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 63,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "44800410": {
+      "type": "Miranda Blossom (Ruins)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.65,
+        "slash": 1.4,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.4,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 63,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45000010": {
+      "type": "Flying Dragon (Field Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45030010": {
+      "type": "Mountaintop Ice Dragon (Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.9,
+        "slash": 0.2,
+        "pierce": 0.2,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45101110": {
+      "type": "Ancient Dragon (Night Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.2,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45102010": {
+      "type": "Ancient Dragon (The Oldest Gaol)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.2,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45601020": {
+      "type": "Giant Crowd (healthbar)",
+      "damageTaken": {
+        "standard": 1.1,
+        "strike": 1.1,
+        "slash": 1.4,
+        "pierce": 1.1,
+        "magic": 1.2,
+        "fire": 1.4,
+        "lightning": 1.2,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 84,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45610010": {
+      "type": "Bloodbane Giant Crow (Ruins Group Boss)",
+      "damageTaken": {
+        "standard": 1.1,
+        "strike": 1.1,
+        "slash": 1.4,
+        "pierce": 1.1,
+        "magic": 1.2,
+        "fire": 1.0,
+        "lightning": 1.2,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "45803010": {
+      "type": "Large Wormface (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 308,
+        "scarletRot": 231,
+        "bleed": 231,
+        "frostbite": 231,
+        "sleep": 231,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "45803020": {
+      "type": "Large Wormface (Ruins)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 308,
+        "scarletRot": 231,
+        "bleed": 231,
+        "frostbite": 231,
+        "sleep": 231,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46000220": {
+      "type": "Headless Troll (Remembrance)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46000230": {
+      "type": "Headless Troll (Noklateo)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46020030": {
+      "type": "Snowfield Troll (Mountaintop- Duo)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 542,
+        "sleep": 20,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46020050": {
+      "type": "Snowfield Troll (Mountaintop)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 542,
+        "sleep": 20,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46200010": {
+      "type": "Naturalborn of the Void (Noklateo)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46400010": {
+      "type": "Ulcerated Tree Spirit (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 112,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46400020": {
+      "type": "Ulcerated Tree Spirit (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 112,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46500010": {
+      "type": "Dragonkin Soldier (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.0,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46500210": {
+      "type": "Dragonkin Soldier (Evergaol)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.0,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46500230": {
+      "type": "Dragonkin Soldier (Noklateo)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.0,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46700010": {
+      "type": "Ancestor Spirit (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.2
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 542,
+        "bleed": 542,
+        "frostbite": 542,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46801010": {
+      "type": "Fallingstar Beast (Random Encounter)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46801020": {
+      "type": "Fallingstar Beast (Crater)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46809010": {
+      "type": "Fallingstar Beast (Night Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46900010": {
+      "type": "Grafted Scion (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "46900020": {
+      "type": "Grafted Scion (Castle)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "47509010": {
+      "type": "Grafted Monarch (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "47700020": {
+      "type": "Valiant Gargoyle (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.0,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "47701030": {
+      "type": "Valiant Gargoyle (Crater)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.0,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "47701210": {
+      "type": "Black Blade Kindred (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.0,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 0.2
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "48000010": {
+      "type": "Lord of Blood / Mohg (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.2,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "48100010": {
+      "type": "Erdtree Avatar (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.0,
+        "slash": 0.9,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 1.4,
+        "lightning": 0.8,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 999,
+        "frostbite": 112,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49000010": {
+      "type": "Caligo - Miasma of Night (Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.15,
+        "slash": 0.85,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 1.35,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49010010": {
+      "type": "Caligo - Miasma of Night (Enhanced Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.15,
+        "slash": 0.85,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 1.35,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49100120": {
+      "type": "Magma Wyrm (Crater)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.2,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49100190": {
+      "type": "Magma Wyrm (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.2,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49110010": {
+      "type": "Great Wyrm (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.65,
+        "pierce": 0.9,
+        "magic": 0.6,
+        "fire": 0.2,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49500010": {
+      "type": "Tibia Mariner (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.4,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.4
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 154,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49801010": {
+      "type": "Death Rite Bird (Night Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.4,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.4
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49801020": {
+      "type": "Death Rite Bird (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.4,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.4
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "49801030": {
+      "type": "Death Rite Bird (The Oldest Gaol)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.4,
+        "slash": 0.9,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.4
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "50110010": {
+      "type": "Golden Hippopotamus (Field Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "50110020": {
+      "type": "Golden Hippopotamus (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "50110040": {
+      "type": "Golden Hippopotamus (Noklateo)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "50400010": {
+      "type": "Curseblade (Eastern Underground Fort Elite)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50400020": {
+      "type": "Curseblade (Ruins Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50400120": {
+      "type": "Curseblade - Darkness (Night Group Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50700010": {
+      "type": "Death Knight - Twinaxes (Night Boss)",
+      "damageTaken": {
+        "standard": 0.6,
+        "strike": 0.6,
+        "slash": 0.6,
+        "pierce": 0.8,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50700020": {
+      "type": "Death Knight - Twinaxes (Blacksmith Boss)",
+      "damageTaken": {
+        "standard": 0.6,
+        "strike": 0.6,
+        "slash": 0.6,
+        "pierce": 0.8,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50701010": {
+      "type": "Death Knight - Longhaft Axe (Night Boss)",
+      "damageTaken": {
+        "standard": 0.6,
+        "strike": 0.6,
+        "slash": 0.6,
+        "pierce": 0.8,
+        "magic": 0.6,
+        "fire": 0.8,
+        "lightning": 0.6,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50810010": {
+      "type": "Chief Bloodfiend (Blacksmith Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50810020": {
+      "type": "Chief Bloodfiend (Ruins Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "50811010": {
+      "type": "Chief Purple Fiend (Ruins Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "51920010": {
+      "type": "Large Spider Scorpion (Marsh Group Boss)",
+      "damageTaken": {
+        "standard": 0.75,
+        "strike": 1.0,
+        "slash": 0.55,
+        "pierce": 0.75,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "51920020": {
+      "type": "Large Spider Scorpion (Ruins Group Boss)",
+      "damageTaken": {
+        "standard": 0.75,
+        "strike": 1.0,
+        "slash": 0.55,
+        "pierce": 0.75,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 0.8,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "52100010": {
+      "type": "Divine Beast Dancing Lion (Night Boss)",
+      "damageTaken": {
+        "standard": 0.7,
+        "strike": 0.7,
+        "slash": 0.8,
+        "pierce": 1.0,
+        "magic": 0.6,
+        "fire": 1.0,
+        "lightning": 0.6,
+        "holy": 0.6
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "52501210": {
+      "type": "Divine Beast Warrior - Lightning (Eastern Underground Fort Boss)",
+      "damageTaken": {
+        "standard": 0.6,
+        "strike": 0.6,
+        "slash": 0.6,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "52501220": {
+      "type": "Divine Beast Warrior - Lightning (Night Group Boss)",
+      "damageTaken": {
+        "standard": 0.6,
+        "strike": 0.6,
+        "slash": 0.6,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 0.8,
+        "lightning": 0.8,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "53120010": {
+      "type": "Elder Inquisitor (Great Church Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 0.9,
+        "fire": 1.2,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "53200010": {
+      "type": "Fat Inquisitor (Great Church Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.75,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 0.9,
+        "fire": 1.2,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "58100910": {
+      "type": "Demi-Human Swordmaster (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 84,
+        "scarletRot": 84,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "58100920": {
+      "type": "Demi-Human Swordmaster (Mountaintop)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.2,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 84,
+        "scarletRot": 84,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "58200010": {
+      "type": "Great Red Bear (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "58600010": {
+      "type": "Ghostflame Dragon (Great Church Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.9,
+        "slash": 0.55,
+        "pierce": 0.6,
+        "magic": 0.4,
+        "fire": 0.6,
+        "lightning": 0.6,
+        "holy": 1.1
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "71000010": {
+      "type": "Ancient Hero (Field Boss)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "71000020": {
+      "type": "Ancient Hero (Castle)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "71000110": {
+      "type": "Ancient Hero (Ruins)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 0.9,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.2,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 112,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75000020": {
+      "type": "Gladius - Beast of Night (Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.1,
+        "magic": 1.0,
+        "fire": 0.5,
+        "lightning": 1.0,
+        "holy": 1.35
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75000210": {
+      "type": "Gladius - Beast of Night (Everdark Sovereign)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.1,
+        "magic": 1.0,
+        "fire": 0.5,
+        "lightning": 1.0,
+        "holy": 1.35
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 542,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75100020": {
+      "type": "Adel - Baron of Night (Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.8,
+        "lightning": 0.5,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 542,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75110010": {
+      "type": "Adel - Baron of Night (Everdark Sovereign)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.8,
+        "lightning": 0.5,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 542,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75200020": {
+      "type": "Gnoster - Wisdom of Night (Boss Phase 1)",
+      "damageTaken": {
+        "standard": 1.15,
+        "strike": 1.15,
+        "slash": 1.25,
+        "pierce": 1.25,
+        "magic": 0.5,
+        "fire": 1.4,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75200030": {
+      "type": "Gnoster - Wisdom of Night (Everdark Sovereign Phase 2)",
+      "damageTaken": {
+        "standard": 1.15,
+        "strike": 1.15,
+        "slash": 1.25,
+        "pierce": 1.25,
+        "magic": 0.5,
+        "fire": 1.4,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75200110": {
+      "type": "Gnoster - Wisdom of Night (Boss Phase 2)",
+      "damageTaken": {
+        "standard": 1.15,
+        "strike": 1.15,
+        "slash": 1.25,
+        "pierce": 1.25,
+        "magic": 0.5,
+        "fire": 1.4,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75200120": {
+      "type": "Gnoster - Wisdom of Night (Everdark Sovereign Phase 1)",
+      "damageTaken": {
+        "standard": 1.15,
+        "strike": 1.15,
+        "slash": 1.25,
+        "pierce": 1.25,
+        "magic": 0.5,
+        "fire": 1.4,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75210010": {
+      "type": "Animus - Ascendant Light (Everdark Sovereign)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75300010": {
+      "type": "Faurtis Stoneshield (Boss Phase 1)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.2,
+        "slash": 0.8,
+        "pierce": 1.1,
+        "magic": 0.9,
+        "fire": 1.35,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75300020": {
+      "type": "Faurtis Stoneshield (Everdark Sovereign Phase 2)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.2,
+        "slash": 0.8,
+        "pierce": 1.1,
+        "magic": 0.9,
+        "fire": 1.35,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75300110": {
+      "type": "Faurtis Stoneshield (Boss Phase 2)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.2,
+        "slash": 0.8,
+        "pierce": 1.1,
+        "magic": 0.9,
+        "fire": 1.35,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75300120": {
+      "type": "Faurtis Stoneshield (Everdark Sovereign Phase 1)",
+      "damageTaken": {
+        "standard": 0.9,
+        "strike": 1.2,
+        "slash": 0.8,
+        "pierce": 1.1,
+        "magic": 0.9,
+        "fire": 1.35,
+        "lightning": 0.9,
+        "holy": 0.9
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75400020": {
+      "type": "Maris - Fathom of Night (Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.8,
+        "slash": 1.15,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.5,
+        "lightning": 1.4,
+        "holy": 0.85
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75400100": {
+      "type": "Maris - Fathom of Night (Everdark Sovereign Phase 1)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.8,
+        "slash": 1.15,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.5,
+        "lightning": 1.4,
+        "holy": 0.85
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75410000": {
+      "type": "Maris - Fathom of Night (Everdark Sovereign Phase 2)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.8,
+        "slash": 1.15,
+        "pierce": 0.9,
+        "magic": 0.8,
+        "fire": 0.5,
+        "lightning": 1.4,
+        "holy": 0.85
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75600020": {
+      "type": "Libra - Creature of Night (Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.35
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 154,
+        "deathBlight": 999
+      }
+    },
+    "75610010": {
+      "type": "Libra - Creature of Night (Everdark Sovereign)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 0.8,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.35
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 154,
+        "deathBlight": 999
+      }
+    },
+    "75800000": {
+      "type": "Heolstor (Shape of Night)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.15,
+        "pierce": 1.1,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.35
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "75809000": {
+      "type": "Heolstor (Phase 2)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.9,
+        "slash": 1.15,
+        "pierce": 1.1,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 1.0,
+        "holy": 1.35
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 999,
+        "frostbite": 999,
+        "sleep": 542,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "76000010": {
+      "type": "Fulghor - Champion of Nightglow (Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.2,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "76001010": {
+      "type": "Fulghor - Champion of Nightglow (Everdark Sovereign)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.2,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 154,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "76100010": {
+      "type": "Traitorous Straghess (Expedition)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.1,
+        "magic": 1.0,
+        "fire": 1.2,
+        "lightning": 0.9,
+        "holy": 1.25
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76109000": {
+      "type": "Pure Impulse Straghess",
+      "damageTaken": {
+        "standard": 0.95,
+        "strike": 0.95,
+        "slash": 1.05,
+        "pierce": 1.05,
+        "magic": 0.95,
+        "fire": 1.1,
+        "lightning": 0.85,
+        "holy": 1.15
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76200010": {
+      "type": "Weapon-Bequeathed Harmonia - Halberd",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.92,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.92,
+        "lightning": 0.9,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76200040": {
+      "type": "Weapon-Bequeathed Harmonia - Spear",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.92,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.92,
+        "lightning": 0.9,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76200070": {
+      "type": "Weapon-Bequeathed Harmonia - Mace",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.92,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.92,
+        "lightning": 0.9,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76200210": {
+      "type": "Weapon-Bequeathed Harmonia - Halberd (Everdark Phase 2)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.92,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.92,
+        "lightning": 0.9,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76200240": {
+      "type": "Weapon-Bequeathed Harmonia - Spear (Everdark Phase 2)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.92,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.92,
+        "lightning": 0.9,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "76200270": {
+      "type": "Weapon-Bequeathed Harmonia - Mace (Everdark Phase 2)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.92,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 0.92,
+        "lightning": 0.9,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "77000010": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.1,
+        "fire": 1.15,
+        "lightning": 1.2,
+        "holy": 1.1
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 999,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "77100010": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 1.0,
+        "pierce": 1.0,
+        "magic": 1.2,
+        "fire": 0.2,
+        "lightning": 1.1,
+        "holy": 1.1
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "77200010": {
+      "type": "Knight Artorias (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.1,
+        "slash": 0.9,
+        "pierce": 1.0,
+        "magic": 0.85,
+        "fire": 0.9,
+        "lightning": 1.1,
+        "holy": 1.1
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "78000010": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 0.84,
+        "strike": 1.1,
+        "slash": 0.93,
+        "pierce": 0.7,
+        "magic": 0.5,
+        "fire": 0.7,
+        "lightning": 0.5,
+        "holy": 0.5
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "78200010": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 1.1,
+        "strike": 1.1,
+        "slash": 0.94,
+        "pierce": 0.92,
+        "magic": 0.7,
+        "fire": 0.2,
+        "lightning": 0.7,
+        "holy": 0.7
+      },
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 999,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "79000010": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 0.79,
+        "strike": 0.81,
+        "slash": 0.78,
+        "pierce": 0.8,
+        "magic": 0.76,
+        "fire": 0.77,
+        "lightning": 0.17,
+        "holy": 1.08
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "79000020": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 0.79,
+        "strike": 0.81,
+        "slash": 0.78,
+        "pierce": 0.8,
+        "magic": 0.76,
+        "fire": 0.77,
+        "lightning": 0.17,
+        "holy": 1.08
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "79200010": {
+      "type": "Unknown",
+      "damageTaken": {
+        "standard": 0.8,
+        "strike": 0.81,
+        "slash": 0.78,
+        "pierce": 0.8,
+        "magic": 0.81,
+        "fire": 0.82,
+        "lightning": 0.83,
+        "holy": 1.26
+      },
+      "statusResistance": {
+        "poison": 999,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 999,
+        "sleep": 999,
+        "madness": 999,
+        "deathBlight": 999
+      }
+    },
+    "79300010": {
+      "type": "Demon from Below (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.99,
+        "slash": 1.18,
+        "pierce": 1.02,
+        "magic": 0.8,
+        "fire": 0.22,
+        "lightning": 0.78,
+        "holy": 0.83
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "79300110": {
+      "type": "Demon in Pain (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.99,
+        "slash": 1.18,
+        "pierce": 1.02,
+        "magic": 0.8,
+        "fire": 0.22,
+        "lightning": 0.78,
+        "holy": 0.83
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "79301010": {
+      "type": "Demon Prince - Demon from Below (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.99,
+        "slash": 1.18,
+        "pierce": 1.02,
+        "magic": 0.8,
+        "fire": 0.22,
+        "lightning": 0.78,
+        "holy": 0.83
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "79301110": {
+      "type": "Demon Prince - Demon in Pain (Night Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 0.99,
+        "slash": 1.18,
+        "pierce": 1.02,
+        "magic": 0.8,
+        "fire": 0.22,
+        "lightning": 0.78,
+        "holy": 0.83
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "33201110": {
+      "type": "Mimic Tear - Troll (Great Church Group Boss)",
+      "damageTaken": {
+        "standard": 0.65,
+        "strike": 0.65,
+        "slash": 0.65,
+        "pierce": 0.65,
+        "magic": 0.8,
+        "fire": 0.6,
+        "lightning": 1.0,
+        "holy": 0.8
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    },
+    "46000040": {
+      "type": "Troll - Mimic Tear (Great Church Group Boss)",
+      "damageTaken": {
+        "standard": 1.0,
+        "strike": 1.0,
+        "slash": 1.1,
+        "pierce": 1.0,
+        "magic": 1.0,
+        "fire": 1.0,
+        "lightning": 1.0,
+        "holy": 1.0
+      },
+      "statusResistance": {
+        "poison": null,
+        "scarletRot": null,
+        "bleed": null,
+        "frostbite": null,
+        "sleep": null,
+        "madness": null,
+        "deathBlight": null
+      }
+    }
+  },
+  "modelNames": {
+    "7700": {
+      "name": "Gaping Dragon",
+      "evidenceNames": [
+        "Gaping Dragon"
+      ],
+      "identityMethod": "NPC model prefix joined to Character FMG model-prefix name; explicit curated mapping"
+    },
+    "7710": {
+      "name": "Centipede Demon",
+      "evidenceNames": [
+        "Centipede Demon",
+        "Centipede Demon and more"
+      ],
+      "identityMethod": "NPC model prefix joined to Character FMG model-prefix name; explicit curated mapping"
+    },
+    "7800": {
+      "name": "The Duke's Dear Freja",
+      "evidenceNames": [
+        "The Duke's Dear Freja",
+        "The Duke's Dear Freja and more"
+      ],
+      "identityMethod": "NPC model prefix joined to Character FMG model-prefix name; explicit curated mapping"
+    },
+    "7820": {
+      "name": "Smelter Demon",
+      "evidenceNames": [
+        "Smelter Demon"
+      ],
+      "identityMethod": "NPC model prefix joined to Character FMG model-prefix name; explicit curated mapping"
+    },
+    "7900": {
+      "name": "Nameless King",
+      "evidenceNames": [
+        "Nameless King"
+      ],
+      "identityMethod": "NPC model prefix joined to Character FMG model-prefix name; explicit curated mapping"
+    },
+    "7920": {
+      "name": "Dancer of the Boreal Valley",
+      "evidenceNames": [
+        "Dancer of the Boreal Valley"
+      ],
+      "identityMethod": "NPC model prefix joined to Character FMG model-prefix name; explicit curated mapping"
+    }
+  },
+  "namesSha256": "fa016831cb0f23af08c27323379f35f75b70287a5a407c0db0b22e46c1c2d989"
+}

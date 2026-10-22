@@ -1,0 +1,2389 @@
+{
+  "quickrefCommit": "3e23450094c18125ae5665927ed240b18189a040",
+  "sources": [
+    {
+      "id": "quickref-names",
+      "title": "Cecilia / xxiixi · 黑夜君临速查手册 · 中文名称",
+      "url": "https://github.com/xxiixi/NightreignQuickRef/tree/3e23450094c18125ae5665927ed240b18189a040/src/data/zh-CN",
+      "game": "nightreign"
+    },
+    {
+      "id": "quickref-wild",
+      "title": "Cecilia / xxiixi · 野外首领数据",
+      "url": "https://github.com/xxiixi/NightreignQuickRef/blob/3e23450094c18125ae5665927ed240b18189a040/src/data/zh-CN/wild_boss_data.json",
+      "game": "nightreign"
+    },
+    {
+      "id": "quickref-players",
+      "title": "Cecilia / xxiixi · 人数与异常抗性倍率",
+      "url": "https://github.com/xxiixi/NightreignQuickRef/blob/3e23450094c18125ae5665927ed240b18189a040/src/pages/BossDataView.tsx",
+      "game": "nightreign"
+    },
+    {
+      "id": "nr-scaling",
+      "title": "Aero · Nightreign Scaling.py（血量人数缩放）",
+      "url": "https://github.com/dash512/Nightreign-Calculator/blob/399c0cc243cefb02d002e272eb636372c2ea4a60/Nightreign/Scaling.py",
+      "game": "nightreign"
+    },
+    {
+      "id": "bwiki-straghess",
+      "title": "黑夜君临中文资料站 · 史柴格斯（分阶段）",
+      "url": "https://wiki.biligame.com/nightreign/史柴格斯",
+      "game": "nightreign"
+    },
+    {
+      "id": "bwiki-harmonia",
+      "title": "黑夜君临中文资料站 · 哈尔莫妮亚（含1.03.2说明）",
+      "url": "https://wiki.biligame.com/nightreign/哈尔莫妮亚",
+      "game": "nightreign"
+    },
+    {
+      "id": "slay-nightlord",
+      "title": "Slay / Unlined-Betters / Emerald Wolf / Penumbra · Nightlord Stats",
+      "url": "https://nightreign.karan.myds.me/",
+      "game": "nightreign"
+    }
+  ],
+  "playerScaling": {
+    "status": {
+      "1": 1,
+      "2": 2.67,
+      "3": 4
+    },
+    "poise": {
+      "1": 1,
+      "2": 1.82,
+      "3": 3.33
+    },
+    "sourceId": "quickref-players",
+    "rounding": "nearest integer",
+    "scope": "ordinary expedition reference; no Deep of Night or repeated-proc additions"
+  },
+  "names": {
+    "astel": "“黑暗之子”艾丝缇",
+    "battlefield_commander": "战场指挥官",
+    "death_rite_bird": "死亡仪式鸟",
+    "mountaintop_ice_dragon": "山顶冰龙",
+    "smelter_demon": "镕铁恶魔",
+    "ulcerated_tree_spirit": "腐败树灵",
+    "miranda_blossom": "米兰达的花",
+    "red_wolf": "王夫的红狼",
+    "king_of_the_storm": "风暴之王（无名王者坐骑）",
+    "gladius": "格拉狄乌斯",
+    "gladius_everdark": "格拉狄乌斯（永夜王）",
+    "adel": "艾德雷",
+    "adel_everdark": "艾德雷（永夜王）",
+    "gnoster": "格诺斯塔（飞蛾）",
+    "gnoster_everdark": "格诺斯塔（飞蛾）（永夜王）",
+    "faurtis": "坚盾弗堤士（蝎子）",
+    "faurtis_everdark": "坚盾弗堤士（蝎子）（永夜王）",
+    "maris": "玛丽斯",
+    "maris_everdark": "玛丽斯（永夜王）",
+    "libra": "利普拉",
+    "libra_everdark": "利普拉（永夜王）",
+    "fulghor": "弗格尔",
+    "fulghor_everdark": "弗格尔（永夜王）",
+    "caligo": "卡莉果",
+    "caligo_everdark": "卡莉果（永夜王）",
+    "heolstor": "布德奇冥",
+    "heolstor_everdark": "布德奇冥（永夜王）",
+    "straghess": "史柴格斯 · 废弃物之王",
+    "animus_everdark": "超越之光亚尼姆斯（永夜王）",
+    "harmonia_halberd": "哈尔莫妮亚 · 安定者（戟）",
+    "harmonia_everdark_halberd": "哈尔莫妮亚 · 安定者（永夜王·戟）",
+    "harmonia_spear": "哈尔莫妮亚 · 安定者（矛）",
+    "harmonia_everdark_spear": "哈尔莫妮亚 · 安定者（永夜王·矛）",
+    "harmonia_mace": "哈尔莫妮亚 · 安定者（锤）",
+    "harmonia_everdark_mace": "哈尔莫妮亚 · 安定者（永夜王·锤）"
+  },
+  "rows": {
+    "46700010": {
+      "healthByPlayers": {
+        "1": 4554,
+        "2": 7925,
+        "3": 11295
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45101110": {
+      "healthByPlayers": {
+        "1": 6167,
+        "2": 12334,
+        "3": 18500
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45102010": {
+      "healthByPlayers": {
+        "1": 3703,
+        "2": 6444,
+        "3": 9184
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "71000010": {
+      "healthByPlayers": {
+        "1": 2666,
+        "2": 3466,
+        "3": 4265
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "71000020": {
+      "healthByPlayers": {
+        "1": 2666,
+        "2": 3466,
+        "3": 4265
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "71000110": {
+      "healthByPlayers": {
+        "1": 1128,
+        "2": 1241,
+        "3": 1354
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "77200010": {
+      "healthByPlayers": {
+        "1": 7776,
+        "2": 15552,
+        "3": 23328
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46200010": {
+      "healthByPlayers": {
+        "1": 6553,
+        "2": 11403,
+        "3": 16252
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30100190": {
+      "healthByPlayers": {
+        "1": 2612,
+        "2": 3396,
+        "3": 4180
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30100010": {
+      "healthByPlayers": {
+        "1": 973,
+        "2": 1070,
+        "3": 1168
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30101110": {
+      "healthByPlayers": {
+        "1": 2612,
+        "2": 3396,
+        "3": 4180
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30101010": {
+      "healthByPlayers": {
+        "1": 973,
+        "2": 1070,
+        "3": 1168
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30102130": {
+      "healthByPlayers": {
+        "1": 2612,
+        "2": 3396,
+        "3": 4180
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30102010": {
+      "healthByPlayers": {
+        "1": 973,
+        "2": 1070,
+        "3": 1168
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30500110": {
+      "healthByPlayers": {
+        "1": 3162,
+        "2": 6324,
+        "3": 9487
+      },
+      "basePoise": 90,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30500100": {
+      "healthByPlayers": {
+        "1": 5186,
+        "2": 6742,
+        "3": 8298
+      },
+      "basePoise": 90,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "39701110": {
+      "healthByPlayers": {
+        "1": 1802,
+        "2": 2342,
+        "3": 2883
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "39702310": {
+      "healthByPlayers": {
+        "1": 825,
+        "2": 1072,
+        "3": 1320
+      },
+      "basePoise": 30,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "39703010": {
+      "healthByPlayers": {
+        "1": 825,
+        "2": 1072,
+        "3": 1320
+      },
+      "basePoise": 30,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31000010": {
+      "healthByPlayers": {
+        "1": 5709,
+        "2": 9933,
+        "3": 14158
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31000020": {
+      "healthByPlayers": {
+        "1": 3457,
+        "2": 6914,
+        "3": 10371
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31000030": {
+      "healthByPlayers": {
+        "1": 5709,
+        "2": 9933,
+        "3": 14158
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "47701210": {
+      "healthByPlayers": {
+        "1": 4223,
+        "2": 7348,
+        "3": 10473
+      },
+      "basePoise": 110,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "21000020": {
+      "healthByPlayers": {
+        "1": 1700,
+        "2": 2209,
+        "3": 2719
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "21000030": {
+      "healthByPlayers": {
+        "1": 1700,
+        "2": 2209,
+        "3": 2719
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "21000040": {
+      "healthByPlayers": {
+        "1": 1700,
+        "2": 2209,
+        "3": 2719
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45610010": {
+      "healthByPlayers": {
+        "1": 1212,
+        "2": 1333,
+        "3": 1454
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "42900010": {
+      "healthByPlayers": {
+        "1": 2421,
+        "2": 4213,
+        "3": 6005
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "42900030": {
+      "healthByPlayers": {
+        "1": 1266,
+        "2": 1392,
+        "3": 1519
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "77100010": {
+      "healthByPlayers": {
+        "1": 4099,
+        "2": 8198,
+        "3": 12298
+      },
+      "basePoise": 110,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50810020": {
+      "healthByPlayers": {
+        "1": 1729,
+        "2": 1901,
+        "3": 2074
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50810010": {
+      "healthByPlayers": {
+        "1": 1729,
+        "2": 1901,
+        "3": 2074
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50811010": {
+      "healthByPlayers": {
+        "1": 1729,
+        "2": 1901,
+        "3": 2074
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "38000010": {
+      "healthByPlayers": {
+        "1": 1236,
+        "2": 1360,
+        "3": 1484
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "25000020": {
+      "healthByPlayers": {
+        "1": 2932,
+        "2": 5864,
+        "3": 8797
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "25000030": {
+      "healthByPlayers": {
+        "1": 2215,
+        "2": 3855,
+        "3": 5494
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "25000040": {
+      "healthByPlayers": {
+        "1": 1716,
+        "2": 1887,
+        "3": 2059
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "25001020": {
+      "healthByPlayers": {
+        "1": 2215,
+        "2": 3855,
+        "3": 5494
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "25001030": {
+      "healthByPlayers": {
+        "1": 1716,
+        "2": 1887,
+        "3": 2059
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "33500010": {
+      "healthByPlayers": {
+        "1": 1162,
+        "2": 1510,
+        "3": 1859
+      },
+      "basePoise": 70,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "33500020": {
+      "healthByPlayers": {
+        "1": 475,
+        "2": 475,
+        "3": 475
+      },
+      "basePoise": 70,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "33501010": {
+      "healthByPlayers": {
+        "1": 1162,
+        "2": 1510,
+        "3": 1859
+      },
+      "basePoise": 70,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "33502010": {
+      "healthByPlayers": {
+        "1": 1162,
+        "2": 1510,
+        "3": 1859
+      },
+      "basePoise": 70,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50400120": {
+      "healthByPlayers": {
+        "1": 1054,
+        "2": 2108,
+        "3": 3162
+      },
+      "basePoise": 85,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50400020": {
+      "healthByPlayers": {
+        "1": 1627,
+        "2": 1790,
+        "3": 1953
+      },
+      "basePoise": 85,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50400010": {
+      "healthByPlayers": {
+        "1": 1627,
+        "2": 1790,
+        "3": 1953
+      },
+      "basePoise": 85,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79200010": {
+      "healthByPlayers": {
+        "1": 4838,
+        "2": 9677,
+        "3": 14515
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "52100010": {
+      "healthByPlayers": {
+        "1": 5443,
+        "2": 10886,
+        "3": 16330
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50700010": {
+      "healthByPlayers": {
+        "1": 703,
+        "2": 1405,
+        "3": 2108
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50700020": {
+      "healthByPlayers": {
+        "1": 1062,
+        "2": 1168,
+        "3": 1274
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50701010": {
+      "healthByPlayers": {
+        "1": 703,
+        "2": 1405,
+        "3": 2108
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49801020": {
+      "healthByPlayers": {
+        "1": 5479,
+        "2": 9533,
+        "3": 13588
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49801010": {
+      "healthByPlayers": {
+        "1": 5662,
+        "2": 11324,
+        "3": 16986
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49801030": {
+      "healthByPlayers": {
+        "1": 6912,
+        "2": 12027,
+        "3": 17142
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "41300020": {
+      "healthByPlayers": {
+        "1": 1713,
+        "2": 2226,
+        "3": 2740
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "41301010": {
+      "healthByPlayers": {
+        "1": 2904,
+        "2": 5808,
+        "3": 8713
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "41300030": {
+      "healthByPlayers": {
+        "1": 1713,
+        "2": 2226,
+        "3": 2740
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "58100910": {
+      "healthByPlayers": {
+        "1": 1587,
+        "2": 3174,
+        "3": 4761
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "58100920": {
+      "healthByPlayers": {
+        "1": 1587,
+        "2": 2063,
+        "3": 2539
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79300010": {
+      "healthByPlayers": {
+        "1": 2811,
+        "2": 5622,
+        "3": 8433
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79300110": {
+      "healthByPlayers": {
+        "1": 2811,
+        "2": 5622,
+        "3": 8433
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79301010": {
+      "healthByPlayers": {
+        "1": 7776,
+        "2": 15552,
+        "3": 23328
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79301110": {
+      "healthByPlayers": {
+        "1": 7776,
+        "2": 15552,
+        "3": 23328
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "52501220": {
+      "healthByPlayers": {
+        "1": 2178,
+        "2": 4355,
+        "3": 6533
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "52501210": {
+      "healthByPlayers": {
+        "1": 2631,
+        "2": 4577,
+        "3": 6524
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "32500090": {
+      "healthByPlayers": {
+        "1": 5624,
+        "2": 9786,
+        "3": 13948
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "32500110": {
+      "healthByPlayers": {
+        "1": 4409,
+        "2": 8818,
+        "3": 13227
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "43531110": {
+      "healthByPlayers": {
+        "1": 1267,
+        "2": 2534,
+        "3": 3802
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "43531400": {
+      "healthByPlayers": {
+        "1": 254,
+        "2": 280,
+        "3": 305
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46500010": {
+      "healthByPlayers": {
+        "1": 7447,
+        "2": 14893,
+        "3": 22340
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46500210": {
+      "healthByPlayers": {
+        "1": 5169,
+        "2": 8995,
+        "3": 12820
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46500230": {
+      "healthByPlayers": {
+        "1": 4738,
+        "2": 8245,
+        "3": 11751
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "78000010": {
+      "healthByPlayers": {
+        "1": 2214,
+        "2": 4429,
+        "3": 6643
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "53120010": {
+      "healthByPlayers": {
+        "1": 2721,
+        "2": 2993,
+        "3": 3265
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "42700020": {
+      "healthByPlayers": {
+        "1": 2166,
+        "2": 2815,
+        "3": 3465
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "42700030": {
+      "healthByPlayers": {
+        "1": 2022,
+        "2": 2225,
+        "3": 2427
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "42700040": {
+      "healthByPlayers": {
+        "1": 2022,
+        "2": 2225,
+        "3": 2427
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "48100010": {
+      "healthByPlayers": {
+        "1": 5617,
+        "2": 9773,
+        "3": 13930
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46809010": {
+      "healthByPlayers": {
+        "1": 6269,
+        "2": 12539,
+        "3": 18808
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46801020": {
+      "healthByPlayers": {
+        "1": 3877,
+        "2": 6746,
+        "3": 9615
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46801010": {
+      "healthByPlayers": {
+        "1": 3464,
+        "2": 4503,
+        "3": 5543
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "39100140": {
+      "healthByPlayers": {
+        "1": 1839,
+        "2": 2023,
+        "3": 2207
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "39101120": {
+      "healthByPlayers": {
+        "1": 1839,
+        "2": 2023,
+        "3": 2207
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45000010": {
+      "healthByPlayers": {
+        "1": 3674,
+        "2": 6392,
+        "3": 9110
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "77000010": {
+      "healthByPlayers": {
+        "1": 5398,
+        "2": 10797,
+        "3": 16196
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "58600010": {
+      "healthByPlayers": {
+        "1": 2359,
+        "2": 2595,
+        "3": 2831
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "22700100": {
+      "healthByPlayers": {
+        "1": 525,
+        "2": 577,
+        "3": 630
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45601020": {
+      "healthByPlayers": {
+        "1": 2117,
+        "2": 2752,
+        "3": 3387
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "35600010": {
+      "healthByPlayers": {
+        "1": 3934,
+        "2": 7868,
+        "3": 11802
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "35600020": {
+      "healthByPlayers": {
+        "1": 3756,
+        "2": 6535,
+        "3": 9314
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "35600110": {
+      "healthByPlayers": {
+        "1": 4418,
+        "2": 7688,
+        "3": 10958
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "35700010": {
+      "healthByPlayers": {
+        "1": 5548,
+        "2": 11097,
+        "3": 16646
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "35700020": {
+      "healthByPlayers": {
+        "1": 4584,
+        "2": 7976,
+        "3": 11368
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "35700110": {
+      "healthByPlayers": {
+        "1": 5393,
+        "2": 9383,
+        "3": 13374
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50110010": {
+      "healthByPlayers": {
+        "1": 3369,
+        "2": 4380,
+        "3": 5390
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50110020": {
+      "healthByPlayers": {
+        "1": 4320,
+        "2": 8640,
+        "3": 12960
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "50110040": {
+      "healthByPlayers": {
+        "1": 3369,
+        "2": 4380,
+        "3": 5390
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "47509010": {
+      "healthByPlayers": {
+        "1": 4685,
+        "2": 9370,
+        "3": 14054
+      },
+      "basePoise": 105,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46900010": {
+      "healthByPlayers": {
+        "1": 3405,
+        "2": 4426,
+        "3": 5447
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46900020": {
+      "healthByPlayers": {
+        "1": 3405,
+        "2": 4426,
+        "3": 5447
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "34001010": {
+      "healthByPlayers": {
+        "1": 2611,
+        "2": 4543,
+        "3": 6476
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "58200010": {
+      "healthByPlayers": {
+        "1": 4099,
+        "2": 8198,
+        "3": 12298
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49110010": {
+      "healthByPlayers": {
+        "1": 7965,
+        "2": 15930,
+        "3": 23895
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46000230": {
+      "healthByPlayers": {
+        "1": 3574,
+        "2": 4646,
+        "3": 5718
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46000220": {
+      "healthByPlayers": {
+        "1": 3004,
+        "2": 3004,
+        "3": 3004
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "53200010": {
+      "healthByPlayers": {
+        "1": 1982,
+        "2": 2180,
+        "3": 2378
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "34600020": {
+      "healthByPlayers": {
+        "1": 2331,
+        "2": 3031,
+        "3": 3730
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "34600010": {
+      "healthByPlayers": {
+        "1": 1049,
+        "2": 1154,
+        "3": 1259
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "34600040": {
+      "healthByPlayers": {
+        "1": 2331,
+        "2": 3031,
+        "3": 3730
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49100190": {
+      "healthByPlayers": {
+        "1": 6486,
+        "2": 11285,
+        "3": 16084
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49100120": {
+      "healthByPlayers": {
+        "1": 6486,
+        "2": 11285,
+        "3": 16084
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "44800020": {
+      "healthByPlayers": {
+        "1": 3284,
+        "2": 4270,
+        "3": 5255
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "44800410": {
+      "healthByPlayers": {
+        "1": 3064,
+        "2": 3370,
+        "3": 3676
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "48000010": {
+      "healthByPlayers": {
+        "1": 6221,
+        "2": 12442,
+        "3": 18662
+      },
+      "basePoise": 110,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "21300510": {
+      "healthByPlayers": {
+        "1": 6048,
+        "2": 12096,
+        "3": 18144
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "21300010": {
+      "healthByPlayers": {
+        "1": 4099,
+        "2": 5329,
+        "3": 6559
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45030010": {
+      "healthByPlayers": {
+        "1": 5184,
+        "2": 9020,
+        "3": 12855
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79000010": {
+      "healthByPlayers": {
+        "1": 4779,
+        "2": 9558,
+        "3": 14337
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "79000020": {
+      "healthByPlayers": {
+        "1": 5905,
+        "2": 11809,
+        "3": 17714
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31500010": {
+      "healthByPlayers": {
+        "1": 1891,
+        "2": 2459,
+        "3": 3026
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31500020": {
+      "healthByPlayers": {
+        "1": 1537,
+        "2": 3074,
+        "3": 4612
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31501020": {
+      "healthByPlayers": {
+        "1": 1537,
+        "2": 3074,
+        "3": 4612
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "33000020": {
+      "healthByPlayers": {
+        "1": 2768,
+        "2": 3598,
+        "3": 4428
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "33001020": {
+      "healthByPlayers": {
+        "1": 2768,
+        "2": 3598,
+        "3": 4428
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "21400210": {
+      "healthByPlayers": {
+        "1": 5351,
+        "2": 6956,
+        "3": 8561
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "30500010": {
+      "healthByPlayers": {
+        "1": 5600,
+        "2": 11200,
+        "3": 16799
+      },
+      "basePoise": 90,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31810010": {
+      "healthByPlayers": {
+        "1": 2190,
+        "2": 2847,
+        "3": 3504
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "31810020": {
+      "healthByPlayers": {
+        "1": 2190,
+        "2": 2847,
+        "3": 3504
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "32520010": {
+      "healthByPlayers": {
+        "1": 5198,
+        "2": 9045,
+        "3": 12891
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "40210010": {
+      "healthByPlayers": {
+        "1": 4285,
+        "2": 5570,
+        "3": 6855
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "40210020": {
+      "healthByPlayers": {
+        "1": 4171,
+        "2": 8341,
+        "3": 12512
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "40210030": {
+      "healthByPlayers": {
+        "1": 4285,
+        "2": 5570,
+        "3": 6855
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "78200010": {
+      "healthByPlayers": {
+        "1": 6828,
+        "2": 13655,
+        "3": 20483
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46020030": {
+      "healthByPlayers": {
+        "1": 3574,
+        "2": 4646,
+        "3": 5718
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46020050": {
+      "healthByPlayers": {
+        "1": 3004,
+        "2": 3304,
+        "3": 3604
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "51920010": {
+      "healthByPlayers": {
+        "1": 620,
+        "2": 682,
+        "3": 744
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "51920020": {
+      "healthByPlayers": {
+        "1": 620,
+        "2": 682,
+        "3": 744
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "41402210": {
+      "healthByPlayers": {
+        "1": 788,
+        "2": 788,
+        "3": 788
+      },
+      "basePoise": 30,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "36000020": {
+      "healthByPlayers": {
+        "1": 2009,
+        "2": 3496,
+        "3": 4983
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "36001020": {
+      "healthByPlayers": {
+        "1": 2009,
+        "2": 3496,
+        "3": 4983
+      },
+      "basePoise": 65,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49500010": {
+      "healthByPlayers": {
+        "1": 2793,
+        "2": 5585,
+        "3": 8378
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "32510020": {
+      "healthByPlayers": {
+        "1": 4920,
+        "2": 8561,
+        "3": 12201
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "32510110": {
+      "healthByPlayers": {
+        "1": 4401,
+        "2": 8802,
+        "3": 13203
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46400010": {
+      "healthByPlayers": {
+        "1": 6907,
+        "2": 12018,
+        "3": 17129
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "46400020": {
+      "healthByPlayers": {
+        "1": 5223,
+        "2": 10446,
+        "3": 15668
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "47700020": {
+      "healthByPlayers": {
+        "1": 3005,
+        "2": 6010,
+        "3": 9015
+      },
+      "basePoise": 95,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "47701030": {
+      "healthByPlayers": {
+        "1": 3040,
+        "2": 5289,
+        "3": 7538
+      },
+      "basePoise": 95,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45803010": {
+      "healthByPlayers": {
+        "1": 2613,
+        "2": 5226,
+        "3": 7840
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "45803020": {
+      "healthByPlayers": {
+        "1": 2507,
+        "2": 2758,
+        "3": 3009
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75000020": {
+      "healthByPlayers": {
+        "1": 11328,
+        "2": 22656,
+        "3": 33984
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75000210": {
+      "healthByPlayers": {
+        "1": 11328,
+        "2": 22656,
+        "3": 33984
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75100020": {
+      "healthByPlayers": {
+        "1": 13140,
+        "2": 26281,
+        "3": 39421
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75110010": {
+      "healthByPlayers": {
+        "1": 13140,
+        "2": 26281,
+        "3": 39421
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75200020": {
+      "healthByPlayers": {
+        "1": 13027,
+        "2": 26054,
+        "3": 39082
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75200110": {
+      "healthByPlayers": {
+        "1": 13027,
+        "2": 26054,
+        "3": 39082
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75200120": {
+      "healthByPlayers": {
+        "1": 6514,
+        "2": 13027,
+        "3": 19541
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75200030": {
+      "healthByPlayers": {
+        "1": 6514,
+        "2": 13027,
+        "3": 19541
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75300010": {
+      "healthByPlayers": {
+        "1": 12234,
+        "2": 24468,
+        "3": 36703
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75300110": {
+      "healthByPlayers": {
+        "1": 12234,
+        "2": 24468,
+        "3": 36703
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75300120": {
+      "healthByPlayers": {
+        "1": 7137,
+        "2": 14273,
+        "3": 21410
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75300020": {
+      "healthByPlayers": {
+        "1": 7137,
+        "2": 14273,
+        "3": 21410
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75210010": {
+      "healthByPlayers": {
+        "1": 5303,
+        "2": 10606,
+        "3": 15909
+      },
+      "basePoise": 100,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75400020": {
+      "healthByPlayers": {
+        "1": 12687,
+        "2": 25375,
+        "3": 38062
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75400100": {
+      "healthByPlayers": {
+        "1": 3172,
+        "2": 6344,
+        "3": 9516
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75410000": {
+      "healthByPlayers": {
+        "1": 29453,
+        "2": 58906,
+        "3": 88358
+      },
+      "basePoise": 600,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75600020": {
+      "healthByPlayers": {
+        "1": 13048,
+        "2": 26097,
+        "3": 39145
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75610010": {
+      "healthByPlayers": {
+        "1": 13048,
+        "2": 26097,
+        "3": 39145
+      },
+      "basePoise": 120,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76000010": {
+      "healthByPlayers": {
+        "1": 11894,
+        "2": 23789,
+        "3": 35683
+      },
+      "basePoise": 155,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76001010": {
+      "healthByPlayers": {
+        "1": 11894,
+        "2": 23789,
+        "3": 35683
+      },
+      "basePoise": 155,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49000010": {
+      "healthByPlayers": {
+        "1": 12008,
+        "2": 24015,
+        "3": 36023
+      },
+      "basePoise": 160,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "49010010": {
+      "healthByPlayers": {
+        "1": 12008,
+        "2": 24015,
+        "3": 36023
+      },
+      "basePoise": 160,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75800000": {
+      "healthByPlayers": {
+        "1": 4984,
+        "2": 9969,
+        "3": 14953
+      },
+      "basePoise": 130,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "75809000": {
+      "healthByPlayers": {
+        "1": 1408,
+        "2": 1408,
+        "3": 1408
+      },
+      "basePoise": 130,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76100010": {
+      "healthByPlayers": {
+        "1": 11555,
+        "2": 23109,
+        "3": 34664
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76109000": {
+      "healthByPlayers": {
+        "1": 10978,
+        "2": 21955,
+        "3": 32933
+      },
+      "basePoise": 150,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76200010": {
+      "healthByPlayers": {
+        "1": 566,
+        "2": 1133,
+        "3": 1699
+      },
+      "basePoise": 75,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76200040": {
+      "healthByPlayers": {
+        "1": 566,
+        "2": 1133,
+        "3": 1699
+      },
+      "basePoise": 75,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76200070": {
+      "healthByPlayers": {
+        "1": 566,
+        "2": 1133,
+        "3": 1699
+      },
+      "basePoise": 75,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76200210": {
+      "healthByPlayers": {
+        "1": 839,
+        "2": 839,
+        "3": 839
+      },
+      "basePoise": 75,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76200240": {
+      "healthByPlayers": {
+        "1": 839,
+        "2": 839,
+        "3": 839
+      },
+      "basePoise": 75,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    },
+    "76200270": {
+      "healthByPlayers": {
+        "1": 839,
+        "2": 839,
+        "3": 839
+      },
+      "basePoise": 75,
+      "sourceIds": [
+        "nr-param",
+        "nr-scaling"
+      ]
+    }
+  },
+  "patches": {
+    "king_of_the_storm": {
+      "damageNegation": {
+        "standard": 20.0,
+        "strike": 18.0,
+        "slash": 21.0,
+        "pierce": 2.0,
+        "magic": 10.0,
+        "fire": 35.0,
+        "lightning": -31.0,
+        "holy": 0
+      },
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 154
+      },
+      "basePoise": 80,
+      "sourceIds": [
+        "quickref-wild"
+      ],
+      "context": "night",
+      "note": "风暴之王按中文速查手册明确命名的坐骑条目补充；没有伪造NPC编号。未收录的睡眠等项目仍保留未知。"
+    },
+    "76100010": {
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 542,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "sourceIds": [
+        "bwiki-straghess",
+        "slay-nightlord"
+      ],
+      "labelZh": "第一阶段",
+      "note": "废弃物之王异常阈值按中文资料站的独立阶段表补全，未把一阶段复制到二阶段。"
+    },
+    "76109000": {
+      "statusResistance": {
+        "poison": 1165,
+        "scarletRot": 542,
+        "bleed": 541,
+        "frostbite": 541,
+        "sleep": 997,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "sourceIds": [
+        "bwiki-straghess",
+        "slay-nightlord"
+      ],
+      "labelZh": "第二阶段",
+      "note": "废弃物之王异常阈值按中文资料站的独立阶段表补全，未把一阶段复制到二阶段。"
+    },
+    "76200010": {
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "sourceIds": [
+        "bwiki-harmonia",
+        "slay-nightlord"
+      ],
+      "note": "普通安定者按中文资料站补全；睡眠初始值采用其明确标注的1.03.2修改后154，旧表84不混用，永夜王不套用。"
+    },
+    "76200040": {
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "sourceIds": [
+        "bwiki-harmonia",
+        "slay-nightlord"
+      ],
+      "note": "普通安定者按中文资料站补全；睡眠初始值采用其明确标注的1.03.2修改后154，旧表84不混用，永夜王不套用。"
+    },
+    "76200070": {
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 154,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "sourceIds": [
+        "bwiki-harmonia",
+        "slay-nightlord"
+      ],
+      "note": "普通安定者按中文资料站补全；睡眠初始值采用其明确标注的1.03.2修改后154，旧表84不混用，永夜王不套用。"
+    }
+  },
+  "inputHashes": {
+    "wild-boss.json": "1b3314c1d86a8b841e09593c6a3b6b2064a14d81108d69ef8cda05916317d6eb",
+    "night-king.json": "20ba2f59106c1851d7390a6a97d31d20f10616aff833b4bb5eb9f1bdd29c0742",
+    "bossview.tsx": "349905e7397badb1bf03475f47732cff477c2824ddb9e2dff2011643991a7f20",
+    "db.xlsx": "f4c6ad23aa91af40297e56ca2ed2c2627be6f050b484a3c376ca7beafb4a695d",
+    "bwiki-哈尔莫妮亚": "378a9bb70d1a7dea47c523fa134f08ce793ed2ad11835567f0b9265d1608f74b",
+    "bwiki-史柴格斯": "ed3754bf4075c7f0330d690c63dc7c0f5fa6591762d2df60f9ecf0dc94ac4cd4"
+  }
+}

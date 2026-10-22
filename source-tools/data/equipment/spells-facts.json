@@ -1,0 +1,7051 @@
+{
+  "version": "0.7.0",
+  "dataVersion": "Nightreign 1.03.2",
+  "generatedAt": "2026-10-21",
+  "sources": [
+    {
+      "id": "nr-calculator",
+      "title": "Aero · Nightreign Calculator（1.03.2 法术消耗与施法武器关联）",
+      "url": "https://github.com/dash512/Nightreign-Calculator/tree/399c0cc243cefb02d002e272eb636372c2ea4a60",
+      "license": "GPL-3.0"
+    },
+    {
+      "id": "bwiki",
+      "title": "BWiki · 艾尔登法环游戏简中文本",
+      "url": "https://wiki.biligame.com/eldenring/首页",
+      "license": "CC BY-NC-SA; game text original rights holders"
+    },
+    {
+      "id": "er-art",
+      "title": "《艾尔登法环》原始图标",
+      "url": "https://github.com/elden-ring-playground/elden-ring-media/tree/2d40cc439ae748d4a6b7147c113a268cc6d4369b",
+      "license": "Game assets original rights holders"
+    },
+    {
+      "id": "nr-art",
+      "title": "Eldenpedia · Nightreign 专属武器图标",
+      "url": "https://eldenring.wiki.gg/wiki/Nightreign:Weapons",
+      "license": "Game assets original rights holders"
+    },
+    {
+      "id": "nr-dlc-art",
+      "title": "pymmog · Forsaken Hollows 原始图标",
+      "url": "https://github.com/pymmog/NR-FH/tree/1549bf00c8c1797dbc81212c01f1502940ce044f",
+      "license": "Game assets original rights holders"
+    }
+  ],
+  "inputHashes": {
+    "magic.py": "b3e0d596b0301c71895a67649492b6339153f9ab6e150ebdd92dc95609a3fb37",
+    "names.py": "fa016831cb0f23af08c27323379f35f75b70287a5a407c0db0b22e46c1c2d989",
+    "nr-weapons.py": "2348411521f1cb430a2a1cbd49fc296703b174c52b05e1f364de1543bbfb245a",
+    "erdb-1.10.0.zip": "98fae9fb61238c1fe2c901019bef01a598367f192648ec240ad23e2441700d75"
+  },
+  "spells": [
+    {
+      "id": 4000,
+      "nameZh": "辉石魔砾",
+      "nameEn": "Glintstone Pebble",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 7,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "能从手杖的辉石释放魔力石砾。\n可以走动施展，也能连续施展。",
+      "image": "assets/icons/spell-4000.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石魔砾",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E9%AD%94%E7%A0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "d08fedbb244c5638f137faa6d0a7d10546fdf4879843713bcebe7ed8b17fd9b8"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4001,
+      "nameZh": "辉石大魔砾",
+      "nameEn": "Great Glintstone Shard",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 12,
+      "fpAdditional": 0,
+      "staminaCost": 26,
+      "staminaAdditional": 0,
+      "summary": "能从手杖的辉石释放大块魔力石砾。\n可以走动施展，也能连续施展。",
+      "image": "assets/icons/spell-4001.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石大魔砾",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E5%A4%A7%E9%AD%94%E7%A0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "f8fa2dafbfc0ecf18bb13361eb9963b5e3318456ef8322cdc2627bb5d4a60d3e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4010,
+      "nameZh": "辉石迅魔砾",
+      "nameEn": "Swift Glintstone Shard",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 5,
+      "fpAdditional": 0,
+      "staminaCost": 9,
+      "staminaAdditional": 0,
+      "summary": "能从手杖的辉石快速释放魔力石砾。\n可以接在其他动作后，立刻衔接使用。",
+      "image": "assets/icons/spell-4010.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石迅魔砾",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E8%BF%85%E9%AD%94%E7%A0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "7ac061fe9551e0c47edccd64c5f1083c8a27e37e119cf1e9d0e20488e4a8d2eb"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4020,
+      "nameZh": "辉石彗星",
+      "nameEn": "Glintstone Cometshard",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 17,
+      "fpAdditional": 17,
+      "staminaCost": 30,
+      "staminaAdditional": 39,
+      "summary": "能释放拖长尾巴的魔力彗星。\n可以走动施展，也能连续施展。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4020.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石彗星",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E5%BD%97%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "d37edb8529781eb7b61f739047ce3c16a23f68fbecdde4f5e2ed893ac6aeaea8"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4021,
+      "nameZh": "帚星",
+      "nameEn": "Comet",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 24,
+      "fpAdditional": 24,
+      "staminaCost": 35,
+      "staminaAdditional": 46,
+      "summary": "能释放等同魔力大彗星的帚星。\n可以走动施展，也能连续施展。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4021.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 帚星",
+        "url": "https://wiki.biligame.com/eldenring/%E5%B8%9A%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "6ed5c0bf7736676ca989f6d37592af90f308d5a55840191d7137bd31201320c1"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4030,
+      "nameZh": "旋飞魔砾",
+      "nameEn": "Shard Spiral",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 14,
+      "fpAdditional": 14,
+      "staminaCost": 28,
+      "staminaAdditional": 36,
+      "summary": "能释放以漩涡状飞出的两道石砾。\n可以走动施展，也能连续施展。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4030.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 旋飞魔砾",
+        "url": "https://wiki.biligame.com/eldenring/%E6%97%8B%E9%A3%9E%E9%AD%94%E7%A0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "ed26354f74486beecdf9ebdd418e0c379a50bc2acfe97bb8538283f5d9e5b179"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4040,
+      "nameZh": "辉石流星",
+      "nameEn": "Glintstone Stars",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 12,
+      "fpAdditional": 12,
+      "staminaCost": 21,
+      "staminaAdditional": 27,
+      "summary": "能释放朝目标飞去的三道流星。\n可以走动施展，借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4040.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石流星",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E6%B5%81%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "b9a5b79793b5bc63801b07227df0af2dc36095da6f0a20a0f72f76a9d3e57852"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4050,
+      "nameZh": "流星雨",
+      "nameEn": "Star Shower",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 23,
+      "fpAdditional": 23,
+      "staminaCost": 26,
+      "staminaAdditional": 34,
+      "summary": "能释放朝目标飞去的六道流星。\n可以走动施展，借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4050.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 流星雨",
+        "url": "https://wiki.biligame.com/eldenring/%E6%B5%81%E6%98%9F%E9%9B%A8%E6%96%87%E6%9C%AC",
+        "sha256": "9c24a21010026c59ce1cf3f482a1f401e390171a58dc68b6e86d3e3a2e78543a"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4060,
+      "nameZh": "结晶连弹",
+      "nameEn": "Crystal Barrage",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 14,
+      "fpAdditional": 2,
+      "staminaCost": 26,
+      "staminaAdditional": 0,
+      "summary": "能连续释放辉石结晶碎片。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4060.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 结晶连弹",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BB%93%E6%99%B6%E8%BF%9E%E5%BC%B9%E6%96%87%E6%9C%AC",
+        "sha256": "839199842a4215ac1331510a9d13e613c1f8c500db1209e1c52762568375c4e5"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4070,
+      "nameZh": "辉石弯弧",
+      "nameEn": "Glintstone Arc",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 9,
+      "fpAdditional": 0,
+      "staminaCost": 18,
+      "staminaAdditional": 0,
+      "summary": "能释放大幅横向扩散的魔力弯弧。\n可以走动施展，也能连续施展。",
+      "image": "assets/icons/spell-4070.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石弯弧",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E5%BC%AF%E5%BC%A7%E6%96%87%E6%9C%AC",
+        "sha256": "7f686cf2e1118de8a75db0081ac84c4253c38f86b6cecf8afc9cfb0732fdb165"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4080,
+      "nameZh": "海摩炮弹",
+      "nameEn": "Cannon of Haima",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 38,
+      "fpAdditional": 38,
+      "staminaCost": 42,
+      "staminaAdditional": 55,
+      "summary": "能释放以拋物线飞去的魔力炮弹。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4080.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 海摩炮弹",
+        "url": "https://wiki.biligame.com/eldenring/%E6%B5%B7%E6%91%A9%E7%82%AE%E5%BC%B9%E6%96%87%E6%9C%AC",
+        "sha256": "d9e98c39b9797ca3f87cfb67f6553011761373bd069bbd7c44f60e30deeae882"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4090,
+      "nameZh": "结晶散射",
+      "nameEn": "Crystal Burst",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 14,
+      "fpAdditional": 14,
+      "staminaCost": 9,
+      "staminaAdditional": 12,
+      "summary": "能同时释放大量辉石结晶碎片。\n可以走动施展，借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4090.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 结晶散射",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BB%93%E6%99%B6%E6%95%A3%E5%B0%84%E6%96%87%E6%9C%AC",
+        "sha256": "9d822d166fa0abf14fb58ffd1ddf60d997ff7268059be12ae53c0cccd34c1511"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4100,
+      "nameZh": "爆碎岩盘",
+      "nameEn": "Shatter Earth",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 10,
+      "fpAdditional": 0,
+      "staminaCost": 22,
+      "staminaAdditional": 0,
+      "summary": "将魔力灌入手杖尾端，刺入地面，\n在周围引发魔力冲击波。\n仅限一次，能使出追击。",
+      "image": "assets/icons/spell-4100.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 爆碎岩盘",
+        "url": "https://wiki.biligame.com/eldenring/%E7%88%86%E7%A2%8E%E5%B2%A9%E7%9B%98%E6%96%87%E6%9C%AC",
+        "sha256": "27549114414214f8eadf2845a7ef9f35126903a4445fce06e3555e6979612693"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4110,
+      "nameZh": "爆破岩盘",
+      "nameEn": "Rock Blaster",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 22,
+      "fpAdditional": 5,
+      "staminaCost": 35,
+      "staminaAdditional": 0,
+      "summary": "魔法学院雷亚卢卡利亚的\n其中一种辉石魔法。",
+      "image": "assets/icons/spell-4110.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 爆破岩盘",
+        "url": "https://wiki.biligame.com/eldenring/%E7%88%86%E7%A0%B4%E5%B2%A9%E7%9B%98%E6%96%87%E6%9C%AC",
+        "sha256": "41b02e8284018d87c97ca3bf62c0ec3cf8ec933d00319d9a3c2b0e9afdc9377c"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4120,
+      "nameZh": "海摩大槌",
+      "nameEn": "Gavel of Haima",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 22,
+      "fpAdditional": 0,
+      "staminaCost": 46,
+      "staminaAdditional": 0,
+      "summary": "能形成魔力大槌，使出敲击。\n仅限一次，能使出追击。",
+      "image": "assets/icons/spell-4120.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 海摩大槌",
+        "url": "https://wiki.biligame.com/eldenring/%E6%B5%B7%E6%91%A9%E5%A4%A7%E6%A7%8C%E6%96%87%E6%9C%AC",
+        "sha256": "ceed75efcd9c49c3e8fd998626696491d12ce4b26e25ad8f43c49d9ff0c83862"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4130,
+      "nameZh": "魔法之境",
+      "nameEn": "Terra Magica",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 12,
+      "staminaAdditional": 0,
+      "summary": "能在地面画出学院的魔法阵，\n在魔法阵内的人物能提升魔法威力。",
+      "image": "assets/icons/spell-4130.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 魔法之境",
+        "url": "https://wiki.biligame.com/eldenring/%E9%AD%94%E6%B3%95%E4%B9%8B%E5%A2%83%E6%96%87%E6%9C%AC",
+        "sha256": "d2832a21314cc593c81634c55d25ffb947d27aadcc79fc2f9ae6cdd3065e5d34"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "support"
+      ]
+    },
+    {
+      "id": 4200,
+      "nameZh": "彗星亚兹勒",
+      "nameEn": "Comet Azur",
+      "kind": "sorcery",
+      "school": "起源",
+      "fpCost": 40,
+      "fpAdditional": 10,
+      "staminaCost": 34,
+      "staminaAdditional": 0,
+      "summary": "据说辉石的故乡位在遥远的星空。\n能释放星空激流──极大型彗星。\n持续施展能一直释放。",
+      "image": "assets/icons/spell-4200.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 彗星亚兹勒",
+        "url": "https://wiki.biligame.com/eldenring/%E5%BD%97%E6%98%9F%E4%BA%9A%E5%85%B9%E5%8B%92%E6%96%87%E6%9C%AC",
+        "sha256": "f85784f4bba46d1b341cccd4f824d20f8279f5a5551ef48291ddb744bd17be1e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4210,
+      "nameZh": "创星雨",
+      "nameEn": "Founding Rain of Stars",
+      "kind": "sorcery",
+      "school": "起源",
+      "fpCost": 27,
+      "fpAdditional": 32,
+      "staminaCost": 37,
+      "staminaAdditional": 48,
+      "summary": "在空中召唤出黑暗星云，\n一定时间内，降下磅礡的星雨。\n可以走动施展，借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4210.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 创星雨",
+        "url": "https://wiki.biligame.com/eldenring/%E5%88%9B%E6%98%9F%E9%9B%A8%E6%96%87%E6%9C%AC",
+        "sha256": "f320e5fc943e159e4fbf52131ff31749c2844994deb1cc823691b71ecd7a73a9"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4220,
+      "nameZh": "毁灭流星",
+      "nameEn": "Stars of Ruin",
+      "kind": "sorcery",
+      "school": "起源",
+      "fpCost": 32,
+      "fpAdditional": 32,
+      "staminaCost": 33,
+      "staminaAdditional": 43,
+      "summary": "能释放朝目标飞去的十二道深色流星。\n可以走动施展，借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4220.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 毁灭流星",
+        "url": "https://wiki.biligame.com/eldenring/%E6%AF%81%E7%81%AD%E6%B5%81%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "068ae95bada499cf929f00187fbf2d8cd06073f3505284f9d3e57c642f82473c"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4300,
+      "nameZh": "辉剑圆阵",
+      "nameEn": "Glintblade Phalanx",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 18,
+      "fpAdditional": 0,
+      "staminaCost": 12,
+      "staminaAdditional": 0,
+      "summary": "能形成魔力辉剑排成的圆阵。\n辉剑会自动飞向、攻击附近的敌人。\n可以走动施展。",
+      "image": "assets/icons/spell-4300.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉剑圆阵",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E5%89%91%E5%9C%86%E9%98%B5%E6%96%87%E6%9C%AC",
+        "sha256": "1eefb353cc6b2264c42edeb887f96a2c41729153db3dd887468aecab64fdb2db"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4301,
+      "nameZh": "卡利亚圆阵",
+      "nameEn": "Carian Phalanx",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 24,
+      "fpAdditional": 0,
+      "staminaCost": 16,
+      "staminaAdditional": 0,
+      "summary": "能形成大量魔力辉剑排成的圆阵。\n辉剑会自动飞向、攻击附近的敌人。\n可以走动施展。",
+      "image": "assets/icons/spell-4301.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 卡利亚圆阵",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8D%A1%E5%88%A9%E4%BA%9A%E5%9C%86%E9%98%B5%E6%96%87%E6%9C%AC",
+        "sha256": "33f03cc3a833cf50a6f4e51af6233a767822da2abbc2eade014d2a7d61ffdfa8"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4302,
+      "nameZh": "巨剑阵",
+      "nameEn": "Greatblade Phalanx",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "专用战技：巨剑阵\n山妖魔法骑士们使用的战技。\n能形成巨型魔力辉剑排成的圆阵。\n辉剑会自动飞向、攻击附近的敌人。\n发动后使出重攻击，能向前大幅跨出、突刺攻击。",
+      "image": "assets/icons/spell-4302.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 巨剑阵",
+        "url": "https://wiki.biligame.com/eldenring/%E5%B7%A8%E5%89%91%E9%98%B5%E6%96%87%E6%9C%AC",
+        "sha256": "1e79c5beb0d9b98e0c57f6f46ec4f0aaf0796a3959ba4823061d114ca3f6a3c2"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4360,
+      "nameZh": "蕾娜菈的满月",
+      "nameEn": "Rennala's Full Moon",
+      "kind": "sorcery",
+      "school": "满月",
+      "fpCost": 47,
+      "fpAdditional": 0,
+      "staminaCost": 32,
+      "staminaAdditional": 0,
+      "summary": "能呼唤满月降临自身，月亮将朝敌人飞去。\n满月能消除所有触碰到的魔法，\n被命中的人物会暂时降低魔力属性减伤率。",
+      "image": "assets/icons/spell-4360.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 蕾娜菈的满月",
+        "url": "https://wiki.biligame.com/eldenring/%E8%95%BE%E5%A8%9C%E8%8F%88%E7%9A%84%E6%BB%A1%E6%9C%88%E6%96%87%E6%9C%AC",
+        "sha256": "bb25df6236afcb157b7f749a0315e5ce94c483613806360d4f92c27324861627"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4361,
+      "nameZh": "菈妮的暗月",
+      "nameEn": "Ranni's Dark Moon",
+      "kind": "sorcery",
+      "school": "满月",
+      "fpCost": 57,
+      "fpAdditional": 0,
+      "staminaCost": 32,
+      "staminaAdditional": 0,
+      "summary": "能呼唤冰冷暗月降临自身，月亮将朝敌人飞去。\n暗月能消除所有触碰到的魔法，\n被命中的人物会暂时降低魔力属性减伤率。",
+      "image": "assets/icons/spell-4361.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 菈妮的暗月",
+        "url": "https://wiki.biligame.com/eldenring/%E8%8F%88%E5%A6%AE%E7%9A%84%E6%9A%97%E6%9C%88%E6%96%87%E6%9C%AC",
+        "sha256": "3747e4720484fe99692f7d1fdc7c09a5d31c95f553c071047b93fd1d8e7b5c34"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 4370,
+      "nameZh": "天降魔力",
+      "nameEn": "Magic Downpour",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 18,
+      "fpAdditional": 18,
+      "staminaCost": 17,
+      "staminaAdditional": 22,
+      "summary": "能放出浮空魔力块，再大范围降下魔力球。\n可以走动施展，借由蓄力能延长有效时间。",
+      "image": "assets/icons/spell-4370.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 天降魔力",
+        "url": "https://wiki.biligame.com/eldenring/%E5%A4%A9%E9%99%8D%E9%AD%94%E5%8A%9B%E6%96%87%E6%9C%AC",
+        "sha256": "9ffd63f777c1555e731ee1838f27bdbbd7cbce1de1cde22bdd2b73a6a46abcef"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4380,
+      "nameZh": "罗蕾塔的大弓",
+      "nameEn": "Loretta's Greatbow",
+      "kind": "sorcery",
+      "school": "罗蕾塔",
+      "fpCost": 24,
+      "fpAdditional": 24,
+      "staminaCost": 30,
+      "staminaAdditional": 39,
+      "summary": "能形成魔力大弓，射出大箭。\n借由蓄力能强化威力，\n持续施展的期间会维持拉弓的状态，\n不会射出大箭。",
+      "image": "assets/icons/spell-4380.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 罗蕾塔的大弓",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BD%97%E8%95%BE%E5%A1%94%E7%9A%84%E5%A4%A7%E5%BC%93%E6%96%87%E6%9C%AC",
+        "sha256": "4e313aa6b5a7a6cb2e68f89ae845210f2436238ee6746a2de287e9f40d068dc7"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4381,
+      "nameZh": "罗蕾塔的绝招",
+      "nameEn": "Loretta's Mastery",
+      "kind": "sorcery",
+      "school": "罗蕾塔",
+      "fpCost": 39,
+      "fpAdditional": 39,
+      "staminaCost": 33,
+      "staminaAdditional": 43,
+      "summary": "能形成魔力大弓，同时射出４支大箭。\n借由蓄力能强化威力，\n持续施展的期间会维持拉弓的状态，\n不会射出大箭。",
+      "image": "assets/icons/spell-4381.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 罗蕾塔的绝招",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BD%97%E8%95%BE%E5%A1%94%E7%9A%84%E7%BB%9D%E6%8B%9B%E6%96%87%E6%9C%AC",
+        "sha256": "437c79a4188a07b36d9ecacdab5b33058677016f9cfe4bafdffe66a99e7f9939"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4390,
+      "nameZh": "魔法辉剑",
+      "nameEn": "Magic Glintblade",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 12,
+      "fpAdditional": 12,
+      "staminaCost": 22,
+      "staminaAdditional": 29,
+      "summary": "能在自身头上画出魔法阵，\n形成延后现形、飞向敌人的辉剑。\n可以走动施展，借由蓄力能延后辉剑形成的时间。",
+      "image": "assets/icons/spell-4390.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 魔法辉剑",
+        "url": "https://wiki.biligame.com/eldenring/%E9%AD%94%E6%B3%95%E8%BE%89%E5%89%91%E6%96%87%E6%9C%AC",
+        "sha256": "c5ce15d0d5cd297cf985fe728dd383fe41ee059c2a3c50c604c1873a97b0a712"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4400,
+      "nameZh": "辉石冰块",
+      "nameEn": "Glintstone Icecrag",
+      "kind": "sorcery",
+      "school": "寒冷",
+      "fpCost": 12,
+      "fpAdditional": 0,
+      "staminaCost": 26,
+      "staminaAdditional": 0,
+      "summary": "能从手杖的辉石释放冰冷的魔力块。\n可以走动施展，也能连续施展。",
+      "image": "assets/icons/spell-4400.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石冰块",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E5%86%B0%E5%9D%97%E6%96%87%E6%9C%AC",
+        "sha256": "dff8374a260786e795c06e5e0374bafd393815d8a63006b431c8343535946560"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 4410,
+      "nameZh": "萨米尔冰风暴",
+      "nameEn": "Zamor Ice Storm",
+      "kind": "sorcery",
+      "school": "寒冷",
+      "fpCost": 17,
+      "fpAdditional": 17,
+      "staminaCost": 27,
+      "staminaAdditional": 35,
+      "summary": "能将手杖刺入地面，在周围形成寒气风暴。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4410.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 萨米尔冰风暴",
+        "url": "https://wiki.biligame.com/eldenring/%E8%90%A8%E7%B1%B3%E5%B0%94%E5%86%B0%E9%A3%8E%E6%9A%B4%E6%96%87%E6%9C%AC",
+        "sha256": "dabe0991a7d1bbac79c6a2da33b47f766454a8aaf35f5aa14bd5cb6bf53b1379"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 4420,
+      "nameZh": "冰雾",
+      "nameEn": "Freezing Mist",
+      "kind": "sorcery",
+      "school": "雪魔女",
+      "fpCost": 20,
+      "fpAdditional": 20,
+      "staminaCost": 13,
+      "staminaAdditional": 17,
+      "summary": "能朝前方形成冰冷寒雾。\n可以走动施展，借由蓄力能扩大寒雾的范围。",
+      "image": "assets/icons/spell-4420.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 冰雾",
+        "url": "https://wiki.biligame.com/eldenring/%E5%86%B0%E9%9B%BE%E6%96%87%E6%9C%AC",
+        "sha256": "3f7fc53e716b8fbbf04ac6249e1064c014081d3cd5b862d53116024d1c18ebcb"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 4430,
+      "nameZh": "卡利亚大剑",
+      "nameEn": "Carian Greatsword",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 12,
+      "fpAdditional": 0,
+      "staminaCost": 22,
+      "staminaAdditional": 0,
+      "summary": "能形成魔力大剑，使出横扫。\n可以连续施展。",
+      "image": "assets/icons/spell-4430.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 卡利亚大剑",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8D%A1%E5%88%A9%E4%BA%9A%E5%A4%A7%E5%89%91%E6%96%87%E6%9C%AC",
+        "sha256": "c52233406f6b54bb7a06a7fe777978fe05ea571cf5bccafc2a937f583e7aaa76"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4431,
+      "nameZh": "亚杜拉的月光剑",
+      "nameEn": "Adula's Moonblade",
+      "kind": "sorcery",
+      "school": "寒冷",
+      "fpCost": 22,
+      "fpAdditional": 0,
+      "staminaCost": 22,
+      "staminaAdditional": 0,
+      "summary": "能形成冰冷魔力大剑，\n使出横扫的同时，释放寒气刀刃。\n可以连续施展。",
+      "image": "assets/icons/spell-4431.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 亚杜拉的月光剑",
+        "url": "https://wiki.biligame.com/eldenring/%E4%BA%9A%E6%9D%9C%E6%8B%89%E7%9A%84%E6%9C%88%E5%85%89%E5%89%91%E6%96%87%E6%9C%AC",
+        "sha256": "f2a0dbcb2d8b327669480ef11fd2c71c71037b1c80ffac5e1effe95086920b77"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 4440,
+      "nameZh": "卡利亚迅剑",
+      "nameEn": "Carian Slicer",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 4,
+      "fpAdditional": 0,
+      "staminaCost": 12,
+      "staminaAdditional": 0,
+      "summary": "能形成魔力剑，使出快速横扫。\n可以接在其他动作后，立刻衔接使用。",
+      "image": "assets/icons/spell-4440.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 卡利亚迅剑",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8D%A1%E5%88%A9%E4%BA%9A%E8%BF%85%E5%89%91%E6%96%87%E6%9C%AC",
+        "sha256": "a19d10052d6ced1848fa13b8d00a4a1dd250a60be8efa6ac0d8f51d84b5f6490"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4450,
+      "nameZh": "卡利亚贯刺",
+      "nameEn": "Carian Piercer",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 17,
+      "fpAdditional": 17,
+      "staminaCost": 25,
+      "staminaAdditional": 33,
+      "summary": "能形成魔力大剑，使出突刺。\n借由蓄力能增加向前推进的距离。",
+      "image": "assets/icons/spell-4450.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 卡利亚贯刺",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8D%A1%E5%88%A9%E4%BA%9A%E8%B4%AF%E5%88%BA%E6%96%87%E6%9C%AC",
+        "sha256": "4e4e51cbadb0d905891aa5166d461b45dd4c776bed13a43d2dbf8725e953b20d"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4460,
+      "nameZh": "魔力武器",
+      "nameEn": "Scholar's Armament",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 25,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器附加魔力属性攻击力。\n可以走动施展。",
+      "image": "assets/icons/spell-4460.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 魔力武器",
+        "url": "https://wiki.biligame.com/eldenring/%E9%AD%94%E5%8A%9B%E6%AD%A6%E5%99%A8%E6%96%87%E6%9C%AC",
+        "sha256": "9cbf0f0ba15e39ddd4a6f9cee50366d9ecc8b4be93e065e1ea12e4fa4b5e9595"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "support"
+      ]
+    },
+    {
+      "id": 4470,
+      "nameZh": "魔力盾牌",
+      "nameEn": "Scholar's Shield",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能以魔力提升左手盾牌的减伤率。\n可以走动施展。",
+      "image": "assets/icons/spell-4470.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 魔力盾牌",
+        "url": "https://wiki.biligame.com/eldenring/%E9%AD%94%E5%8A%9B%E7%9B%BE%E7%89%8C%E6%96%87%E6%9C%AC",
+        "sha256": "4da07599bc4f6f08dfac2a8292f62d99b695b03153b72f488314d0984a404a88"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 4490,
+      "nameZh": "结冰武器",
+      "nameEn": "Frozen Armament",
+      "kind": "sorcery",
+      "school": "寒冷",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器附加异常状态冻伤。\n可以走动施展。",
+      "image": "assets/icons/spell-4490.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 结冰武器",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BB%93%E5%86%B0%E6%AD%A6%E5%99%A8%E6%96%87%E6%9C%AC",
+        "sha256": "f712be3166622a845e44a9a141b8b702f1ecdf8ff5a7a348535c59ee32d4056b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "frostbite",
+        "support"
+      ]
+    },
+    {
+      "id": 4500,
+      "nameZh": "爆散结晶",
+      "nameEn": "Shattering Crystal",
+      "kind": "sorcery",
+      "school": "结晶人",
+      "fpCost": 27,
+      "fpAdditional": 38,
+      "staminaCost": 35,
+      "staminaAdditional": 46,
+      "summary": "能形成结晶块，粉碎后朝前方释放。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4500.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 爆散结晶",
+        "url": "https://wiki.biligame.com/eldenring/%E7%88%86%E6%95%A3%E7%BB%93%E6%99%B6%E6%96%87%E6%9C%AC",
+        "sha256": "4def4cf16f1ad1021f5c3297cb6fc16e65d68b3ab1e95981e1735f6202fbee05"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4510,
+      "nameZh": "飞散结晶",
+      "nameEn": "Crystal Release",
+      "kind": "sorcery",
+      "school": "结晶人",
+      "fpCost": 34,
+      "fpAdditional": 0,
+      "staminaCost": 26,
+      "staminaAdditional": 0,
+      "summary": "能向空中浮起结晶块，\n再降下大范围、气势磅礡的结晶碎片。",
+      "image": "assets/icons/spell-4510.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 飞散结晶",
+        "url": "https://wiki.biligame.com/eldenring/%E9%A3%9E%E6%95%A3%E7%BB%93%E6%99%B6%E6%96%87%E6%9C%AC",
+        "sha256": "b093b210961de63a3fd1905b42dcc70466193715c9e70ab0da53c05a4ed09053"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4520,
+      "nameZh": "奔放结晶",
+      "nameEn": "Crystal Torrent",
+      "kind": "sorcery",
+      "school": "结晶人",
+      "fpCost": 20,
+      "fpAdditional": 5,
+      "staminaCost": 30,
+      "staminaAdditional": 0,
+      "summary": "能形成结晶块，连续释放结晶碎片。\n持续施展的期间会继续释放。",
+      "image": "assets/icons/spell-4520.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 奔放结晶",
+        "url": "https://wiki.biligame.com/eldenring/%E5%A5%94%E6%94%BE%E7%BB%93%E6%99%B6%E6%96%87%E6%9C%AC",
+        "sha256": "b4839b82d918e3855bb9542b06af29d2ec8090892c5c122439f426f6631643d7"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4600,
+      "nameZh": "奇袭魔砾",
+      "nameEn": "Ambush Shard",
+      "kind": "sorcery",
+      "school": "黑夜",
+      "fpCost": 13,
+      "fpAdditional": 0,
+      "staminaCost": 15,
+      "staminaAdditional": 0,
+      "summary": "能释放会从远方偷袭敌人背后的石砾。\n可以连续施展。",
+      "image": "assets/icons/spell-4600.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 奇袭魔砾",
+        "url": "https://wiki.biligame.com/eldenring/%E5%A5%87%E8%A2%AD%E9%AD%94%E7%A0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "ac51f995ba46df0cc20d916a3122b98ccffc1df88a1f3ed05aafb589a7363e7a"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4610,
+      "nameZh": "黑夜魔砾",
+      "nameEn": "Night Shard",
+      "kind": "sorcery",
+      "school": "黑夜",
+      "fpCost": 7,
+      "fpAdditional": 0,
+      "staminaCost": 9,
+      "staminaAdditional": 0,
+      "summary": "能快速释放难以辨识的魔力石砾。\n可以接在其他动作后，立刻衔接使用。",
+      "image": "assets/icons/spell-4610.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑夜魔砾",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E5%A4%9C%E9%AD%94%E7%A0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "fd0e386beee359886ea02bb9e0ffecbf33f2a4f8cd36fd12ca07b5a6141bf4e3"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4620,
+      "nameZh": "黑夜彗星",
+      "nameEn": "Night Comet",
+      "kind": "sorcery",
+      "school": "黑夜",
+      "fpCost": 21,
+      "fpAdditional": 21,
+      "staminaCost": 30,
+      "staminaAdditional": 39,
+      "summary": "能释放难以辨识的魔力彗星。\n可以走动施展，也能连续施展。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4620.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑夜彗星",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E5%A4%9C%E5%BD%97%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "319282913f2c7d678742d03863f64fce477ead5283025485a0ea6bbb65317c4e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4630,
+      "nameZh": "托普斯的力场",
+      "nameEn": "Thops's Barrier",
+      "kind": "sorcery",
+      "school": "辉石",
+      "fpCost": 7,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能形成魔力力场，拨开魔法与祷告。\n持续施展的期间会接连形成力场。",
+      "image": "assets/icons/spell-4630.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 托普斯的力场",
+        "url": "https://wiki.biligame.com/eldenring/%E6%89%98%E6%99%AE%E6%96%AF%E7%9A%84%E5%8A%9B%E5%9C%BA%E6%96%87%E6%9C%AC",
+        "sha256": "4b5a11a786cb80cb2b4896901a68a4e677d6e4db9774ef45d7a0141ce6b05ddc"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 4640,
+      "nameZh": "卡利亚式奉还",
+      "nameEn": "Carian Retaliation",
+      "kind": "sorcery",
+      "school": "卡利亚",
+      "fpCost": 8,
+      "fpAdditional": 0,
+      "staminaCost": 15,
+      "staminaAdditional": 0,
+      "summary": "能挥舞手杖，消除魔法与祷告后，\n再用承受的力量化为浮空辉剑。",
+      "image": "assets/icons/spell-4640.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 卡利亚式奉还",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8D%A1%E5%88%A9%E4%BA%9A%E5%BC%8F%E5%A5%89%E8%BF%98%E6%96%87%E6%9C%AC",
+        "sha256": "d62fd5414accf6754d97beb2d40c214e20ba7b30d6ad1f8c611813409081d27b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4650,
+      "nameZh": "亘古黑暗",
+      "nameEn": "Eternal Darkness",
+      "kind": "sorcery",
+      "school": "瑟利亚禁忌",
+      "fpCost": 25,
+      "fpAdditional": 0,
+      "staminaCost": 15,
+      "staminaAdditional": 0,
+      "summary": "能形成黑暗，吸引魔法与祷告。\n可以走动施展。",
+      "image": "assets/icons/spell-4650.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 亘古黑暗",
+        "url": "https://wiki.biligame.com/eldenring/%E4%BA%98%E5%8F%A4%E9%BB%91%E6%9A%97%E6%96%87%E6%9C%AC",
+        "sha256": "d925722bb463ed2b065a9a0d5d6f24e5eea9d5bf0220024c77fd9f2b0e084506"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 4700,
+      "nameZh": "陨石",
+      "nameEn": "Meteorite",
+      "kind": "sorcery",
+      "school": "重力",
+      "fpCost": 30,
+      "fpAdditional": 10,
+      "staminaCost": 35,
+      "staminaAdditional": 0,
+      "summary": "能从虚无空间召唤小颗陨石，引发坠落。\n持续施展的期间，陨石会不停坠落。",
+      "image": "assets/icons/spell-4700.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 陨石",
+        "url": "https://wiki.biligame.com/eldenring/%E9%99%A8%E7%9F%B3%E6%96%87%E6%9C%AC",
+        "sha256": "83d6735bf5e6dcadbba3fee49620d34422762078f2ada1ea0d8497e4a498167b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "standard"
+      ]
+    },
+    {
+      "id": 4701,
+      "nameZh": "艾丝缇陨石",
+      "nameEn": "Meteorite of Astel",
+      "kind": "sorcery",
+      "school": "重力",
+      "fpCost": 60,
+      "fpAdditional": 12,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能从虚无空间召唤大量小颗陨石，引发坠落。\n持续施展的期间，陨石会不停坠落。",
+      "image": "assets/icons/spell-4701.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 艾丝缇陨石",
+        "url": "https://wiki.biligame.com/eldenring/%E8%89%BE%E4%B8%9D%E7%BC%87%E9%99%A8%E7%9F%B3%E6%96%87%E6%9C%AC",
+        "sha256": "d51f81a5e1ec86af15d3598b1c55651a0f84c9440104cc749e4265ac8793359c"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4710,
+      "nameZh": "岩石球",
+      "nameEn": "Rock Sling",
+      "kind": "sorcery",
+      "school": "重力",
+      "fpCost": 18,
+      "fpAdditional": 0,
+      "staminaCost": 29,
+      "staminaAdditional": 0,
+      "summary": "能从地面召唤、释放岩石块。",
+      "image": "assets/icons/spell-4710.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 岩石球",
+        "url": "https://wiki.biligame.com/eldenring/%E5%B2%A9%E7%9F%B3%E7%90%83%E6%96%87%E6%9C%AC",
+        "sha256": "b1550c6470bec14d4d84945cad65041c1a1ba0bd6c98dbd77dcba53088352bff"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 4720,
+      "nameZh": "重力球",
+      "nameEn": "Gravity Well",
+      "kind": "sorcery",
+      "school": "重力",
+      "fpCost": 12,
+      "fpAdditional": 12,
+      "staminaCost": 20,
+      "staminaAdditional": 26,
+      "summary": "能释放重力球，\n命中的对象会被拉向自己。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4720.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 重力球",
+        "url": "https://wiki.biligame.com/eldenring/%E9%87%8D%E5%8A%9B%E7%90%83%E6%96%87%E6%9C%AC",
+        "sha256": "f82eb899a94078f608b79ea0ccbcaee2f28cdaf8c52ada6bb07d6d9e538bdbb7"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4721,
+      "nameZh": "碎星",
+      "nameEn": "Collapsing Stars",
+      "kind": "sorcery",
+      "school": "重力",
+      "fpCost": 18,
+      "fpAdditional": 18,
+      "staminaCost": 27,
+      "staminaAdditional": 35,
+      "summary": "能释放多颗重力球，\n命中的对象会被拉向自己。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4721.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 碎星",
+        "url": "https://wiki.biligame.com/eldenring/%E7%A2%8E%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "3a934ece57615cac4441929a1b6c8ef522245134d7be358199e15152208adef0"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4800,
+      "nameZh": "熔岩球",
+      "nameEn": "Magma Shot",
+      "kind": "sorcery",
+      "school": "熔岩",
+      "fpCost": 16,
+      "fpAdditional": 16,
+      "staminaCost": 21,
+      "staminaAdditional": 27,
+      "summary": "能释放命中后会爆炸的熔岩球。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-4800.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 熔岩球",
+        "url": "https://wiki.biligame.com/eldenring/%E7%86%94%E5%B2%A9%E7%90%83%E6%96%87%E6%9C%AC",
+        "sha256": "7e3a953f7fab6f3a04a4c61f55837673f03e510fea220966fb891bfa301f49dc"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 4810,
+      "nameZh": "格密尔之怒",
+      "nameEn": "Gelmir's Fury",
+      "kind": "sorcery",
+      "school": "格密尔熔岩",
+      "fpCost": 16,
+      "fpAdditional": 3,
+      "staminaCost": 38,
+      "staminaAdditional": 0,
+      "summary": "能从地面引起熔岩喷发，洒向四周。\n借由蓄力能延长喷发时间。",
+      "image": "assets/icons/spell-4810.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 格密尔之怒",
+        "url": "https://wiki.biligame.com/eldenring/%E6%A0%BC%E5%AF%86%E5%B0%94%E4%B9%8B%E6%80%92%E6%96%87%E6%9C%AC",
+        "sha256": "827127da2e7ea0cc27bd99e0d05a097a25b9f2437e0072e7cb70cacaf66057d7"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 4820,
+      "nameZh": "滚烫熔岩",
+      "nameEn": "Roiling Magma",
+      "kind": "sorcery",
+      "school": "熔岩",
+      "fpCost": 28,
+      "fpAdditional": 28,
+      "staminaCost": 27,
+      "staminaAdditional": 35,
+      "summary": "能释放命中后会延迟爆炸、\n经过压缩的熔岩球。\n借由蓄力能强化威力，并延迟爆炸时间。",
+      "image": "assets/icons/spell-4820.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 滚烫熔岩",
+        "url": "https://wiki.biligame.com/eldenring/%E6%BB%9A%E7%83%AB%E7%86%94%E5%B2%A9%E6%96%87%E6%9C%AC",
+        "sha256": "956ea0e91bfb5c0a18f4182a3a495e5327d5f00eb5c0a877712357dce50aac82"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 4830,
+      "nameZh": "拉卡德的怨魂",
+      "nameEn": "Rykard's Rancor",
+      "kind": "sorcery",
+      "school": "熔岩",
+      "fpCost": 23,
+      "fpAdditional": 0,
+      "staminaCost": 36,
+      "staminaAdditional": 0,
+      "summary": "能释放受熏烧的怨魂，在飞行的轨迹上\n引发延迟性的连续爆炸。",
+      "image": "assets/icons/spell-4830.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 拉卡德的怨魂",
+        "url": "https://wiki.biligame.com/eldenring/%E6%8B%89%E5%8D%A1%E5%BE%B7%E7%9A%84%E6%80%A8%E9%AD%82%E6%96%87%E6%9C%AC",
+        "sha256": "d39944034388665cd22d817f894d448737bed0569618749c6b1753fe6b23ea78"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 4900,
+      "nameZh": "罪恶荆棘",
+      "nameEn": "Briars of Sin",
+      "kind": "sorcery",
+      "school": "罪人异端",
+      "fpCost": 6,
+      "fpAdditional": 0,
+      "staminaCost": 26,
+      "staminaAdditional": 0,
+      "summary": "能用罪恶荆棘伤害自己，\n在周围召唤漩涡状的鲜血大荆棘。\n可以连续施展最多３次。",
+      "image": "assets/icons/spell-4900.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 罪恶荆棘",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BD%AA%E6%81%B6%E8%8D%86%E6%A3%98%E6%96%87%E6%9C%AC",
+        "sha256": "f8af001b6ff72dbd3547e43ffec3582a52c12f20ead845f9c198628ee0dfd372"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "bleed"
+      ]
+    },
+    {
+      "id": 4910,
+      "nameZh": "责罚荆棘",
+      "nameEn": "Briars of Punishment",
+      "kind": "sorcery",
+      "school": "异端",
+      "fpCost": 9,
+      "fpAdditional": 0,
+      "staminaCost": 22,
+      "staminaAdditional": 0,
+      "summary": "能用罪恶荆棘伤害自己，\n召唤爬走地面的鲜血荆棘，从敌人脚边窜出攻击。\n可以连续施展。",
+      "image": "assets/icons/spell-4910.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 责罚荆棘",
+        "url": "https://wiki.biligame.com/eldenring/%E8%B4%A3%E7%BD%9A%E8%8D%86%E6%A3%98%E6%96%87%E6%9C%AC",
+        "sha256": "a9e558244c27d9367f49b660b600e91e7fd50e67cb5b7d7cb2d25f14a3b3e62a"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "bleed"
+      ]
+    },
+    {
+      "id": 5000,
+      "nameZh": "召唤怨魂",
+      "nameEn": "Rancorcall",
+      "kind": "sorcery",
+      "school": "死亡",
+      "fpCost": 12,
+      "fpAdditional": 12,
+      "staminaCost": 21,
+      "staminaAdditional": 27,
+      "summary": "能召唤穷追不舍的怨魂群。\n借由蓄力能强化威力。",
+      "image": "assets/icons/spell-5000.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 召唤怨魂",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%AC%E5%94%A4%E6%80%A8%E9%AD%82%E6%96%87%E6%9C%AC",
+        "sha256": "b2bb70f2cbc666beef6993fcf60253ae8d1af4f30e99110c0f0eeee687fc7f6e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 5001,
+      "nameZh": "古老死亡怨魂",
+      "nameEn": "Ancient Death Rancor",
+      "kind": "sorcery",
+      "school": "死亡",
+      "fpCost": 21,
+      "fpAdditional": 24,
+      "staminaCost": 27,
+      "staminaAdditional": 35,
+      "summary": "能召唤大量穷追不舍的怨魂群。\n借由蓄力能强化威力。",
+      "image": "assets/icons/spell-5001.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 古老死亡怨魂",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%A4%E8%80%81%E6%AD%BB%E4%BA%A1%E6%80%A8%E9%AD%82%E6%96%87%E6%9C%AC",
+        "sha256": "105a03254d36ef691c62f4d7a0376838e430aef502bd26e34ed7bbd9b48ff954"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 5010,
+      "nameZh": "迸发灵火",
+      "nameEn": "Explosive Ghostflame",
+      "kind": "sorcery",
+      "school": "死亡",
+      "fpCost": 29,
+      "fpAdditional": 0,
+      "staminaCost": 45,
+      "staminaAdditional": 0,
+      "summary": "能将手杖刺入地面，引发灵火爆炸，\n大范围燃烧四周。",
+      "image": "assets/icons/spell-5010.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 迸发灵火",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BF%B8%E5%8F%91%E7%81%B5%E7%81%AB%E6%96%87%E6%9C%AC",
+        "sha256": "2cfe44f5649e3b67939dde140e9b3ec87f7c652610af0b4340e29df89f7a54d5"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 5030,
+      "nameZh": "提比亚的唤声",
+      "nameEn": "Tibia's Summons",
+      "kind": "sorcery",
+      "school": "死亡",
+      "fpCost": 17,
+      "fpAdditional": 0,
+      "staminaCost": 27,
+      "staminaAdditional": 0,
+      "summary": "以守墓者头盖骨作为触媒的古老诅咒器具。\n能够制作的其中一项道具。\n能消耗专注值，在命中的地方召唤因死迷途的人。\n迷途者会一边回旋，一边横扫周围，\n攻击三次后会消失。\n自古以来，死者皆是迷途羔羊，\n因此需要有人挺身引导。",
+      "image": "assets/icons/spell-5030.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 提比亚的唤声",
+        "url": "https://wiki.biligame.com/eldenring/%E6%8F%90%E6%AF%94%E4%BA%9A%E7%9A%84%E5%94%A4%E5%A3%B0%E6%96%87%E6%9C%AC",
+        "sha256": "8283ff87bd7eafa86d7f6cfe6a0c1b5b8e05aa75af1badaa441ff45cb720cd63"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 5040,
+      "nameZh": "死亡雷击",
+      "nameEn": "Death Lightning",
+      "kind": "incantation",
+      "school": "古龙信仰",
+      "fpCost": 28,
+      "fpAdditional": 28,
+      "staminaCost": 32,
+      "staminaAdditional": 42,
+      "summary": "能在周围降下剧烈的死亡落雷。\n雷电具有引发异常状态死亡的效果。\n借由蓄力能延长降下落雷的时间。",
+      "image": "assets/icons/spell-5040.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 死亡雷击",
+        "url": "https://wiki.biligame.com/eldenring/%E6%AD%BB%E4%BA%A1%E9%9B%B7%E5%87%BB%E6%96%87%E6%9C%AC",
+        "sha256": "b51f2a57d961000fa32bdb7056b5d85c16845205624431fc1ddfd4b9fc3f6d20"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 5100,
+      "nameZh": "神谕泡泡",
+      "nameEn": "Oracle Bubbles",
+      "kind": "sorcery",
+      "school": "泥人",
+      "fpCost": 12,
+      "fpAdditional": 12,
+      "staminaCost": 18,
+      "staminaAdditional": 23,
+      "summary": "能释放数个小型的魔力泡泡。\n泡泡会缓慢飞去，最后破裂。\n借由蓄力能延长泡泡的维持时间。",
+      "image": "assets/icons/spell-5100.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 神谕泡泡",
+        "url": "https://wiki.biligame.com/eldenring/%E7%A5%9E%E8%B0%95%E6%B3%A1%E6%B3%A1%E6%96%87%E6%9C%AC",
+        "sha256": "0b2ebcf9b2f50f4c13631a07b240a6088c16714fb0b26021e37034aa09911242"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 5110,
+      "nameZh": "神谕大泡泡",
+      "nameEn": "Great Oracular Bubble",
+      "kind": "sorcery",
+      "school": "古王朝泥人",
+      "fpCost": 16,
+      "fpAdditional": 16,
+      "staminaCost": 27,
+      "staminaAdditional": 35,
+      "summary": "能释放一个大型的魔力泡泡。\n泡泡会缓慢飞去，最后破裂。\n借由蓄力能延长泡泡的维持时间。",
+      "image": "assets/icons/spell-5110.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 神谕大泡泡",
+        "url": "https://wiki.biligame.com/eldenring/%E7%A5%9E%E8%B0%95%E5%A4%A7%E6%B3%A1%E6%B3%A1%E6%96%87%E6%9C%AC",
+        "sha256": "ac3ab02c6ee836e34ee69b3776134682e03872b265cbd2ded9cfe5018f1f7a8d"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 6000,
+      "nameZh": "燃火",
+      "nameEn": "Catch Flame",
+      "kind": "incantation",
+      "school": "不祥预言",
+      "fpCost": 10,
+      "fpAdditional": 0,
+      "staminaCost": 17,
+      "staminaAdditional": 0,
+      "summary": "能从手中引发瞬间燃烧的火焰。\n可以接在其他动作后，立刻衔接使用。",
+      "image": "assets/icons/spell-6000.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 燃火",
+        "url": "https://wiki.biligame.com/eldenring/%E7%87%83%E7%81%AB%E6%96%87%E6%9C%AC",
+        "sha256": "45238ac5d6621480bb516382d2e51ac1b5ed4db173d63dbd880a35c36caf1819"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6001,
+      "nameZh": "火焰啊！",
+      "nameEn": "O, Flame!",
+      "kind": "incantation",
+      "school": "灰灭火焰",
+      "fpCost": 16,
+      "fpAdditional": 16,
+      "staminaCost": 24,
+      "staminaAdditional": 31,
+      "summary": "能从手中引发瞬间剧烈燃烧的火焰。\n借由蓄力能强化威力。",
+      "image": "assets/icons/spell-6001.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰啊！",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E5%95%8A%EF%BC%81%E6%96%87%E6%9C%AC",
+        "sha256": "bed460701ad07df868dea8568df658e5c81756f890446a2809872810d57b85c3"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6010,
+      "nameZh": "投火",
+      "nameEn": "Flame Sling",
+      "kind": "incantation",
+      "school": "不祥预言",
+      "fpCost": 11,
+      "fpAdditional": 11,
+      "staminaCost": 22,
+      "staminaAdditional": 29,
+      "summary": "能丢掷燃烧的火焰球。\n借由蓄力能强化威力，并追加爆炸效果。",
+      "image": "assets/icons/spell-6010.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 投火",
+        "url": "https://wiki.biligame.com/eldenring/%E6%8A%95%E7%81%AB%E6%96%87%E6%9C%AC",
+        "sha256": "27c89d4eeff74c7c751e2f3975e4fec4ea70e78ae2839b01cc0a06c76796705b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6020,
+      "nameZh": "火焰啊，倾注吧",
+      "nameEn": "Flame, Fall Upon Them",
+      "kind": "incantation",
+      "school": "火焰巨人",
+      "fpCost": 16,
+      "fpAdditional": 16,
+      "staminaCost": 10,
+      "staminaAdditional": 13,
+      "summary": "能一口气丢掷多颗火焰球。\n借由蓄力能强化威力，并追加爆炸效果。",
+      "image": "assets/icons/spell-6020.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰啊，倾注吧",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E5%95%8A%EF%BC%8C%E5%80%BE%E6%B3%A8%E5%90%A7%E6%96%87%E6%9C%AC",
+        "sha256": "894987ea5cb9d0c68247afa7e405e3a0978a6dd379c2ce1da5a14e7f17f93b4d"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6030,
+      "nameZh": "火焰啊，缠绕吧",
+      "nameEn": "Whirl, O Flame!",
+      "kind": "incantation",
+      "school": "火焰修士",
+      "fpCost": 19,
+      "fpAdditional": 19,
+      "staminaCost": 26,
+      "staminaAdditional": 34,
+      "summary": "能朝前方横扫持续喷出、漩涡状燃烧的火焰。\n借由蓄力能强化威力，并扩大燃烧范围。",
+      "image": "assets/icons/spell-6030.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰啊，缠绕吧",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E5%95%8A%EF%BC%8C%E7%BC%A0%E7%BB%95%E5%90%A7%E6%96%87%E6%9C%AC",
+        "sha256": "506af8ef73d0780b2d280e91ba9d2e06c9a40d06d1a0a9e417e43e1101bcb4d5"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6050,
+      "nameZh": "火焰啊，赐予我力量！",
+      "nameEn": "Flame, Grant Me Strength",
+      "kind": "incantation",
+      "school": "火焰修士",
+      "fpCost": 28,
+      "fpAdditional": 0,
+      "staminaCost": 16,
+      "staminaAdditional": 0,
+      "summary": "在自身体内燃起火焰，化为力量。\n能提升物理攻击力与火属性攻击力。",
+      "image": "assets/icons/spell-6050.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰啊，赐予我力量！",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E5%95%8A%EF%BC%8C%E8%B5%90%E4%BA%88%E6%88%91%E5%8A%9B%E9%87%8F%EF%BC%81%E6%96%87%E6%9C%AC",
+        "sha256": "fa6c869a5ed01f76b39bb7bb05457ff4c22ccb8d9a49c19886bd90ece84fd5ce"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6060,
+      "nameZh": "火焰的庇佑啊",
+      "nameEn": "Flame, Protect Me",
+      "kind": "incantation",
+      "school": "火焰修士",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "能在自身体内燃起火焰，\n大幅提升火属性减伤率。",
+      "image": "assets/icons/spell-6060.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰的庇佑啊",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E7%9A%84%E5%BA%87%E4%BD%91%E5%95%8A%E6%96%87%E6%9C%AC",
+        "sha256": "70d92fb60a982cc32fa8f2cf5d37a1ea0c833231776de7d4b8618932cd5a3659"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6100,
+      "nameZh": "感受巨人火焰吧",
+      "nameEn": "Giantsflame Take Thee",
+      "kind": "incantation",
+      "school": "火焰巨人",
+      "fpCost": 30,
+      "fpAdditional": 30,
+      "staminaCost": 34,
+      "staminaAdditional": 44,
+      "summary": "能丢掷燃烧的巨大火焰球。\n借由蓄力能强化威力，并追加爆炸效果。",
+      "image": "assets/icons/spell-6100.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 感受巨人火焰吧",
+        "url": "https://wiki.biligame.com/eldenring/%E6%84%9F%E5%8F%97%E5%B7%A8%E4%BA%BA%E7%81%AB%E7%84%B0%E5%90%A7%E6%96%87%E6%9C%AC",
+        "sha256": "bab68f5346dfd24b0430e8e081d7f35b3fc790e3f93ff833a806609a957f7c3d"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6110,
+      "nameZh": "恶神火焰",
+      "nameEn": "Flame of the Fell God",
+      "kind": "incantation",
+      "school": "火焰巨人",
+      "fpCost": 34,
+      "fpAdditional": 0,
+      "staminaCost": 42,
+      "staminaAdditional": 0,
+      "summary": "能丢掷据说有恶神寄宿其中，\n熊熊燃烧的火焰球。\n火焰球会缓慢朝目标飞去，\n引发爆炸之后，燃烧四周。",
+      "image": "assets/icons/spell-6110.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 恶神火焰",
+        "url": "https://wiki.biligame.com/eldenring/%E6%81%B6%E7%A5%9E%E7%81%AB%E7%84%B0%E6%96%87%E6%9C%AC",
+        "sha256": "17ccafe2ab55a1d15dfdcfc51a59c985b89aa245c32ae324c4bc7fb181cd0a0b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6120,
+      "nameZh": "火焰啊，吞噬一切！",
+      "nameEn": "Burn, O Flame!",
+      "kind": "incantation",
+      "school": "火焰巨人",
+      "fpCost": 26,
+      "fpAdditional": 30,
+      "staminaCost": 36,
+      "staminaAdditional": 47,
+      "summary": "能在自身周围燃起接连形成的火焰柱。\n借由蓄力能增加火焰柱的数量。",
+      "image": "assets/icons/spell-6120.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰啊，吞噬一切！",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E5%95%8A%EF%BC%8C%E5%90%9E%E5%99%AC%E4%B8%80%E5%88%87%EF%BC%81%E6%96%87%E6%9C%AC",
+        "sha256": "fe4ccb82093ad3ae7e5516aa7e60e043c68443315e0351ee6bf453d011964387"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6210,
+      "nameZh": "黑焰",
+      "nameEn": "Black Flame",
+      "kind": "incantation",
+      "school": "神皮黑焰",
+      "fpCost": 18,
+      "fpAdditional": 18,
+      "staminaCost": 25,
+      "staminaAdditional": 33,
+      "summary": "能丢掷燃烧的黑焰球。\n借由蓄力能强化威力，并追加爆炸效果。",
+      "image": "assets/icons/spell-6210.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑焰",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E7%84%B0%E6%96%87%E6%9C%AC",
+        "sha256": "9151fb627b152846fff5562b3479d9bf509e2b68870af8ebe383daad6b0c193f"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6220,
+      "nameZh": "火焰啊，喷发吧",
+      "nameEn": "Surge, O Flame!",
+      "kind": "incantation",
+      "school": "火焰修士",
+      "fpCost": 1,
+      "fpAdditional": 0,
+      "staminaCost": 2,
+      "staminaAdditional": 0,
+      "summary": "能朝前方喷出持续并剧烈燃烧的火焰。\n可以走动执行，持续执行能继续喷火。",
+      "image": "assets/icons/spell-6220.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰啊，喷发吧",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E5%95%8A%EF%BC%8C%E5%96%B7%E5%8F%91%E5%90%A7%E6%96%87%E6%9C%AC",
+        "sha256": "36041408df8f003e5ce037d26a7ac427636aaea9d1d468517a98709ae51ea668"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6230,
+      "nameZh": "横扫黑焰",
+      "nameEn": "Scouring Black Flame",
+      "kind": "incantation",
+      "school": "神皮黑焰",
+      "fpCost": 21,
+      "fpAdditional": 21,
+      "staminaCost": 29,
+      "staminaAdditional": 38,
+      "summary": "能朝前方大幅度横扫黑焰。\n借由蓄力能扩大横扫的范围。",
+      "image": "assets/icons/spell-6230.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 横扫黑焰",
+        "url": "https://wiki.biligame.com/eldenring/%E6%A8%AA%E6%89%AB%E9%BB%91%E7%84%B0%E6%96%87%E6%9C%AC",
+        "sha256": "1f0efa49b3256e911bc366c58870eecf592072c40157d80719f6fe5602c756d4"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6240,
+      "nameZh": "黑焰仪式",
+      "nameEn": "Black Flame Ritual",
+      "kind": "incantation",
+      "school": "神皮黑焰",
+      "fpCost": 30,
+      "fpAdditional": 30,
+      "staminaCost": 39,
+      "staminaAdditional": 51,
+      "summary": "能在自身周围燃起环绕的黑焰柱。\n借由蓄力能扩大火柱环绕的范围。",
+      "image": "assets/icons/spell-6240.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑焰仪式",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E7%84%B0%E4%BB%AA%E5%BC%8F%E6%96%87%E6%9C%AC",
+        "sha256": "07c41f55ea92c0d97d948e77f76961caea75cd9c0a058e7b00410ed833aa5074"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 6250,
+      "nameZh": "黑焰刀刃",
+      "nameEn": "Black Flame Blade",
+      "kind": "incantation",
+      "school": "神皮黑焰",
+      "fpCost": 15,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器缠绕黑焰。\n可以接在其他动作后，立刻衔接使用。",
+      "image": "assets/icons/spell-6250.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑焰刀刃",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E7%84%B0%E5%88%80%E5%88%83%E6%96%87%E6%9C%AC",
+        "sha256": "5222b5438e9b100188bfa2f5cd2ac9f42f6434067eb3e6049cb6aa142ca75fd5"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "support"
+      ]
+    },
+    {
+      "id": 6260,
+      "nameZh": "黑焰庇佑",
+      "nameEn": "Black Flame's Protection",
+      "kind": "incantation",
+      "school": "神皮黑焰",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 13,
+      "staminaAdditional": 0,
+      "summary": "能在自身体内燃起黑焰，提升物理减伤率。\n但会减少各种手段的血量恢复量。",
+      "image": "assets/icons/spell-6260.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑焰庇佑",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E7%84%B0%E5%BA%87%E4%BD%91%E6%96%87%E6%9C%AC",
+        "sha256": "987bca9a9dd1cf6aa88f2b9bdc49d1f79b1ade45d0b793d854129bdae0b82e51"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6270,
+      "nameZh": "贵族气场",
+      "nameEn": "Noble Presence",
+      "kind": "incantation",
+      "school": "神皮贵族",
+      "fpCost": 20,
+      "fpAdditional": 20,
+      "staminaCost": 35,
+      "staminaAdditional": 46,
+      "summary": "能大幅度突出腹部，\n形成弹飞周围人物的冲击波。\n借由蓄力能强化威力，打飞敌人。",
+      "image": "assets/icons/spell-6270.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 贵族气场",
+        "url": "https://wiki.biligame.com/eldenring/%E8%B4%B5%E6%97%8F%E6%B0%94%E5%9C%BA%E6%96%87%E6%9C%AC",
+        "sha256": "9d42947806bc26f2f0d6230863edabef7bd73de804ae4706c3a857c798301d2e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6300,
+      "nameZh": "血焰爪痕",
+      "nameEn": "Bloodflame Talons",
+      "kind": "incantation",
+      "school": "鲜血",
+      "fpCost": 12,
+      "fpAdditional": 0,
+      "staminaCost": 21,
+      "staminaAdditional": 0,
+      "summary": "能朝前方形成血焰爪痕，随后引发爆炸。\n可以连续执行。",
+      "image": "assets/icons/spell-6300.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 血焰爪痕",
+        "url": "https://wiki.biligame.com/eldenring/%E8%A1%80%E7%84%B0%E7%88%AA%E7%97%95%E6%96%87%E6%9C%AC",
+        "sha256": "f46c22c74ee65099f64c07a465875ae9055235e37f5cc56a710b2ec7fccce305"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "bleed"
+      ]
+    },
+    {
+      "id": 6310,
+      "nameZh": "授血",
+      "nameEn": "Bloodboon",
+      "kind": "incantation",
+      "school": "特殊",
+      "fpCost": 13,
+      "fpAdditional": 0,
+      "staminaCost": 34,
+      "staminaAdditional": 0,
+      "summary": "“鲜血君王”蒙格的神圣祷告。",
+      "image": "assets/icons/spell-6310.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 授血",
+        "url": "https://wiki.biligame.com/eldenring/%E6%8E%88%E8%A1%80%E6%96%87%E6%9C%AC",
+        "sha256": "f00c5df8356c505aa29817a2ad6b553beadcabc58ca53ca2278c34d43cfb8497"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "bleed"
+      ]
+    },
+    {
+      "id": 6320,
+      "nameZh": "血焰刀刃",
+      "nameEn": "Bloodflame Blade",
+      "kind": "incantation",
+      "school": "血王血盟",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器缠绕血焰。\n可以走动执行。",
+      "image": "assets/icons/spell-6320.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 血焰刀刃",
+        "url": "https://wiki.biligame.com/eldenring/%E8%A1%80%E7%84%B0%E5%88%80%E5%88%83%E6%96%87%E6%9C%AC",
+        "sha256": "6e065f0c13fd3fbfe9ef527ad0c38c35615d29f1fd4b7d21d12ccd74b9125424"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "bleed",
+        "support"
+      ]
+    },
+    {
+      "id": 6330,
+      "nameZh": "黄金魔力防护",
+      "nameEn": "Barrier of Gold",
+      "kind": "incantation",
+      "school": "黄金树信仰",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 13,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，大幅提升魔力属性减伤率。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6330.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金魔力防护",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E9%AD%94%E5%8A%9B%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "fd30528d3ac453ea8cd38ca435dca795db49b00b80cf7f7284004d50efd70864"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6340,
+      "nameZh": "黄金树庇佑",
+      "nameEn": "Protection of the Erdtree",
+      "kind": "incantation",
+      "school": "黄金树信仰",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 50,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，提升所有属性的减伤率，\n但不包含物理减伤率。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6340.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金树庇佑",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E6%A0%91%E5%BA%87%E4%BD%91%E6%96%87%E6%9C%AC",
+        "sha256": "f50247cd736ede25bc8ad8cb45c1e5cd482eb80527f6fdee5d46087b8c65c608"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6400,
+      "nameZh": "拒绝",
+      "nameEn": "Rejection",
+      "kind": "incantation",
+      "school": "双指信徒",
+      "fpCost": 9,
+      "fpAdditional": 9,
+      "staminaCost": 24,
+      "staminaAdditional": 31,
+      "summary": "能形成弹飞周围人物的冲击波。\n借由蓄力能增加冲击波的幅度。",
+      "image": "assets/icons/spell-6400.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 拒绝",
+        "url": "https://wiki.biligame.com/eldenring/%E6%8B%92%E7%BB%9D%E6%96%87%E6%9C%AC",
+        "sha256": "d3a7b8cd4ca4bdcac3c98806d346b9177b8f3dc0153a33c369efe9d101a1fb7b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6410,
+      "nameZh": "黄金之怒",
+      "nameEn": "Wrath of Gold",
+      "kind": "incantation",
+      "school": "黄金树信仰",
+      "fpCost": 32,
+      "fpAdditional": 32,
+      "staminaCost": 44,
+      "staminaAdditional": 57,
+      "summary": "能形成弹飞周围人物的黄金冲击波。\n借由蓄力能增加冲击波的幅度。",
+      "image": "assets/icons/spell-6410.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金之怒",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E4%B9%8B%E6%80%92%E6%96%87%E6%9C%AC",
+        "sha256": "f62cb480acbb0c34dfcc374bae47c7d990c5670d94669fd35d10e3cd643145e2"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6420,
+      "nameZh": "紧急恢复",
+      "nameEn": "Urgent Heal",
+      "kind": "incantation",
+      "school": "双指信徒",
+      "fpCost": 16,
+      "fpAdditional": 0,
+      "staminaCost": 30,
+      "staminaAdditional": 0,
+      "summary": "能些微恢复血量。\n可以走动执行。",
+      "image": "assets/icons/spell-6420.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 紧急恢复",
+        "url": "https://wiki.biligame.com/eldenring/%E7%B4%A7%E6%80%A5%E6%81%A2%E5%A4%8D%E6%96%87%E6%9C%AC",
+        "sha256": "b5d464f796df6c7fff85301ce18c031d5ac2a20bfcd998a016281816c30ebd52"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6421,
+      "nameZh": "恢复",
+      "nameEn": "Heal",
+      "kind": "incantation",
+      "school": "双指之引",
+      "fpCost": 32,
+      "fpAdditional": 0,
+      "staminaCost": 35,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，恢复血量。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6421.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 恢复",
+        "url": "https://wiki.biligame.com/eldenring/%E6%81%A2%E5%A4%8D%E6%96%87%E6%9C%AC",
+        "sha256": "97ba53a81dcc8672af0228dc57afe175fc23b8326efb75efe7eb134390b2b408"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6422,
+      "nameZh": "大恢复",
+      "nameEn": "Great Heal",
+      "kind": "incantation",
+      "school": "双指信徒",
+      "fpCost": 45,
+      "fpAdditional": 0,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，大幅恢复血量。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6422.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 大恢复",
+        "url": "https://wiki.biligame.com/eldenring/%E5%A4%A7%E6%81%A2%E5%A4%8D%E6%96%87%E6%9C%AC",
+        "sha256": "3443fa8dc53e181c4645bc785325206a4c1519550fa3af038cd8d405aab818bd"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6423,
+      "nameZh": "王之恢复",
+      "nameEn": "Lord's Heal",
+      "kind": "incantation",
+      "school": "双指赐予",
+      "fpCost": 55,
+      "fpAdditional": 0,
+      "staminaCost": 45,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，极大幅恢复血量。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6423.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 王之恢复",
+        "url": "https://wiki.biligame.com/eldenring/%E7%8E%8B%E4%B9%8B%E6%81%A2%E5%A4%8D%E6%96%87%E6%9C%AC",
+        "sha256": "d9ab84d7805147ddb89e7d4cda33f50aa3460513755af89fd3d70730358b861d"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6424,
+      "nameZh": "黄金树恢复",
+      "nameEn": "Erdtree Heal",
+      "kind": "incantation",
+      "school": "远古黄金树",
+      "fpCost": 65,
+      "fpAdditional": 0,
+      "staminaCost": 50,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，巨幅恢复血量。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6424.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金树恢复",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E6%A0%91%E6%81%A2%E5%A4%8D%E6%96%87%E6%9C%AC",
+        "sha256": "37d902b085cfd4049dd53084ac781b8e1f7df5c6d2aa79281f30025592002dc9"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6430,
+      "nameZh": "恩惠赐福",
+      "nameEn": "Blessing's Boon",
+      "kind": "incantation",
+      "school": "远古黄金树",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 30,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，赐予恩惠赐福。\n具有缓慢恢复血量的效果。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6430.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 恩惠赐福",
+        "url": "https://wiki.biligame.com/eldenring/%E6%81%A9%E6%83%A0%E8%B5%90%E7%A6%8F%E6%96%87%E6%9C%AC",
+        "sha256": "d5b8a52caee11da6c598791ef53ad4275cbbbed32ec9cbf373ce8060402f1101"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6431,
+      "nameZh": "黄金树恩惠",
+      "nameEn": "Blessing of the Erdtree",
+      "kind": "incantation",
+      "school": "远古黄金树",
+      "fpCost": 60,
+      "fpAdditional": 0,
+      "staminaCost": 50,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，赐予强大的恩惠赐福。\n具有缓慢、大幅恢复血量的效果。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6431.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金树恩惠",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E6%A0%91%E6%81%A9%E6%83%A0%E6%96%87%E6%9C%AC",
+        "sha256": "e7c6972a460452b40249d4c291bc2f7336d1c244e717b5ea77db5fcb0693c123"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6450,
+      "nameZh": "火防护",
+      "nameEn": "Flame Fortification",
+      "kind": "incantation",
+      "school": "双指信徒",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 13,
+      "staminaAdditional": 0,
+      "summary": "能提升火属性减伤率。\n可以走动执行。",
+      "image": "assets/icons/spell-6450.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火防护",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "e49405e6f36342168b95fed71d20c8dee6e5226c48729b203594b9b6c8b90120"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6460,
+      "nameZh": "魔力防护",
+      "nameEn": "Magic Fortification",
+      "kind": "incantation",
+      "school": "双指信徒",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 13,
+      "staminaAdditional": 0,
+      "summary": "能提升魔力属性减伤率。\n可以走动执行。",
+      "image": "assets/icons/spell-6460.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 魔力防护",
+        "url": "https://wiki.biligame.com/eldenring/%E9%AD%94%E5%8A%9B%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "61526f64c83946964a91ddfb98b6e1114c7ccaae576af40ee14ef834ab8113d3"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6470,
+      "nameZh": "雷防护",
+      "nameEn": "Lightning Fortification",
+      "kind": "incantation",
+      "school": "双指之引",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 13,
+      "staminaAdditional": 0,
+      "summary": "能提升雷属性减伤率。\n可以走动执行。",
+      "image": "assets/icons/spell-6470.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 雷防护",
+        "url": "https://wiki.biligame.com/eldenring/%E9%9B%B7%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "ee4ac09f079cfebbaacb11ce41d08a9d65047cfbe51a127124fea431a8ae6176"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6480,
+      "nameZh": "圣防护",
+      "nameEn": "Divine Fortification",
+      "kind": "incantation",
+      "school": "双指信徒",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 13,
+      "staminaAdditional": 0,
+      "summary": "能提升圣属性减伤率。\n可以走动执行。",
+      "image": "assets/icons/spell-6480.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 圣防护",
+        "url": "https://wiki.biligame.com/eldenring/%E5%9C%A3%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "ba8f6e99e13dbd8f135670363f2820fb5924ff1d6d203ed11e5d1479a5234680"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6490,
+      "nameZh": "王之圣防护",
+      "nameEn": "Lord's Divine Fortification",
+      "kind": "incantation",
+      "school": "双指赐予",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，大幅提升圣属性减伤率。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-6490.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 王之圣防护",
+        "url": "https://wiki.biligame.com/eldenring/%E7%8E%8B%E4%B9%8B%E5%9C%A3%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "f870e32a132431baaf804816211e1df64192d90b46399b5c5c4f82929c48bf48"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6500,
+      "nameZh": "黑夜女巫烟雾",
+      "nameEn": "Night Maiden's Mist",
+      "kind": "sorcery",
+      "school": "瑟利亚黑夜",
+      "fpCost": 20,
+      "fpAdditional": 20,
+      "staminaCost": 20,
+      "staminaAdditional": 26,
+      "summary": "能朝前方形成侵蚀生命的银色烟雾。\n包含施展者，给予触碰到烟雾的人物伤害。\n可以走动施展。",
+      "image": "assets/icons/spell-6500.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          33000000,
+          33040000,
+          33050000,
+          33060000,
+          33090000,
+          33120000,
+          33130000,
+          33170000,
+          33180000,
+          33190000,
+          33200000,
+          33210000,
+          33230000,
+          33240000,
+          33250000,
+          33260000,
+          33270000,
+          33280000,
+          33750000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑夜女巫烟雾",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E5%A4%9C%E5%A5%B3%E5%B7%AB%E7%83%9F%E9%9B%BE%E6%96%87%E6%9C%AC",
+        "sha256": "fc42aa29b49f68c14ac5a5f2886b2432266ccb9c0aafcc225e9b1d57916faba1"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 6520,
+      "nameZh": "诱敌幻影",
+      "nameEn": "Shadow Bait",
+      "kind": "incantation",
+      "school": "圆桌刺客",
+      "fpCost": 15,
+      "fpAdditional": 0,
+      "staminaCost": 14,
+      "staminaAdditional": 0,
+      "summary": "能朝前方放出淡金色的影子，\n吸引有着人类之身的敌人攻击。\n即使对方在战斗状态，也会有效。\n可以走动执行，在蹲下的状态也能执行。",
+      "image": "assets/icons/spell-6520.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 诱敌幻影",
+        "url": "https://wiki.biligame.com/eldenring/%E8%AF%B1%E6%95%8C%E5%B9%BB%E5%BD%B1%E6%96%87%E6%9C%AC",
+        "sha256": "70ee80a6b553a8639c65691b43f353adb73810900e5a40528221935f450551ef"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6530,
+      "nameZh": "黑暗",
+      "nameEn": "Darkness",
+      "kind": "incantation",
+      "school": "双指之引",
+      "fpCost": 24,
+      "fpAdditional": 0,
+      "staminaCost": 24,
+      "staminaAdditional": 0,
+      "summary": "专用战技：黑暗\n将剑举至半空，以黑暗横扫周围的战技。\n给予敌人圣属性伤害的同时，\n也能暂时降低对方的圣属性减伤率。",
+      "image": "assets/icons/spell-6530.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑暗",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E6%9A%97%E6%96%87%E6%9C%AC",
+        "sha256": "a03fa3356376292f1e7e0fb13c6a0e6e85dea9aa6669eac7cae062729d8b1f6f"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6600,
+      "nameZh": "黄金树立誓",
+      "nameEn": "Golden Vow",
+      "kind": "incantation",
+      "school": "DLC新增物品",
+      "fpCost": 47,
+      "fpAdditional": 0,
+      "staminaCost": 50,
+      "staminaAdditional": 0,
+      "summary": "执行过黄金树祷告，化为光的遗骨。\n能够制作的其中一项道具。\n能消耗专注值高举，包含周围我方人物，\n提升攻击力与防御力。\n同袍们信仰远方的黄金树，为圣战捐躯──\n此为继承先人遗志的仪式。",
+      "image": "assets/icons/spell-6600.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金树立誓",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E6%A0%91%E7%AB%8B%E8%AA%93%E6%96%87%E6%9C%AC",
+        "sha256": "59bac804cecfeb412f6cb9f0d7fafc43b2ffddbfe793bdc8771e3a4768da0470"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6700,
+      "nameZh": "光环",
+      "nameEn": "Discus of Light",
+      "kind": "incantation",
+      "school": "黄金律法",
+      "fpCost": 3,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "能朝前方形成、释放黄金光环。\n光环会飞回执行者附近后再消失。\n可以连续执行。",
+      "image": "assets/icons/spell-6700.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 光环",
+        "url": "https://wiki.biligame.com/eldenring/%E5%85%89%E7%8E%AF%E6%96%87%E6%9C%AC",
+        "sha256": "b9518f3117bc236a386518d9896cd6b1b23c6e10139c1ff03c889826cde7f229"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 6701,
+      "nameZh": "化三光环",
+      "nameEn": "Triple Rings of Light",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 23,
+      "fpAdditional": 0,
+      "staminaCost": 28,
+      "staminaAdditional": 0,
+      "summary": "能朝前方形成、释放三个黄金光环。\n光环会飞回执行者附近后再消失。\n可以连续执行。",
+      "image": "assets/icons/spell-6701.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 化三光环",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8C%96%E4%B8%89%E5%85%89%E7%8E%AF%E6%96%87%E6%9C%AC",
+        "sha256": "062180c8b955d93a4cdacfcf98671ea111ce2c7379614b8c8860d38d40eda0c3"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 6710,
+      "nameZh": "拉达冈的光环",
+      "nameEn": "Radagon's Rings of Light",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 21,
+      "fpAdditional": 21,
+      "staminaCost": 37,
+      "staminaAdditional": 48,
+      "summary": "能形成、扩大黄金光环，攻击四周。\n借由蓄力能扩大攻击的范围。",
+      "image": "assets/icons/spell-6710.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 拉达冈的光环",
+        "url": "https://wiki.biligame.com/eldenring/%E6%8B%89%E8%BE%BE%E5%86%88%E7%9A%84%E5%85%89%E7%8E%AF%E6%96%87%E6%9C%AC",
+        "sha256": "6cf6b7817f4af0203298155e4331a5beef959a6fbd630436d43dca331154a373"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 6720,
+      "nameZh": "艾尔登流星",
+      "nameEn": "Elden Stars",
+      "kind": "incantation",
+      "school": "古老黄金树",
+      "fpCost": 41,
+      "fpAdditional": 0,
+      "staminaCost": 48,
+      "staminaAdditional": 0,
+      "summary": "能形成无数颗黄金流星，攻击四周。",
+      "image": "assets/icons/spell-6720.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 艾尔登流星",
+        "url": "https://wiki.biligame.com/eldenring/%E8%89%BE%E5%B0%94%E7%99%BB%E6%B5%81%E6%98%9F%E6%96%87%E6%9C%AC",
+        "sha256": "98ba4b8fcb1e3eb3dcdec8b3ab7ec1bd86388f53f8786e066b89816cd03182c9"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 6730,
+      "nameZh": "回归性原理",
+      "nameEn": "Law of Regression",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 55,
+      "fpAdditional": 0,
+      "staminaCost": 50,
+      "staminaAdditional": 0,
+      "summary": "黄金律法基本主义的祷告。\n形成根基的祷告之一。",
+      "image": "assets/icons/spell-6730.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 回归性原理",
+        "url": "https://wiki.biligame.com/eldenring/%E5%9B%9E%E5%BD%92%E6%80%A7%E5%8E%9F%E7%90%86%E6%96%87%E6%9C%AC",
+        "sha256": "f41179b1e2b4dbdf36fd56e3ae0d078c6108e057d8b8334f912784369ee40f35"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6740,
+      "nameZh": "不变盾牌",
+      "nameEn": "Immutable Shield",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 15,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能将回归光芒寄宿在左手盾牌，\n提升所有属性、异常状态的减伤率，\n但不包含物理的减伤率。",
+      "image": "assets/icons/spell-6740.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 不变盾牌",
+        "url": "https://wiki.biligame.com/eldenring/%E4%B8%8D%E5%8F%98%E7%9B%BE%E7%89%8C%E6%96%87%E6%9C%AC",
+        "sha256": "dfba0167d05cf74b5f728fa1533243e8c191a9f1742f03bcfd5ff29960f0e79b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 6750,
+      "nameZh": "纠死圣律",
+      "nameEn": "Litany of Proper Death",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 17,
+      "fpAdditional": 0,
+      "staminaCost": 28,
+      "staminaAdditional": 0,
+      "summary": "能模仿圣律的模样，对周围给予圣属性伤害。\n对死诞者的伤害尤为巨大，\n死诞者被此祷告打败之后，不会复活。",
+      "image": "assets/icons/spell-6750.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 纠死圣律",
+        "url": "https://wiki.biligame.com/eldenring/%E7%BA%A0%E6%AD%BB%E5%9C%A3%E5%BE%8B%E6%96%87%E6%9C%AC",
+        "sha256": "81892471cb264837436af289be78ddc7236232dbfb4ddb1b5f440ba27a4fd399"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 6760,
+      "nameZh": "因果性原理",
+      "nameEn": "Law of Causality",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 22,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "黄金律法基本主义的祷告。\n形成根基的祷告之一。",
+      "image": "assets/icons/spell-6760.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 因果性原理",
+        "url": "https://wiki.biligame.com/eldenring/%E5%9B%A0%E6%9E%9C%E6%80%A7%E5%8E%9F%E7%90%86%E6%96%87%E6%9C%AC",
+        "sha256": "fd2a479565deffe2daae500aaaf3394ec02373c5c1f15de5d0b95f58ada8f731"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 6770,
+      "nameZh": "圣律剑刃",
+      "nameEn": "Order's Blade",
+      "kind": "incantation",
+      "school": "基本主义",
+      "fpCost": 22,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器附加圣属性攻击力。\n对死诞者的伤害尤为巨大，\n死诞者被此祷告打败之后，不会复活。",
+      "image": "assets/icons/spell-6770.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 圣律剑刃",
+        "url": "https://wiki.biligame.com/eldenring/%E5%9C%A3%E5%BE%8B%E5%89%91%E5%88%83%E6%96%87%E6%9C%AC",
+        "sha256": "8896e0a548b3b225e2398eb9894a708eb176ebd8c29cc542fcab170a48a161d2"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy",
+        "support"
+      ]
+    },
+    {
+      "id": 6800,
+      "nameZh": "兽石",
+      "nameEn": "Bestial Sling",
+      "kind": "incantation",
+      "school": "野兽祭司",
+      "fpCost": 7,
+      "fpAdditional": 0,
+      "staminaCost": 19,
+      "staminaAdditional": 0,
+      "summary": "能快速释放大量锐利石片。\n可以接在其他动作后，立刻衔接使用。",
+      "image": "assets/icons/spell-6800.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 兽石",
+        "url": "https://wiki.biligame.com/eldenring/%E5%85%BD%E7%9F%B3%E6%96%87%E6%9C%AC",
+        "sha256": "c221adaa7619acc7161bc65254c24d5ec05f6f545fa50d49a4a7aaac1ee533d5"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6810,
+      "nameZh": "古兰格的岩石",
+      "nameEn": "Stone of Gurranq",
+      "kind": "incantation",
+      "school": "野兽祭司",
+      "fpCost": 15,
+      "fpAdditional": 0,
+      "staminaCost": 37,
+      "staminaAdditional": 0,
+      "summary": "能朝前方丢掷巨大岩石。\n可以连续执行。",
+      "image": "assets/icons/spell-6810.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 古兰格的岩石",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%A4%E5%85%B0%E6%A0%BC%E7%9A%84%E5%B2%A9%E7%9F%B3%E6%96%87%E6%9C%AC",
+        "sha256": "d91654e8c38df4f417ea498d05cd43f133671ac3544b010e42e972113c3a1ecd"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6820,
+      "nameZh": "兽爪",
+      "nameEn": "Beast Claw",
+      "kind": "incantation",
+      "school": "野兽祭司",
+      "fpCost": 13,
+      "fpAdditional": 13,
+      "staminaCost": 27,
+      "staminaAdditional": 35,
+      "summary": "能长出兽爪，以冲击撕裂地面。\n借由蓄力能提升威力。",
+      "image": "assets/icons/spell-6820.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 兽爪",
+        "url": "https://wiki.biligame.com/eldenring/%E5%85%BD%E7%88%AA%E6%96%87%E6%9C%AC",
+        "sha256": "32b1818d83795b930f1938cb2150a1030f40af2d836dde7ad5662c1842b1ea16"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6830,
+      "nameZh": "古兰格的兽爪",
+      "nameEn": "Gurranq's Beast Claw",
+      "kind": "incantation",
+      "school": "野兽祭司",
+      "fpCost": 21,
+      "fpAdditional": 0,
+      "staminaCost": 42,
+      "staminaAdditional": 0,
+      "summary": "能长出兽爪，以冲击撕裂四周。",
+      "image": "assets/icons/spell-6830.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 古兰格的兽爪",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%A4%E5%85%B0%E6%A0%BC%E7%9A%84%E5%85%BD%E7%88%AA%E6%96%87%E6%9C%AC",
+        "sha256": "48defcd41d9262b01479a4ccb883170295b20a99fdbbf06799ee2f8ec6fecb66"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 6840,
+      "nameZh": "野兽活力",
+      "nameEn": "Bestial Vitality",
+      "kind": "incantation",
+      "school": "野兽祭司",
+      "fpCost": 18,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "将野兽的活力寄宿在体内，\n能一定时间内，持续恢复血量。",
+      "image": "assets/icons/spell-6840.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 野兽活力",
+        "url": "https://wiki.biligame.com/eldenring/%E9%87%8E%E5%85%BD%E6%B4%BB%E5%8A%9B%E6%96%87%E6%9C%AC",
+        "sha256": "d62fc6bc54b7e6023732ef8322703ac4fa26f2427d64652473f665eae1344515"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "healing"
+      ]
+    },
+    {
+      "id": 6900,
+      "nameZh": "雷电枪",
+      "nameEn": "Lightning Spear",
+      "kind": "incantation",
+      "school": "王城古龙",
+      "fpCost": 18,
+      "fpAdditional": 18,
+      "staminaCost": 28,
+      "staminaAdditional": 36,
+      "summary": "能召唤雷电枪，朝前方丢掷。\n借由蓄力能在命中后，附加落雷。",
+      "image": "assets/icons/spell-6900.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 雷电枪",
+        "url": "https://wiki.biligame.com/eldenring/%E9%9B%B7%E7%94%B5%E6%9E%AA%E6%96%87%E6%9C%AC",
+        "sha256": "3bf72fb7c5fee0b6c1653d308312c3a9fdb050987d5c685c7b7013f0d92d9b2e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6910,
+      "nameZh": "古龙雷击",
+      "nameEn": "Ancient Dragons' Lightning Strike",
+      "kind": "incantation",
+      "school": "王城古龙",
+      "fpCost": 36,
+      "fpAdditional": 36,
+      "staminaCost": 31,
+      "staminaAdditional": 40,
+      "summary": "能召唤红落雷，朝周围爬窜。\n借由蓄力能扩大落雷降下的范围。",
+      "image": "assets/icons/spell-6910.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 古龙雷击",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%A4%E9%BE%99%E9%9B%B7%E5%87%BB%E6%96%87%E6%9C%AC",
+        "sha256": "b94587ae8a9a7ed03e69b1fe3915b878d5003f8f704d2ae2c0dae38d97b094b0"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6920,
+      "nameZh": "雷击",
+      "nameEn": "Lightning Strike",
+      "kind": "incantation",
+      "school": "古龙信仰",
+      "fpCost": 19,
+      "fpAdditional": 0,
+      "staminaCost": 32,
+      "staminaAdditional": 0,
+      "summary": "能召唤落雷，朝前方爬窜。\n可以连续执行。",
+      "image": "assets/icons/spell-6920.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 雷击",
+        "url": "https://wiki.biligame.com/eldenring/%E9%9B%B7%E5%87%BB%E6%96%87%E6%9C%AC",
+        "sha256": "aee61e1525e0c2c2e52b0195db2d01bb85374a4ea2c720dfb7ada85ce34c3097"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6921,
+      "nameZh": "冰雷枪",
+      "nameEn": "Frozen Lightning Spear",
+      "kind": "incantation",
+      "school": "龙人士兵",
+      "fpCost": 29,
+      "fpAdditional": 0,
+      "staminaCost": 39,
+      "staminaAdditional": 0,
+      "summary": "能展现龙人士兵力量的祷告。",
+      "image": "assets/icons/spell-6921.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 冰雷枪",
+        "url": "https://wiki.biligame.com/eldenring/%E5%86%B0%E9%9B%B7%E6%9E%AA%E6%96%87%E6%9C%AC",
+        "sha256": "c26664c3d6265446653b954f417d1fcbb30e8c5bda8bdb036bc8dace3b2e6632"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 6930,
+      "nameZh": "精准雷击",
+      "nameEn": "Honed Bolt",
+      "kind": "incantation",
+      "school": "王城古龙",
+      "fpCost": 12,
+      "fpAdditional": 0,
+      "staminaCost": 29,
+      "staminaAdditional": 0,
+      "summary": "能在目标头上降下落雷。\n可以连续执行。",
+      "image": "assets/icons/spell-6930.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 精准雷击",
+        "url": "https://wiki.biligame.com/eldenring/%E7%B2%BE%E5%87%86%E9%9B%B7%E5%87%BB%E6%96%87%E6%9C%AC",
+        "sha256": "3ee5d849f69626425111e1d5686a9db46651a932f8e640a59ede31a2f7cf91e1"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6940,
+      "nameZh": "古龙雷枪",
+      "nameEn": "Ancient Dragons' Lightning Spear",
+      "kind": "incantation",
+      "school": "王城古龙",
+      "fpCost": 25,
+      "fpAdditional": 0,
+      "staminaCost": 29,
+      "staminaAdditional": 0,
+      "summary": "能召唤红雷枪，从空中刺入地面。\n雷枪反弹后，会朝周围释放雷电。",
+      "image": "assets/icons/spell-6940.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 古龙雷枪",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%A4%E9%BE%99%E9%9B%B7%E6%9E%AA%E6%96%87%E6%9C%AC",
+        "sha256": "07e77936bebf08eaac26ac47a287b90d907e32a5288d60c49d5b8e0433622103"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6941,
+      "nameZh": "弗尔桑克斯的雷枪",
+      "nameEn": "Fortissax's Lightning Spear",
+      "kind": "incantation",
+      "school": "特殊",
+      "fpCost": 35,
+      "fpAdditional": 0,
+      "staminaCost": 42,
+      "staminaAdditional": 0,
+      "summary": "能展现古龙弗尔桑克斯力量的祷告。",
+      "image": "assets/icons/spell-6941.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 弗尔桑克斯的雷枪",
+        "url": "https://wiki.biligame.com/eldenring/%E5%BC%97%E5%B0%94%E6%A1%91%E5%85%8B%E6%96%AF%E7%9A%84%E9%9B%B7%E6%9E%AA%E6%96%87%E6%9C%AC",
+        "sha256": "5dc4bdbf42eac6f2c8706cc8a1c5d27b0325765aef9c3d39c206ddc540528803"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6950,
+      "nameZh": "兰斯桑克斯的刀",
+      "nameEn": "Lansseax's Glaive",
+      "kind": "incantation",
+      "school": "古龙信仰",
+      "fpCost": 22,
+      "fpAdditional": 0,
+      "staminaCost": 45,
+      "staminaAdditional": 0,
+      "summary": "能展现古龙兰斯桑克斯力量的祷告。",
+      "image": "assets/icons/spell-6950.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 兰斯桑克斯的刀",
+        "url": "https://wiki.biligame.com/eldenring/%E5%85%B0%E6%96%AF%E6%A1%91%E5%85%8B%E6%96%AF%E7%9A%84%E5%88%80%E6%96%87%E6%9C%AC",
+        "sha256": "92f21f67085edee8e7d3ef4782430135e564e44b0b4f2100d1a1422f19a0207c"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning"
+      ]
+    },
+    {
+      "id": 6960,
+      "nameZh": "雷武器",
+      "nameEn": "Electrify Armament",
+      "kind": "incantation",
+      "school": "王城古龙",
+      "fpCost": 27,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器附加雷属性攻击力。",
+      "image": "assets/icons/spell-6960.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 雷武器",
+        "url": "https://wiki.biligame.com/eldenring/%E9%9B%B7%E6%AD%A6%E5%99%A8%E6%96%87%E6%9C%AC",
+        "sha256": "68eb9f7bd2a2523b4adc198418947bac078b5d00a9b61ea05ef24d0881867f68"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "lightning",
+        "support"
+      ]
+    },
+    {
+      "id": 6971,
+      "nameZh": "龙雷庇佑",
+      "nameEn": "Dragonbolt Blessing",
+      "kind": "incantation",
+      "school": "王城古龙",
+      "fpCost": 20,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "能召唤雷电，缠绕执行者全身。\n身体会变得容易弹开攻击，\n并且提升对所有异常状态的抵抗力，\n但是会降低雷属性减伤率。",
+      "image": "assets/icons/spell-6971.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 龙雷庇佑",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BE%99%E9%9B%B7%E5%BA%87%E4%BD%91%E6%96%87%E6%9C%AC",
+        "sha256": "f4d0891623cc81d5643ce477ef645f661e3b1cfff09e1875d1c121f1e0e27d25"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    },
+    {
+      "id": 7000,
+      "nameZh": "龙焰",
+      "nameEn": "Dragonfire",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 28,
+      "fpAdditional": 4,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙，喷出火焰吐息。\n借由蓄力能延长喷出吐息的时间。",
+      "image": "assets/icons/spell-7000.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 龙焰",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BE%99%E7%84%B0%E6%96%87%E6%9C%AC",
+        "sha256": "86ff2b3c3d2ade99a7fd034d21cd82e658b4164fd8d5634dfdc0a7f92f77baca"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 7001,
+      "nameZh": "亚基尔的火焰",
+      "nameEn": "Agheel's Flame",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 36,
+      "fpAdditional": 6,
+      "staminaCost": 60,
+      "staminaAdditional": 0,
+      "summary": "其中一种龙飨祷告。属于高阶祷告。\n能展现“飞龙”亚基尔的力量。",
+      "image": "assets/icons/spell-7001.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 亚基尔的火焰",
+        "url": "https://wiki.biligame.com/eldenring/%E4%BA%9A%E5%9F%BA%E5%B0%94%E7%9A%84%E7%81%AB%E7%84%B0%E6%96%87%E6%9C%AC",
+        "sha256": "b0b95e9cb9aad66f7d9e78c152fa5f2e9d6e4c08d9533029e3041d63bdca8703"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 7010,
+      "nameZh": "熔岩吐息",
+      "nameEn": "Magma Breath",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为土龙，喷出熔岩吐息。\n仅限一次，能使出追击。",
+      "image": "assets/icons/spell-7010.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 熔岩吐息",
+        "url": "https://wiki.biligame.com/eldenring/%E7%86%94%E5%B2%A9%E5%90%90%E6%81%AF%E6%96%87%E6%9C%AC",
+        "sha256": "4229320f40a52b04b364c4e78a62a2ba771ed1bb267a93befe20501eb73aa69f"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 7011,
+      "nameZh": "席欧朵利克的熔岩",
+      "nameEn": "Theodorix's Magma",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 45,
+      "fpAdditional": 0,
+      "staminaCost": 60,
+      "staminaAdditional": 0,
+      "summary": "其中一种龙飨祷告。属于高阶祷告。\n能展现“大土龙”席欧朵利克的力量。",
+      "image": "assets/icons/spell-7011.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 席欧朵利克的熔岩",
+        "url": "https://wiki.biligame.com/eldenring/%E5%B8%AD%E6%AC%A7%E6%9C%B5%E5%88%A9%E5%85%8B%E7%9A%84%E7%86%94%E5%B2%A9%E6%96%87%E6%9C%AC",
+        "sha256": "e7678840950aa5165ddadab432d267ca831480f70c221c963aff5aa83084474c"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 7020,
+      "nameZh": "龙冰",
+      "nameEn": "Dragonice",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 36,
+      "fpAdditional": 4,
+      "staminaCost": 48,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙，喷出寒冰吐息。\n借由蓄力能延长喷出吐息的时间。",
+      "image": "assets/icons/spell-7020.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 龙冰",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BE%99%E5%86%B0%E6%96%87%E6%9C%AC",
+        "sha256": "1b45e9cd838b93cfa425207c2389ea107f8eeacf1e38c3071f0988a5625498fb"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 7021,
+      "nameZh": "玻列琉斯的冰雾",
+      "nameEn": "Borealis's Mist",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 48,
+      "fpAdditional": 6,
+      "staminaCost": 60,
+      "staminaAdditional": 0,
+      "summary": "其中一种龙飨祷告。属于高阶祷告。\n能展现“冻结冰雾”玻列琉斯的力量。",
+      "image": "assets/icons/spell-7021.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 玻列琉斯的冰雾",
+        "url": "https://wiki.biligame.com/eldenring/%E7%8E%BB%E5%88%97%E7%90%89%E6%96%AF%E7%9A%84%E5%86%B0%E9%9B%BE%E6%96%87%E6%9C%AC",
+        "sha256": "d7c6ca04a106d2a2f3ffc30ed6f51ce3950240a03ec9774e9d2d032daf6bba5b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic",
+        "frostbite"
+      ]
+    },
+    {
+      "id": 7030,
+      "nameZh": "腐败吐息",
+      "nameEn": "Rotten Breath",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 36,
+      "fpAdditional": 4,
+      "staminaCost": 48,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙，喷出猩红腐败吐息。\n借由蓄力能延长喷出吐息的时间。",
+      "image": "assets/icons/spell-7030.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 腐败吐息",
+        "url": "https://wiki.biligame.com/eldenring/%E8%85%90%E8%B4%A5%E5%90%90%E6%81%AF%E6%96%87%E6%9C%AC",
+        "sha256": "3732848e4f2aaf5e300ed3d2a1003ebab82a25fe746d24d86e469f56a65981ef"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "scarletRot"
+      ]
+    },
+    {
+      "id": 7031,
+      "nameZh": "艾格基斯的腐败",
+      "nameEn": "Ekzykes's Decay",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 48,
+      "fpAdditional": 6,
+      "staminaCost": 60,
+      "staminaAdditional": 0,
+      "summary": "其中一种龙飨祷告。属于高阶祷告。\n能展现“步入腐败”艾格基斯的力量。",
+      "image": "assets/icons/spell-7031.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 艾格基斯的腐败",
+        "url": "https://wiki.biligame.com/eldenring/%E8%89%BE%E6%A0%BC%E5%9F%BA%E6%96%AF%E7%9A%84%E8%85%90%E8%B4%A5%E6%96%87%E6%9C%AC",
+        "sha256": "39fe0ec2e3c1439ac421a3062f445af82312982e33377c7d5ae5a4fcf04c8f12"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "scarletRot"
+      ]
+    },
+    {
+      "id": 7040,
+      "nameZh": "辉石吐息",
+      "nameEn": "Glintstone Breath",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 28,
+      "fpAdditional": 4,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙，喷出魔力吐息。\n借由蓄力能延长喷出吐息的时间。",
+      "image": "assets/icons/spell-7040.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 辉石吐息",
+        "url": "https://wiki.biligame.com/eldenring/%E8%BE%89%E7%9F%B3%E5%90%90%E6%81%AF%E6%96%87%E6%9C%AC",
+        "sha256": "cddaa5ca97cc630e6f081c19fb6887aa5154c79bafa31a74858ae81782f65562"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 7041,
+      "nameZh": "史玛拉格的辉石",
+      "nameEn": "Smarag's Glintstone Breath",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 36,
+      "fpAdditional": 6,
+      "staminaCost": 60,
+      "staminaAdditional": 0,
+      "summary": "其中一种龙飨祷告。属于高阶祷告。\n能展现“辉石龙”史玛拉格的力量。",
+      "image": "assets/icons/spell-7041.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 史玛拉格的辉石",
+        "url": "https://wiki.biligame.com/eldenring/%E5%8F%B2%E7%8E%9B%E6%8B%89%E6%A0%BC%E7%9A%84%E8%BE%89%E7%9F%B3%E6%96%87%E6%9C%AC",
+        "sha256": "682b91715ba905bf5be79166b3102d63f60288070e10a3cabe13f894e09063e3"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "magic"
+      ]
+    },
+    {
+      "id": 7050,
+      "nameZh": "普拉顿桑克斯的凋亡",
+      "nameEn": "Placidusax's Ruin",
+      "kind": "incantation",
+      "school": "特殊",
+      "fpCost": 62,
+      "fpAdditional": 0,
+      "staminaCost": 75,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙王，从空中喷出金色吐息。\n在跳跃期间也能使用。",
+      "image": "assets/icons/spell-7050.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 普拉顿桑克斯的凋亡",
+        "url": "https://wiki.biligame.com/eldenring/%E6%99%AE%E6%8B%89%E9%A1%BF%E6%A1%91%E5%85%8B%E6%96%AF%E7%9A%84%E5%87%8B%E4%BA%A1%E6%96%87%E6%9C%AC",
+        "sha256": "91d9859e617eb696f287cefbb2230a02d3fa23a59e191095f76bedc9897bbfdb"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "lightning"
+      ]
+    },
+    {
+      "id": 7060,
+      "nameZh": "龙爪",
+      "nameEn": "Dragonclaw",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 24,
+      "fpAdditional": 0,
+      "staminaCost": 35,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙，以龙爪撕裂敌人。\n仅限一次，能使出追击。",
+      "image": "assets/icons/spell-7060.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 龙爪",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BE%99%E7%88%AA%E6%96%87%E6%9C%AC",
+        "sha256": "d0c982189b6aa5857ff2a8220a665b3eee7d5e2ab9f563007237651711987204"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 7080,
+      "nameZh": "龙咬",
+      "nameEn": "Dragonmaw",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 34,
+      "fpAdditional": 0,
+      "staminaCost": 50,
+      "staminaAdditional": 0,
+      "summary": "能将自身化为龙，朝前方咬碎敌人。",
+      "image": "assets/icons/spell-7080.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 龙咬",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BE%99%E5%92%AC%E6%96%87%E6%9C%AC",
+        "sha256": "daf87254e3fdaa37ffd25460bb1c8af881815bc8ba1921db1b485ca17afb4c46"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 7090,
+      "nameZh": "桂奥尔的咆哮",
+      "nameEn": "Greyoll's Roar",
+      "kind": "incantation",
+      "school": "龙飨",
+      "fpCost": 50,
+      "fpAdditional": 0,
+      "staminaCost": 72,
+      "staminaAdditional": 0,
+      "summary": "其中一种龙飨祷告。属于高阶祷告。\n能展现“古老龙”桂奥尔的力量。\n“传说中的祷告”之一。",
+      "image": "assets/icons/spell-7090.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 桂奥尔的咆哮",
+        "url": "https://wiki.biligame.com/eldenring/%E6%A1%82%E5%A5%A5%E5%B0%94%E7%9A%84%E5%92%86%E5%93%AE%E6%96%87%E6%9C%AC",
+        "sha256": "3f583d9a52eeaf8d514f4ab56ff9d7051fc55f7f1f2c479b0f6ec44f2ef948e2"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 7200,
+      "nameZh": "虫丝",
+      "nameEn": "Pest Threads",
+      "kind": "incantation",
+      "school": "奉腐者",
+      "fpCost": 19,
+      "fpAdditional": 0,
+      "staminaCost": 29,
+      "staminaAdditional": 0,
+      "summary": "能分泌大量具粘性的丝线，朝前方释放。",
+      "image": "assets/icons/spell-7200.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 虫丝",
+        "url": "https://wiki.biligame.com/eldenring/%E8%99%AB%E4%B8%9D%E6%96%87%E6%9C%AC",
+        "sha256": "4126bc8937d695a8052e385356934b98053f088a387d10d245d0418c468d0933"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 7210,
+      "nameZh": "蝇群",
+      "nameEn": "Swarm of Flies",
+      "kind": "incantation",
+      "school": "血王血盟",
+      "fpCost": 14,
+      "fpAdditional": 0,
+      "staminaCost": 24,
+      "staminaAdditional": 0,
+      "summary": "能朝前方释放一群血蝇，袭击敌人。\n蝇群给予敌人伤害的同时，也会累积出血量表。\n可以走动执行，在蹲下的状态也能执行。",
+      "image": "assets/icons/spell-7210.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 蝇群",
+        "url": "https://wiki.biligame.com/eldenring/%E8%9D%87%E7%BE%A4%E6%96%87%E6%9C%AC",
+        "sha256": "ed92fa20d7e9a6e06b6905a18b44f078adf59b86e11d9245b9ee6ce3d17a0f84"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard",
+        "bleed"
+      ]
+    },
+    {
+      "id": 7220,
+      "nameZh": "毒雾",
+      "nameEn": "Poison Mist",
+      "kind": "incantation",
+      "school": "血焰与腐败",
+      "fpCost": 18,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能朝前方形成毒性烟雾。\n可以走动执行，在蹲下的状态也能执行。",
+      "image": "assets/icons/spell-7220.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 毒雾",
+        "url": "https://wiki.biligame.com/eldenring/%E6%AF%92%E9%9B%BE%E6%96%87%E6%9C%AC",
+        "sha256": "a2a5fe154c49429c48ec32c32ec47e132d9da4c7da5ddacd08746bd22ad98494"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "poison"
+      ]
+    },
+    {
+      "id": 7230,
+      "nameZh": "毒刃",
+      "nameEn": "Poison Armament",
+      "kind": "incantation",
+      "school": "奉腐者",
+      "fpCost": 15,
+      "fpAdditional": 0,
+      "staminaCost": 10,
+      "staminaAdditional": 0,
+      "summary": "能在右手武器缠绕毒素。\n可以走动执行。",
+      "image": "assets/icons/spell-7230.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 毒刃",
+        "url": "https://wiki.biligame.com/eldenring/%E6%AF%92%E5%88%83%E6%96%87%E6%9C%AC",
+        "sha256": "8ec2a8db5f667dbf2a1028b252a928a4859da93ac3fed8f4da9cf6eedc64dbb0"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "poison",
+        "support"
+      ]
+    },
+    {
+      "id": 7240,
+      "nameZh": "猩红艾奥尼亚",
+      "nameEn": "Scarlet Aeonia",
+      "kind": "incantation",
+      "school": "特殊",
+      "fpCost": 48,
+      "fpAdditional": 0,
+      "staminaCost": 66,
+      "staminaAdditional": 0,
+      "summary": "能绽放大株花朵，引爆猩红腐败。",
+      "image": "assets/icons/spell-7240.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 猩红艾奥尼亚",
+        "url": "https://wiki.biligame.com/eldenring/%E7%8C%A9%E7%BA%A2%E8%89%BE%E5%A5%A5%E5%B0%BC%E4%BA%9A%E6%96%87%E6%9C%AC",
+        "sha256": "f1de5a4fe358e216ccca3b577ceb45bb88799213c0c4ae2def7627351f883f5b"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard",
+        "scarletRot"
+      ]
+    },
+    {
+      "id": 7310,
+      "nameZh": "癫火",
+      "nameEn": "The Flame of Frenzy",
+      "kind": "incantation",
+      "school": "癫狂叁指",
+      "fpCost": 16,
+      "fpAdditional": 16,
+      "staminaCost": 30,
+      "staminaAdditional": 39,
+      "summary": "能从眼睛迸发黄色癫火。\n借由蓄力能扩大迸发的范围。",
+      "image": "assets/icons/spell-7310.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 癫火",
+        "url": "https://wiki.biligame.com/eldenring/%E7%99%AB%E7%81%AB%E6%96%87%E6%9C%AC",
+        "sha256": "ef90d1589bf81867e334580c647b5ac54bdc291a0cf28ab47f7d51aa94da9297"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "madness"
+      ]
+    },
+    {
+      "id": 7311,
+      "nameZh": "难耐癫火",
+      "nameEn": "Unendurable Frenzy",
+      "kind": "incantation",
+      "school": "癫狂叁指",
+      "fpCost": 22,
+      "fpAdditional": 6,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能从眼睛迸发剧烈黄色癫火。\n持续执行的期间会继续迸发癫火。\n可以走动执行。",
+      "image": "assets/icons/spell-7311.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 难耐癫火",
+        "url": "https://wiki.biligame.com/eldenring/%E9%9A%BE%E8%80%90%E7%99%AB%E7%81%AB%E6%96%87%E6%9C%AC",
+        "sha256": "543a457c2127049f4e86c66448e46697d602e84a6b19263c16bd3b5a624a09bd"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "madness"
+      ]
+    },
+    {
+      "id": 7320,
+      "nameZh": "划空癫火",
+      "nameEn": "Frenzied Burst",
+      "kind": "incantation",
+      "school": "癫狂叁指",
+      "fpCost": 24,
+      "fpAdditional": 24,
+      "staminaCost": 33,
+      "staminaAdditional": 43,
+      "summary": "能从眼睛凝聚、释放黄色癫火。\n借由蓄力能强化威力、突破防御。",
+      "image": "assets/icons/spell-7320.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 划空癫火",
+        "url": "https://wiki.biligame.com/eldenring/%E5%88%92%E7%A9%BA%E7%99%AB%E7%81%AB%E6%96%87%E6%9C%AC",
+        "sha256": "dbf49a74a6c533bb738859a68575a071d8e89aecac3f32b9262d6fd47a18b78e"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire",
+        "madness"
+      ]
+    },
+    {
+      "id": 7330,
+      "nameZh": "夏玻利利的嘶吼",
+      "nameEn": "Howl of Shabriri",
+      "kind": "incantation",
+      "school": "癫狂叁指",
+      "fpCost": 21,
+      "fpAdditional": 0,
+      "staminaCost": 38,
+      "staminaAdditional": 0,
+      "summary": "能发出疯狂吼声，让周围人物累积发狂量表。\n执行者本身也会累积发狂量表，\n并且会变得容易受敌人攻击。",
+      "image": "assets/icons/spell-7330.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 夏玻利利的嘶吼",
+        "url": "https://wiki.biligame.com/eldenring/%E5%A4%8F%E7%8E%BB%E5%88%A9%E5%88%A9%E7%9A%84%E5%98%B6%E5%90%BC%E6%96%87%E6%9C%AC",
+        "sha256": "cf1045800de04dd045b7697a32f1e75163873f30af23270ddf33ce952d7de58a"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "madness",
+        "support"
+      ]
+    },
+    {
+      "id": 7500,
+      "nameZh": "熔炉百相之尾",
+      "nameEn": "Aspects of the Crucible: Tail",
+      "kind": "incantation",
+      "school": "远古黄金树",
+      "fpCost": 20,
+      "fpAdditional": 20,
+      "staminaCost": 32,
+      "staminaAdditional": 42,
+      "summary": "能形成修长的尾巴，横扫前方。\n借由蓄力能强化威力。",
+      "image": "assets/icons/spell-7500.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 熔炉百相之尾",
+        "url": "https://wiki.biligame.com/eldenring/%E7%86%94%E7%82%89%E7%99%BE%E7%9B%B8%E4%B9%8B%E5%B0%BE%E6%96%87%E6%9C%AC",
+        "sha256": "5772fa95db29c1344919307ef36e7de43b511ba8e8c3c9266f8e8db895a6eafe"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 7510,
+      "nameZh": "熔炉百相之角",
+      "nameEn": "Aspects of the Crucible: Horns",
+      "kind": "incantation",
+      "school": "远古黄金树",
+      "fpCost": 18,
+      "fpAdditional": 18,
+      "staminaCost": 38,
+      "staminaAdditional": 49,
+      "summary": "能在肩膀形成硬角，压低姿势再向上突刺。\n借由蓄力能向前推进。",
+      "image": "assets/icons/spell-7510.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 熔炉百相之角",
+        "url": "https://wiki.biligame.com/eldenring/%E7%86%94%E7%82%89%E7%99%BE%E7%9B%B8%E4%B9%8B%E8%A7%92%E6%96%87%E6%9C%AC",
+        "sha256": "105e8a2be905091ab3d512b740720c476582c2549b3758f8f67480edeca866ba"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "standard"
+      ]
+    },
+    {
+      "id": 7520,
+      "nameZh": "熔炉百相之喉囊",
+      "nameEn": "Aspects of the Crucible: Breath",
+      "kind": "incantation",
+      "school": "远古黄金树",
+      "fpCost": 28,
+      "fpAdditional": 4,
+      "staminaCost": 40,
+      "staminaAdditional": 0,
+      "summary": "能形成巨大喉囊，一边走动一边喷出火焰吐息。\n借由蓄力能延长喷出吐息的时间。",
+      "image": "assets/icons/spell-7520.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 熔炉百相之喉囊",
+        "url": "https://wiki.biligame.com/eldenring/%E7%86%94%E7%82%89%E7%99%BE%E7%9B%B8%E4%B9%8B%E5%96%89%E5%9B%8A%E6%96%87%E6%9C%AC",
+        "sha256": "5a47aa424b443ae27406576fddc42c76bfca0b6b35d7df6e31ab92a4d816385a"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 7530,
+      "nameZh": "黑剑",
+      "nameEn": "Black Blade",
+      "kind": "incantation",
+      "school": "黄金律法",
+      "fpCost": 26,
+      "fpAdditional": 0,
+      "staminaCost": 51,
+      "staminaAdditional": 0,
+      "summary": "能形成黑剑的幻影，朝前方跳跃，\n旋转剑身的同时攻击敌人，再释放光波。\n仅限一次，能使出追击。",
+      "image": "assets/icons/spell-7530.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黑剑",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%91%E5%89%91%E6%96%87%E6%9C%AC",
+        "sha256": "d1578db21619e9d3a77e2505f039bd5aee91bf321133d86c98ded3f2e111e0d4"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "holy"
+      ]
+    },
+    {
+      "id": 7900,
+      "nameZh": "火焰重罪",
+      "nameEn": "Fire's Deadly Sin",
+      "kind": "incantation",
+      "school": "不祥预言",
+      "fpCost": 26,
+      "fpAdditional": 26,
+      "staminaCost": 28,
+      "staminaAdditional": 36,
+      "summary": "能引发剧烈自燃，连同周围一起燃烧。\n执行者身上的火焰短时间内不会消失，\n会持续燃烧执行者以及其附近的人物。\n借由蓄力能强化威力。",
+      "image": "assets/icons/spell-7900.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 火焰重罪",
+        "url": "https://wiki.biligame.com/eldenring/%E7%81%AB%E7%84%B0%E9%87%8D%E7%BD%AA%E6%96%87%E6%9C%AC",
+        "sha256": "9e90a942dd001962f2224f7b1523114f75d62cb0c9fbc2eebe2e2934cb48609f"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "fire"
+      ]
+    },
+    {
+      "id": 7903,
+      "nameZh": "黄金雷防护",
+      "nameEn": "Golden Lightning Fortification",
+      "kind": "incantation",
+      "school": "黄金树信仰",
+      "fpCost": 30,
+      "fpAdditional": 0,
+      "staminaCost": 20,
+      "staminaAdditional": 0,
+      "summary": "能包含周围我方人物，大幅提升雷属性减伤率。\n持续执行的期间能维持祷告状态，不会生效。",
+      "image": "assets/icons/spell-7903.webp",
+      "availability": {
+        "basis": "Nightreign CustomWeapons -> MagicTables; positive-weight rows only",
+        "weaponIds": [
+          34000000,
+          34010000,
+          34020000,
+          34030000,
+          34040000,
+          34060000,
+          34070000,
+          34080000,
+          34090000
+        ]
+      },
+      "textSource": {
+        "title": "BWiki 游戏简中文本 · 黄金雷防护",
+        "url": "https://wiki.biligame.com/eldenring/%E9%BB%84%E9%87%91%E9%9B%B7%E9%98%B2%E6%8A%A4%E6%96%87%E6%9C%AC",
+        "sha256": "4f80bebb5e486ab64ac2d46771020dd589db0a773717172c4ea4efa4f6199d91"
+      },
+      "sourceIds": [
+        "nr-calculator",
+        "bwiki",
+        "er-art"
+      ],
+      "elements": [
+        "support"
+      ]
+    }
+  ],
+  "coverage": {
+    "spells": 158,
+    "sorceries": 65,
+    "incantations": 93,
+    "weapons": 390
+  },
+  "notice": "消耗与可用法术表采用 Nightreign 社区 1.03.2 数据。中文名称与简述参考游戏简中原文，图标按物品编号对应；不套用本体的能力需求、记忆格或掉落地点。",
+  "classificationNotice": "效果属性用于图鉴筛选，附魔、回复与强化类不代表该法术直接造成同类伤害；不据此计算伤害倍率。"
+}

@@ -1,0 +1,461 @@
+{
+  "source": {
+    "id": "ledger-status",
+    "title": "Nightfarer Ledger / Nightmap · 黑夜君临异常耐受表",
+    "url": "https://nightfarerledger.com/codex/bosses",
+    "game": "nightreign",
+    "kind": "named-community-table",
+    "retrievedAt": "2026-10-22",
+    "assetUrl": "https://nightfarerledger.com/assets/Affinity-B2fqUc4f.js",
+    "sha256": "c2be8852f62cc0446636814a5554bc79d283673d6f9c5203b5d27db63d0fabef",
+    "version": "异常字段未独立声明补丁版本；不将网页的血量1.03.5声明扩展到这些阈值"
+  },
+  "unit": "base-buildup-points",
+  "rows": {
+    "77200010": {
+      "bossId": "artorias",
+      "sourceProfile": "Artorias",
+      "sourceMember": "Artorias",
+      "statusResistance": {
+        "poison": 542,
+        "scarletRot": 542,
+        "bleed": 542,
+        "frostbite": 542,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "45610010": {
+      "bossId": "bloodbane_giant_crows",
+      "sourceProfile": "Bloodbane Giant Crows",
+      "sourceMember": "Bloodbane Giant Crows",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 84,
+        "frostbite": 112,
+        "sleep": 154,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50810020": {
+      "bossId": "chief_bloodfiend",
+      "sourceProfile": "Chief Bloodfiend",
+      "sourceMember": "Chief Bloodfiend",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 252,
+        "frostbite": 112,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50810010": {
+      "bossId": "chief_bloodfiend",
+      "sourceProfile": "Chief Bloodfiend",
+      "sourceMember": "Chief Bloodfiend",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 252,
+        "frostbite": 112,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50811010": {
+      "bossId": "chief_purple_fiend",
+      "sourceProfile": "Chief Purple Fiend",
+      "sourceMember": "Chief Purple Fiend",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 252,
+        "frostbite": 112,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "38000010": {
+      "bossId": "cleanrot_knights",
+      "sourceProfile": "Cleanrot Knights",
+      "sourceMember": "Cleanrot Knights",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50400020": {
+      "bossId": "curseblade",
+      "sourceProfile": "Curseblade",
+      "sourceMember": "Curseblade",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50400010": {
+      "bossId": "curseblade",
+      "sourceProfile": "Curseblade",
+      "sourceMember": "Curseblade",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "52100010": {
+      "bossId": "dancing_lion",
+      "sourceProfile": "Dancing Lion",
+      "sourceMember": "Dancing Lion",
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 252,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50700010": {
+      "bossId": "death_knight_twinaxes",
+      "sourceProfile": "Death Knights",
+      "sourceMember": "Death Knights",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": "immune",
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50700020": {
+      "bossId": "death_knight_twinaxes",
+      "sourceProfile": "Death Knight",
+      "sourceMember": "Death Knight",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": "immune",
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "50701010": {
+      "bossId": "death_knight_longhaft_axe",
+      "sourceProfile": "Death Knights",
+      "sourceMember": "Death Knights",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": "immune",
+        "frostbite": 252,
+        "sleep": 252,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "79300010": {
+      "bossId": "demon_from_below",
+      "sourceProfile": "Demons",
+      "sourceMember": "Demon from Below",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": 542,
+        "bleed": 252,
+        "frostbite": "immune",
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "79300110": {
+      "bossId": "demon_in_pain",
+      "sourceProfile": "Demons",
+      "sourceMember": "Demon in Pain",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": 542,
+        "bleed": 252,
+        "frostbite": "immune",
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "79301010": {
+      "bossId": "demon_prince_below",
+      "sourceProfile": "Demon Prince",
+      "sourceMember": "Demon Prince",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": 542,
+        "bleed": 252,
+        "frostbite": "immune",
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "79301110": {
+      "bossId": "demon_prince_pain",
+      "sourceProfile": "Demon Prince",
+      "sourceMember": "Demon Prince",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": 542,
+        "bleed": 252,
+        "frostbite": "immune",
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "52501220": {
+      "bossId": "divine_beast_warrior",
+      "sourceProfile": "DBW & Curseblade",
+      "sourceMember": "Divine Beast Warrior",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "52501210": {
+      "bossId": "divine_beast_warrior",
+      "sourceProfile": "Divine Beast Warrior",
+      "sourceMember": "Divine Beast Warrior",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "53120010": {
+      "bossId": "elder_inquisitor",
+      "sourceProfile": "Elder Inquisitor",
+      "sourceMember": "Elder Inquisitor",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "58600010": {
+      "bossId": "ghostflame_dragon",
+      "sourceProfile": "Ghostflame Dragon",
+      "sourceMember": "Ghostflame Dragon",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": 252,
+        "bleed": "immune",
+        "frostbite": "immune",
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "58200010": {
+      "bossId": "great_red_bear",
+      "sourceProfile": "Great Red Bear",
+      "sourceMember": "Great Red Bear",
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 252,
+        "frostbite": 252,
+        "sleep": 84,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "53200010": {
+      "bossId": "inquisitor",
+      "sourceProfile": "Inquisitor",
+      "sourceMember": "Inquisitor",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "33201110": {
+      "bossId": "mimic_tears",
+      "sourceProfile": "Mimic Tears",
+      "sourceMember": "Mimic Tear",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": "immune",
+        "bleed": "immune",
+        "frostbite": 252,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "46000040": {
+      "bossId": "mimic_tears",
+      "sourceProfile": "Mimic Tears",
+      "sourceMember": "Troll",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 154,
+        "sleep": 20,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "48000010": {
+      "bossId": "mohg",
+      "sourceProfile": "Mohg",
+      "sourceMember": "Mohg",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 112,
+        "frostbite": 252,
+        "sleep": 542,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "51920010": {
+      "bossId": "spider_scorpions",
+      "sourceProfile": "Spider Scorpions",
+      "sourceMember": "Spider Scorpions (Marsh)",
+      "statusResistance": {
+        "poison": "immune",
+        "scarletRot": 252,
+        "bleed": 154,
+        "frostbite": 84,
+        "sleep": 84,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "51920020": {
+      "bossId": "spider_scorpions",
+      "sourceProfile": "Spider Scorpions",
+      "sourceMember": "Spider Scorpions (Ruins)",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 154,
+        "frostbite": 84,
+        "sleep": 84,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "41402210": {
+      "bossId": "spiritcaller_snail",
+      "sourceProfile": "Spiritcaller Snail",
+      "sourceMember": "Spiritcaller Snail",
+      "statusResistance": {
+        "poison": 84,
+        "scarletRot": 84,
+        "bleed": 84,
+        "frostbite": 63,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    },
+    "king_of_the_storm": {
+      "bossId": "king_of_the_storm",
+      "sourceProfile": "Nameless King",
+      "sourceMember": "phase:1",
+      "statusResistance": {
+        "poison": 252,
+        "scarletRot": 252,
+        "bleed": 252,
+        "frostbite": 154,
+        "sleep": "immune",
+        "madness": "immune",
+        "deathBlight": "immune"
+      }
+    }
+  },
+  "references": {
+    "50400120": {
+      "bossId": "curseblade",
+      "sourceProfile": "Curseblade",
+      "sourceMember": "Curseblade",
+      "statusResistance": {
+        "poison": 112,
+        "scarletRot": 112,
+        "bleed": 112,
+        "frostbite": 112,
+        "sleep": 63,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "label": "据点咒剑士",
+      "note": "仅作同名据点形态参考，夜间暗化形态尚无独立异常阈值。"
+    },
+    "42900030": {
+      "bossId": "bloodhound_knight",
+      "sourceProfile": "Bloodhound Knight",
+      "sourceMember": "Bloodhound Knight",
+      "statusResistance": {
+        "poison": 154,
+        "scarletRot": 154,
+        "bleed": 154,
+        "frostbite": 154,
+        "sleep": 112,
+        "madness": "immune",
+        "deathBlight": "immune"
+      },
+      "label": "监牢猎犬骑士",
+      "note": "监牢场景参考，不能视作西侧地下要塞精英的独立阈值。"
+    }
+  },
+  "limitations": [
+    "仅补空缺，不覆盖已收录原始参数。",
+    "恶魔王子来源未区分两条分支，死骑士组合来源未按武器拆开；保留共用资料表说明。",
+    "夜间暗化咒剑士及永夜安定者仍须独立来源，不能复制普通形态。"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/NeuraXmy/nightreign-overlay-helper",
+  "path": "src/nightreign_overlay/plugins/map_detect/data/poi_cnn/epoch-42.onnx",
+  "license": "AGPL-3.0",
+  "sha256": "13acbd8fcaa7bd997e31fa288a4ab4f9b1180a2eb3020ab15e5572d356bf77d1",
+  "input": "RGB NCHW float32 /255, 64x64 per point at normalized 750 map",
+  "outputs": [
+    "base_logits",
+    "corner_logits"
+  ]
+}

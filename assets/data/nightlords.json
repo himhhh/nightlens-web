@@ -1,0 +1,339 @@
+{
+  "version": 3,
+  "side": 64,
+  "license": "AGPL-3.0",
+  "source": "https://github.com/NeuraXmy/nightreign-overlay-helper",
+  "sourceCommit": "f1e52248e3c4e84a9e2002cda1503a5be7eb9268",
+  "method": "Public grayscale identity templates and public foreground-chroma prototypes; no user photos or derived images are bundled",
+  "formBasis": "https://github.com/NeuraXmy/nightreign-overlay-helper/blob/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/detector.py#L90",
+  "sha256": "121157df1c213351cd61cffecd681a10b8eb7ef8f45181645a75df47a3023ef4",
+  "templates": [
+    {
+      "id": "Gladius",
+      "variant": "normal",
+      "offset": 0,
+      "colorOffset": 4096,
+      "chroma": [
+        -0.015989,
+        0.088194
+      ],
+      "foregroundChroma": [
+        -0.012655,
+        0.048844
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/0.png",
+      "sourceSha256": "0af5497813855edda6676f239d10fecfea6c58f412c2f85db36beab9d2543af1",
+      "foregroundMask": "AAAAACAAAAAAAAAAAAIgAAAAAACQAzCAAAAAAMwJEMAAACAA7AUIYAACIIDmBAQwAAMwYIECBDAAgBgQgAACmAAACAABAAHcACAI0AAAgDwAAADgAkAAFAAGAPAAoIDOAACg8ADQgO8EAQhYAEBFfQYACG4AIGJ5CwAEZgAQ4hkNAABxAAi7gwZAgDgABMnAAyDCFgACZ2ADICACQIA3MAGQGAAggBuIAHhNABCABW4AegYADNADNwA6CAAAwIGPAB4EAADo4CcAQwAAAuj9FwAjAAIB9P3EABGAAQD2HqKAaPAcAHuPA8A8GIQA2cIBQB4GBoB84QAAT4MPwObgAJin9SDAMzAA2BN+DMA7GQD8oTkH4D0BAJwYTADg/QIAzo53AOAcAQBn8PwAoM4BALc4FgDgTgwA354DAPCSA4jf/wEA8POA4P8/AAD4YwYI/x8AAPixHwL/BQAA/MAPAP8OAAA8AgYA3+8fAD4A0ACHHw4ADwF+AOMPAsDP/ydB/QMEwO///wH/AQDg/x94AAcAAeBnBnlAE4AB8D8DD4AFAAD4nwEAAAAAAPj/TgAAAAAA0H4AAAAGAACANYABAAcAAEAHAQAAAAAAgM8BAAAAAADAfwAAAAAAAOC/AAAAAAAAoHwAAAAAAAAAAgAAAAAAAAABAAAAAAAAAAAAAAA="
+    },
+    {
+      "id": "Adel",
+      "variant": "normal",
+      "offset": 16384,
+      "colorOffset": 20480,
+      "chroma": [
+        -0.012192,
+        0.090285
+      ],
+      "foregroundChroma": [
+        -0.011869,
+        0.038457
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/1.png",
+      "sourceSha256": "c0d9a778a1f34c4a589b18963dcf53c89b7c1862d81e45cfaf3aed04153135b2",
+      "foregroundMask": "AAAAYNd0KQAAAADw3WECAAAAwN2+fEMAAADgjnB/owAAAPDOgX8jAAAgeO+AfyIAAGAcbwD3IgAAAI4PAGYKAADQwAcAvAgAANDkAwAsAAAA+H4AACwKAIDpbwAANGAAgPIDAKBVAADA8AMA+HkAAED4FwA4ewCAQPw2ABj7AABA/O8APP4BAAD8QwD8fwEAAP4FAPj7AACA/gUAuPsAAMD/AwC4uwUAwGMAAJiTBQDgRwIAgDsAAOCfAwAAEwAA5P8DAAAwCADnfwAAAHAAAOM7AQAAUAAAxz8DAAAAAACDNwAAAAAAAacnAAAAGAABvz8AAADYAAgPJwAAAOIBCEIOAAAA9AYAAQwAAICxAQAIHIAAwON7AAAMAADAQx8QHAAABOADPgAAAEAGcEC4AQAIwgDw//wAEABBADD+3AA4QgAAAPzNA0AQAAIA+OE5wxgDAADwuT02GQMAAOC5Pz8AEAQA0Hl9nxkMBAAw8x+uEQwAABDYLw9DLAAAADk3AEYJAAAAdz4ABFkAAAD3/1ZgEAAAAPb7B0QwAAAA7P8HBDQAAADo9weABgAAAODnAIAHAAAA4A8AAAcAAACAnAAADwAAAADZAAAOAAAAgP8AAA4AAADA/wAADAAAAIDvAAAMAAAAgJ8AAAAAAADAvwAAAAAAAPg/AAAAAAAA4C8="
+    },
+    {
+      "id": "Gnoster",
+      "variant": "normal",
+      "offset": 32768,
+      "colorOffset": 36864,
+      "chroma": [
+        -0.017741,
+        0.065878
+      ],
+      "foregroundChroma": [
+        -0.013928,
+        0.038436
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/2.png",
+      "sourceSha256": "28358b1fca237b55778b5cb14f24157289699430b594fce27b6054e808e7166a",
+      "foregroundMask": "/c8PAP8ffwfwfv79//+DR7I/tST9NeSQePkDQP5HSAAAeAHg/MIAAAAMAPD3xQEAAAAA8O90AAAAAADQ+UMBAAAEANC0WQAAAAAAEP4XAAAgAADQ+zMAACAAAEDzMQAAAAAACL8nAAAAAYACvScAAMAUYCG+H4AAgACwwLNTAAEACBjACGYAAAAADsAUwQAAAAAH8ABAACAAgBfAAUAACAAgBNAAAAAAERAAcAAAAAD/PwAgAIAAAP8/ACAAwAMAABwCoAPgDwAAgB/AB/AfgADgH+AHeBwAAPgdgAc44AAC/BEABxhgAQL/s0EGGCABgh+ABw4AgANDN8AGBAAABFl+zAMMAAAGH3/8A1QAAA6fP3wGFAQADog/fAYYBAAegA84AAwCABzADxwADAMAPOQPCAAIAwB49gcAAIADAHj6DwAAwAMA8PsJAADgAwHg/wMAAOBpD0D9AQAA4ME9AGABAAAQYH4AAAAAAAAQ/AEAEAAAAID3AQQAAAAAQOQHAAAAYAAA+AcBwAGwAAAgBwvgATAAAEAOIvgBUIADgAEM+ABAoAwAABgwAADYDwABYAAAAP8PAAHAAQAA/wgAAAAAAIB/AAIAAAAAwBcABwAAAABgC4APAAEAAPABwD8ABwAA/wOATwBjA/CfAAAIAP8AsD8AACAAfwAAHwAAAAA="
+    },
+    {
+      "id": "Maris",
+      "variant": "normal",
+      "offset": 49152,
+      "colorOffset": 53248,
+      "chroma": [
+        -0.019279,
+        0.139977
+      ],
+      "foregroundChroma": [
+        -0.017718,
+        0.094395
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/3.png",
+      "sourceSha256": "d2d7ac9f0459ca52af92785411fda74b149bc429ac06f84d0ecbe4047721b031",
+      "foregroundMask": "TgCAfwAAAABvAAA8AQAAAHcAABYAAAAAdwCASwBAfAB7AAAoADgGAHsABAYAngEAPQDCAwBLAAAJAPEBACUAAAEA+ACABwAACQD8IIACAAALgD4EAwAAAB8AP3AHAAACD8Af+EcAAAAf4A/0ZwAAAB74D3AGAAAAL/gHzBsAAAAu8APEAQAAAArwASAAAAAAQPhbNgAAAABg+BMLAAAAAAD4AwOABwAAIPzNAwAAAADg/c8B/gIAAMD/B8D7/wEAwP/j+f//BwDA//P+5P8PAMC//Q+A/x8AwP/8BwD8PwDAf/4LAIs/AOB//wOAED8A4O//AYCAfQCAhz8AAAB/AIAPPQAAAPwAwJctIAAA8AKAuw4EgADgZoH/DwBwAOAFBC8nAAAAAG0AIhcAAAAA2wCQDwAAAAD2ANYFAEAAACIA9gcBgAAADAD8AwAAAwAcEPwDAAAcIPAA/AEAAAAgwCD7AQADAAAAEP8BAAYAAADg/wEACAAAAOD/AQAwAAAA4P8BAMAAAADA/wcAgAEAAED/BwAADgAAAP8HAAAQAACA/w8AAMDwAYD/BwA9AH8AAP9fABgA/P8A/x8AIAQAAAD/DwBAAAAEAPo3AAAAAAAA8gcAAAAAAADiAgAAAAAAAAAHAAAAAwAAgAEAAAAGAAAAAAAAAAAAAAAAAAAAAAA="
+    },
+    {
+      "id": "Libra",
+      "variant": "normal",
+      "offset": 65536,
+      "colorOffset": 69632,
+      "chroma": [
+        -0.011287,
+        0.096208
+      ],
+      "foregroundChroma": [
+        -0.0135,
+        0.066131
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/4.png",
+      "sourceSha256": "7ee906b26992fe48f670c19d612e2ad50b45d4aa995c887a611cf1d8fa014812",
+      "foregroundMask": "AP8DCAAA/gJA/wdABgB+BAD/AwACAP4EAPsFAAEAPARAAQCABwAAAEADAMAPAAAAQD4B7A8AHgDAdsD4CAg8AIAFYLzTGAAAABlg7k8RAAAAAyDOAxAAAQAOIKgAEIACAAwg8A8QwAEAeDCwA0AQAADgH2AAwA8AQIADwAcAAAAAAADAAAAAAAAAAMAFAAAAAAAAgAMAAAAAAADEAwAAAAAAAMADAAAAAAAAWAMAAAAAAAC5AQAAAAAAAJoAAAAAAAAAHAAAAABAAAA+AAAAAAAAAFwAAAAAAAAAWMAAAAAAAADoIgAAAAAAAPzQAAAAAABA/hsAAAAAAED+aSAAAAAAAP4XYAAAAAAArgsAAAAAABD+AQAAAAAAMP9mAAAAAABY73EAAAAAAFD/DQAAAACACDslAAAAAECwnjsBAAAAAIG83QAAEAAAwtszAQAAAADJv3YAAGAAgGH57QAAAADgNf4BCQAAAOBLpoMnAAAAwE9cWTIAAADH2l6xFQAAAN7eDPAECAAA//8TeAIKAAD/9wd8AQAAYP//L/YAAADA/////TEAAOD/9r/3DQgAQP7X/3mCAwCA2e/zORgJAMDb8+24kAQA0J+/25nhCgigH3/f2U1BEtAev91d4IAFaA9+3F85gAPkD/zNGZyAB+gB/IcHDwAG/gH4v+cHADw="
+    },
+    {
+      "id": "Fulghor",
+      "variant": "normal",
+      "offset": 81920,
+      "colorOffset": 86016,
+      "chroma": [
+        -0.015901,
+        0.065555
+      ],
+      "foregroundChroma": [
+        -0.014379,
+        0.029187
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/5.png",
+      "sourceSha256": "e3b4e9ec4b51dac79fabba3e71f5e7f623d7b2d028f2dbdc9f452f7087513e18",
+      "foregroundMask": "ACACAACA7x4AIAMAAMAA9ACAAQAASAD8AIAAAAAAAJ4AQAAAAAAA3wBAAAAAAABvAAAAAAAoAB8AAAAAAACAHgAAAAAAAOAGAAAAAAAAYAIAGAAAAABg/wAAAAAAAKC/gAAAAAAA0L8ABAAAAADQnwACAAAAAOiLAAAAAAAA3A8AAAD+AwD/AwAAAMz/AP4AwAAAkfnjfgBIAABA2MP/AAgAAPDYg/8NAHAB/7OB/wEA+5//8wV/AID////xABYAAf7v/yUA7gQA////5QH+AAF//f/rDegEAf///2Ne5AQDf///Zw4YAAN///9jDHAAA33+/2ssBAAnXP7/RzIAADP8///LFgAAAfT8/8IEAAAN1P5/gJsBAA2G7v8IAAAABgAMfBgAAAADAAgwHAAAAAAAACC+AQAABQAA8L8BAAADAADgvwEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA4AAAAAAAAAAAAAAAAo/1RAAAAAADj/ycAAAAAgOW+kAAAAACA89bmAQAAAAD4WzIBAAAAAP4/MAAAAACA488+AAAAAMK8LycAAAAAwPx4FwAAADDgfBM2AAAACFCMoRsAAAAELOc3NwAAAAKQ+UcaAAAAAJb/FwIBAAAQz/mfgAAAADAPeQ8GAAA="
+    },
+    {
+      "id": "Caligo",
+      "variant": "normal",
+      "offset": 98304,
+      "colorOffset": 102400,
+      "chroma": [
+        -0.014145,
+        0.039136
+      ],
+      "foregroundChroma": [
+        -0.011999,
+        0.026049
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/6.png",
+      "sourceSha256": "10c66fb81567e359433a3efc2fa11fb3870c4ea69d42d4a3b52084484761a839",
+      "foregroundMask": "ACAALAgEAJwAQABsCAQQmgACACYJBPi3AAgAIggA/vcAEAAjCsD+/wAAgCEABh//AAAAIgCC/38AAIApAMD/70AAgBEE8H/egACOEAD4H8CAAMMAAOgLwBCAgAAM/g+gOGDAAIj8BYAMIAAAAP4DAB4wAAAA/wAAPhgAAAD/AAAHGAABgP8BEAMMgACAfABgAAQAAJB+AEADBgAA4D8AAAECAADgHwDAAAMAAP4vAICgAQAAfH8AAIABAACc/wAA0AAgAJI/AIDYACACgn8AAFhgYAOQ/wEAeABgA5j/AQB2ACAGmP8BACYQwAQ4/wEAEwhABQj+AQDZD4ALDN8BAN8F4AsGfwAAHgSgC8YfAQD+AmAfwg8AAP4B4R9AiAAAfgHgPwC2AAB+AMA/IBIBABIAwC4ACCAAAADAHQAAQAAAgIF/AADAAAAABvsAAMAAAAAM/wAQgAEAAAj+AHAYAQAAAP4B7HADAAAQ/gPo4QIAABD+A/iDBwAAGPxH8IcPAAAM/M3gHw8AAAT4j8A/HwAAkPG/gD8fAACY54+heh8AAADOvwHwNwAAAIh9AYAjAACAEX8DgCIAAkhCcAOwIgAOAAZgBhAiABgAAEEGGCIAMAAAQAYnYABwAAAYBzAgCGAABBADaCBIAAAAAAJrIAAAAAAABG8AAAAADAAAc4A="
+    },
+    {
+      "id": "Heolstor",
+      "variant": "normal",
+      "offset": 114688,
+      "colorOffset": 118784,
+      "chroma": [
+        -0.004565,
+        0.083221
+      ],
+      "foregroundChroma": [
+        -0.004458,
+        0.051507
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/7.png",
+      "sourceSha256": "2354bd6f8f4776937eb0fb29ee631b1dffe497a75c99a67f3d0e7d0e8671f1c0",
+      "foregroundMask": "AAAcfgAA4BsAAB5bAACoAQEAHEsAAPAgMwApGwAG8CAnADkbABJwME4CMR8ACDgSDgTwLwBmaBINjOAPAGNgAgue4wIAOSQJE/zDIAAcBAwz+MEAQA6oTif4ARAAKwhYDfYBBAAGAHwN8AEAAAJA/AnwASAgAAT+CHABMAAABP88EAE4AAAA/D0AABgAAAf8OAQAHAAAB/4YBgAMAACH8gAGAA4AAMfgAAwABgCo8+8ADAAHB/jnfwAcgMMH+AM4ABjAYQP8EeBgWPDxONixAnAYeDk84LFP+Dj4Gh7wAW78MOABG7gAhHxwwP4DMADULGDw/zEAQPAHYPC/GASAkQAg/GEIAMBDACBHAQcAwMcAwAcAAwCA7wDAf2ACAAB/AMD/7wEAAP4AAPPzAQAACAAA8TYAAAAAAADjDwAAAAAIAOYPAHAAABAA8A8APAAAAADwBwh/AgAAAMEfj/8BAACAA58r/wAAAAAePwI+AAAAAD8+AAwIAAAADC+AAAAAAADAfwAAAAAAAeD5gAAYAAAAfDBAAAgAAAA8+AAYIAAAAADgAB4oAAAAAOCAHzwAAAAAwIENPAAAAACAAwA4AAAAAIADYBAAAACABw8AOAABAMAHDwAwAAIAwAcPABAAAACADw4BGAAYAIAfDEANAAAAAA0YCAcAAAAAABgAAQA="
+    },
+    {
+      "id": "Harmonia",
+      "variant": "normal",
+      "offset": 131072,
+      "colorOffset": 135168,
+      "chroma": [
+        -0.010346,
+        0.052656
+      ],
+      "foregroundChroma": [
+        -0.008413,
+        0.031734
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/8.png",
+      "sourceSha256": "31017fec94bdb30470cc04345ef6e472d6fdd92d05c0ece838075256a358dbcf",
+      "foregroundMask": "AAAQDwAeBIAAAAKPAJgFoAAAAo8ADAO0AQAAjkEMBLQAAAGsIQ4AsAAAYOwgBgBgBIBgzCAAAOAEgOAEYIAA4AYA4AxAgCEwB4CgDQHAAXwCACAMIfgBPAQAAAihnAF+AAAAGCGEAf8BAACDQNwAAAAAAEIAfgAAAAAAQiAPAAQAAABAwAEAAgAAAARgwAGAAGAACHDAB4AGcAAAGMAPgAd+AAAAwA8QA38AAADAP8DCfwAAAMA/4OD/AOAAwD+g4P8AMAHAP7DguwGQAcD/gOA7AfYAQL/A8TcD1gBgLuDoMwKSACD84OQABgYA4HtAdIkGDgDgMwE0jgYcAPAPAwyUBDIA0F8GDBwGBgBQ/A8MjobfAFD0Dzy8hMcAGMQPFD7NXwAQxgceGO9vABTHCx4Yd2AAGMcY3wwGZQAIRzzeBJ4GAAhHHE4C/hYAAEccfABeFgAA5gR8AEJWAABuAH4AAjYAAGwAfwACAgAM4AwPAAMLAAzgDAcQAx0ADsAMAIgD/AAOiAwA4Ad3CAQYHACUB3cAAEAEAI4HeAAQAAwADgd8AgQACBAGB36CBAQACAYD+BAEAgAABgB8AAgAQAAEAPoACAAAAARBeAIAAAAAAOFpEgAAAAAE4GEwAAAAAADgBXgBAAAAAOEHeAAAAAAA4QdwAAAAAADhADAAAAA="
+    },
+    {
+      "id": "Straghess",
+      "variant": "normal",
+      "offset": 147456,
+      "colorOffset": 151552,
+      "chroma": [
+        -0.01588,
+        0.075378
+      ],
+      "foregroundChroma": [
+        -0.009333,
+        0.041598
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/9.png",
+      "sourceSha256": "51816bd850bbc0163ca139f4306d706488daacae544214cc7a6c6b9e70a0ae65",
+      "foregroundMask": "AMAC4AAAAAAEwASAPwAAAALACYDhAwAAAIABAqIfAAAAAAKIBv4AAAAABsQf/AAAAIAVhH/8OwAAADMA/8/3AACAfwD/z48AAID/Afz/vwEAwP4D/P8/AwAA/Avw/38CAAD8G+T/fwYAANgWwf//DAAAuAuH//8dAADwHwf//xkAAOA9wv//MQAAwPvA//9zAACA88D///cAAADmwP//+wAAANzD///7AAAAsMP///cAAABA4P//7wAAAADw///fAAAAAPD///8AAAAAwPf//wAAAADA////AAAAAAB5//8AAAAAAPH//wAAAAAA43f/AAAAAAADr/8AAAAAAAL+/wAAAAAAAPj/AAAAgAgAMO4AAACACQIA7gAAAEMABgDsAAAAbgAeAGgAAAA8ADwAOAAAAHgAAAA+AAAAcAAA9v8AAABAAAD+/wAAAIIDAOP/AAAAAAgAA/wAAAAAAAAHPAAAAAAAgAEMAAAAAACAQb4AAAAAAODg3wAAAAAAMPDfAAAAAMAD+BMAAAAAgAPYMQAAAACAAYAZAAAAAgABgBgAAAAAAADAXAAAgAAAEEAMAAAAAwAgAAQAAAAOAIABBAAAAAQAAAAEAAAAAAAAAAIAAAAIAAAAAAAAABAAAMABAAAAAAAAaAEAAAAAAEDsAQAAAAAAQMABAAAAAAAAEAA="
+    },
+    {
+      "id": "Gladius",
+      "variant": "everdark",
+      "offset": 163840,
+      "colorOffset": 167936,
+      "chroma": [
+        0.116386,
+        0.224729
+      ],
+      "foregroundChroma": [
+        0.110053,
+        0.212393
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e0.png",
+      "sourceSha256": "ae9663aaccca8a1da658e2d6e640ea5c0cbbe49b5e82278cfca42d45ff2978c6"
+    },
+    {
+      "id": "Adel",
+      "variant": "everdark",
+      "offset": 180224,
+      "colorOffset": 184320,
+      "chroma": [
+        0.110206,
+        0.212623
+      ],
+      "foregroundChroma": [
+        0.083919,
+        0.161287
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e1.png",
+      "sourceSha256": "75954df1f82419c759e95c218bfedf1409a9eafe430b39f142cea9d7c4e263b3"
+    },
+    {
+      "id": "Gnoster",
+      "variant": "everdark",
+      "offset": 196608,
+      "colorOffset": 200704,
+      "chroma": [
+        0.10479,
+        0.202158
+      ],
+      "foregroundChroma": [
+        0.069496,
+        0.13324
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e2.png",
+      "sourceSha256": "3c3759a38c1e0f95de4b005391c5a0a04ac50decb7b0097256578975ef7a5302"
+    },
+    {
+      "id": "Maris",
+      "variant": "everdark",
+      "offset": 212992,
+      "colorOffset": 217088,
+      "chroma": [
+        0.11144,
+        0.215317
+      ],
+      "foregroundChroma": [
+        0.084467,
+        0.162885
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e3.png",
+      "sourceSha256": "662adfa47328be76c3c8c5c687d97879314812c456bfa4266f4230aeb5e44256"
+    },
+    {
+      "id": "Libra",
+      "variant": "everdark",
+      "offset": 229376,
+      "colorOffset": 233472,
+      "chroma": [
+        0.108046,
+        0.208717
+      ],
+      "foregroundChroma": [
+        0.074431,
+        0.142965
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e4.png",
+      "sourceSha256": "7fd3126933e5fc5236b176d5be3728d349c9df51b4fe0c81f237e389528d0c52"
+    },
+    {
+      "id": "Fulghor",
+      "variant": "everdark",
+      "offset": 245760,
+      "colorOffset": 249856,
+      "chroma": [
+        0.120311,
+        0.232422
+      ],
+      "foregroundChroma": [
+        0.101331,
+        0.194753
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e5.png",
+      "sourceSha256": "4f442b36c5f0d118bfea0ddd8dbba850e2ecd4c700fde313f6b0963925a76f1f"
+    },
+    {
+      "id": "Caligo",
+      "variant": "everdark",
+      "offset": 262144,
+      "colorOffset": 266240,
+      "chroma": [
+        0.115003,
+        0.221986
+      ],
+      "foregroundChroma": [
+        0.088269,
+        0.169815
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e6.png",
+      "sourceSha256": "8ed447eac9272e882573f17b7feea6f87132cca6b6a830fe5e55287c6ad2b2d6"
+    },
+    {
+      "id": "Heolstor",
+      "variant": "everdark",
+      "offset": 278528,
+      "colorOffset": 282624,
+      "chroma": [
+        0.11126,
+        0.214631
+      ],
+      "foregroundChroma": [
+        0.087981,
+        0.169238
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e7.png",
+      "sourceSha256": "1aaf913d18b996ae7baad7463fef3a97523b9867b50beac68590b30a52929c57"
+    },
+    {
+      "id": "Harmonia",
+      "variant": "everdark",
+      "offset": 294912,
+      "colorOffset": 299008,
+      "chroma": [
+        0.102147,
+        0.196617
+      ],
+      "foregroundChroma": [
+        0.06964,
+        0.133772
+      ],
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/e8.png",
+      "sourceSha256": "3bda7b40b9f788cfde372568bcb5b870c41fba915b76d8d980c40d8ee44f395e"
+    },
+    {
+      "id": null,
+      "variant": "unknown",
+      "offset": 311296,
+      "colorOffset": 315392,
+      "chroma": [
+        -0.031609,
+        0.256412
+      ],
+      "foregroundChroma": null,
+      "source": "https://raw.githubusercontent.com/NeuraXmy/nightreign-overlay-helper/f1e52248e3c4e84a9e2002cda1503a5be7eb9268/src/nightreign_overlay/plugins/map_detect/data/icons/nightlord/unk.png",
+      "sourceSha256": "189eee5ce79b8e33138475b553351dd42dfde5b1706e456a8fb489b5ecc7f81e"
+    }
+  ]
+}
