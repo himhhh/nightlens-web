@@ -1,3 +1,4 @@
+import {isSingleFormNightlord} from './core.js';
 import {getBossCombat} from './boss_combat.js';
 import {bossLinkHTML} from './boss_ui.js';
 import {escapeHTML as esc} from './ui_helpers.js';
@@ -88,7 +89,7 @@ function expeditionStages(pattern,form){
  return [{id:'night1',label:'第一夜',key:pattern.night1Boss,context:'night'},{id:'night2',label:'第二夜',key:pattern.night2Boss,context:'night'},{id:'final',label:'最终夜王',key:form==='everdark'?pattern.nightlord+'_everdark':pattern.nightlord}];
 }
 export function recommendForExpedition(pattern,combat,weapons,{form='unknown',spells}={}){
- if(pattern.nightlord==='Heolstor')form='normal';
+ if(isSingleFormNightlord(pattern.nightlord))form='normal';
  if(form==='unknown')return {...empty(),reason:'最终夜王形态尚未识别，暂不生成整局推荐；可先查看第一夜、第二夜。'};
  const stages=expeditionStages(pattern,form).map(stage=>{
   const bodies=getBossCombat(combat,stage.key,{context:stage.context}),ratings=damageRatings(bodies);
@@ -127,7 +128,7 @@ function overallSummaryHTML(r,combat,getName,pattern,form){
 }
 export function recommendationsHTML(pattern,combat,weapons,{form='unknown',stage='overall',kind='melee',spells,getName=x=>x}={}){
  if(kind==='weapon')kind='melee';
- if(pattern.nightlord==='Heolstor')form='normal';
+ if(isSingleFormNightlord(pattern.nightlord))form='normal';
  const defs=[{id:'overall',label:'整局推荐'},...expeditionStages(pattern,form)];
  return '<section class="weapon-recommendations"><div class="section-heading"><h2>武器推荐</h2></div><p class="data-note">武器品质：仅紫色（稀有）／金色（传说），含弓弩与法器。</p><div class="recommend-tabs" role="tablist" aria-label="战斗阶段">'+defs.map(d=>'<button data-plan-stage="'+d.id+'" aria-selected="'+(stage===d.id)+'">'+d.label+'</button>').join('')+'</div><div class="recommend-kinds" role="group" aria-label="推荐类别">'+KINDS.map(([id,label])=>'<button type="button" data-plan-kind="'+id+'" aria-pressed="'+(kind===id)+'">'+label+'</button>').join('')+'</div>'+defs.map(d=>{
   const overall=d.id==='overall',ready=(!overall&&d.id!=='final')||form!=='unknown';const r=overall?recommendForExpedition(pattern,combat,weapons,{form,spells}):ready?recommendForBoss(combat,weapons,d.key,{spells,context:d.context,legendaryWeight:d.id==='final'?10:0}):{...empty(),reason:'照片未确认夜王形态，暂不推断最终战抗性。'};

@@ -1,3 +1,4 @@
+import {isSingleFormNightlord} from './core.js';
 /** Independent recognition of the lower-left expedition portrait; never uses layout IDs. */
 export function decideNightlord(scores){
  const grouped=new Map();for(const item of scores){if(!Number.isFinite(item.score))continue;const old=grouped.get(item.id);if(!old||item.score>old.score)grouped.set(item.id,item);}
@@ -24,7 +25,7 @@ export function classifyPortraitChroma(chroma,normal){
 function portraitForm(cv,aligned,identity,templates){
  if(!identity.id)return {form:'unknown'};
  // This boss has no Everdark form, regardless of generic purple art in a template pack.
- if(identity.id==='Heolstor')return {form:'normal',formSource:'known-single-form'};
+ if(isSingleFormNightlord(identity.id))return {form:'normal',formSource:'known-single-form'};
  if(!identity.box||![3,4].includes(aligned.channels()))return {form:'unknown',formReason:'头像配色不可用'};
  const normal=templates.find(t=>t.id===identity.id&&t.variant==='normal');
  const mask=foregroundMask(normal);

@@ -1,8 +1,9 @@
 export const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function sourceLink(source){const url=source?.url;return typeof url==='string'&&/^https:\/\//.test(url)?'<a href="'+escapeHTML(url)+'" target="_blank" rel="noopener">'+escapeHTML(source.title||source.id||'数据来源')+' ↗</a>':'';}
 export const DAMAGE_NAMES={standard:'标准',strike:'打击',slash:'斩击',pierce:'突刺',magic:'魔力',fire:'火',lightning:'雷',holy:'圣'};
-export function requestMapPhoto({nativeBridge,fallbackInput}){
+export function requestMapPhoto({nativeBridge,browserCamera,fallbackInput}){
  if(nativeBridge?.postMessage){nativeBridge.postMessage(JSON.stringify({action:'capturePhoto'}));return;}
+ if(browserCamera){browserCamera();return;}
  fallbackInput.click();
 }
 export function photoFromNative({base64,name}){

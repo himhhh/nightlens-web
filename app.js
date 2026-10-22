@@ -2,7 +2,7 @@ import {renderSpellCatalog,spellDetailsHTML,SPELL_EFFECTS} from './spell_catalog
 import {renderWeaponCatalog,weaponDetailsHTML,WEAPON_ELEMENTS} from './weapon_catalog.js';
 import {installImageRecovery} from './image_recovery.js';
 import {recommendationsHTML} from './weapon_recommendations.js';
-import {filterPatterns,recommendPoint,summarizeEvidence,resolveNightlordFilter,normalizeObservations,TYPE_NAMES,TERRAIN_NAMES,NIGHTLORD_NAMES,POI_TYPES} from './core.js';
+import {filterPatterns,recommendPoint,summarizeEvidence,resolveNightlordFilter,normalizeObservations,isSingleFormNightlord,TYPE_NAMES,TERRAIN_NAMES,NIGHTLORD_NAMES,POI_TYPES} from './core.js';
 import {filterCrystalGroups} from './crystals.js';
 import {createCrystalMapView} from './crystal_map.js';
 import {crystalMarkersHTML,crystalSummaryText} from './crystal_ui.js';
@@ -19,6 +19,8 @@ import {eventText,featureDetailsHTML} from './map_events.js';
 import {castleMapMarkers,compactEncounterLabel} from './map_labels.js';
 import {requestMapPhoto,photoFromNative} from './ui_helpers.js';
 import {connectOffline,offlinePresentation} from './offline_ui.js';
+import {mountBrowserCamera} from './browser_camera.js';
+import {mountInstallGuide} from './install_guide.js';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const STORAGE='nightlens.demo.v2';
@@ -60,7 +62,7 @@ function setView(view){
  if(view==='results')renderResults();if(view==='crystals'){renderCrystals();crystalViewport?.refresh();}if(view==='scan')mainViewport?.refresh();window.scrollTo({top:0,behavior:'instant'});updateAtlasBackTop();
 }
 function closeDetail(){const view=state.detailReturnView,top=state.detailReturnScroll;setView(view);window.scrollTo({top,behavior:'instant'});}
-function formForPattern(pattern){return pattern.nightlord==='Heolstor'?'normal':state.formNightlord===pattern.nightlord?state.expeditionForm:'unknown';}
+function formForPattern(pattern){return isSingleFormNightlord(pattern.nightlord)?'normal':state.formNightlord===pattern.nightlord?state.expeditionForm:'unknown';}
 function renderFinalCombat(){if(!state.selected)return;const form=formForPattern(state.selected);$('final-nightlord-slot').innerHTML=finalNightlordHTML(state.selected,state.combat,{form,formSource:state.formSource});$('weapon-plan-slot').innerHTML=recommendationsHTML(state.selected,state.combat,state.weapons,{form,stage:state.planStage,kind:state.planKind,spells:state.spells,getName:bossName});}
 function renderWeaponDetails(id){currentWeaponId=Number(id);$('weapon-content').innerHTML=weaponDetailsHTML(state.weapons,currentWeaponId,{nightfarers:state.nightfarers,scaling:state.weaponScaling,character:state.weaponCharacter,level:state.weaponLevel});}
 function openWeapon(id){renderWeaponDetails(id);if(!$('weapon-dialog').open)$('weapon-dialog').showModal();$('weapon-dialog').scrollTop=0;}
@@ -264,6 +266,7 @@ function download(url,name){if(window.NightLensNative?.postMessage){fetch(url).t
 function exportSession(){const payload={app:'NightLens',build:'0.8.0',time:new Date().toISOString(),dataVersion:state.data.sourceVersion,filters:state.filters,observations:state.observations,candidates:visibleCandidates().map(p=>p.id),decision:evidenceSummary(),autoTerrain:state.autoTerrain,autoNightlord:state.autoNightlord,nightlordDetection:state.detectedNightlord,effectiveNightlord:effectiveNightlord(),crystals:state.crystals,crystalGroups:filterCrystalGroups(state.crystalData.groups,state.crystals).map(g=>g.id),diagnostics:state.diagnostics};const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));download(url,'NightLens-验收记录.json');setTimeout(()=>URL.revokeObjectURL(url),3000);}
 function filterChanged(kind,value){if(state.busy)return;state.expeditionForm='unknown';state.formSource=null;state.formNightlord=null;if(kind==='terrain'){state.autoTerrain=value==='Auto';if(value!=='Auto')state.filters.terrain=value;}else if(kind==='nightlord'){state.autoNightlord=value==='Auto';state.filters.nightlord=value==='Auto'?'':value;}else state.filters[kind]=value;state.observations=[];state.aligned=null;state.selected=null;state.diagnostics=null;state.detectedNightlord=null;if(kind!=='spawn')state.filters.spawn='';showPhoto();renderFilters();renderCandidates();status('已更新筛选条件并清空旧点位；可以重新自动识别这张照片。');}
 function wire(){
+ mountInstallGuide();
  const versionButton=$('version-status'),versionMenu=$('version-menu');
  const closeVersion=()=>{versionMenu.hidden=true;versionButton.setAttribute('aria-expanded','false');};
  versionButton.onclick=()=>{versionMenu.hidden=!versionMenu.hidden;versionButton.setAttribute('aria-expanded',String(!versionMenu.hidden));};
@@ -272,7 +275,8 @@ function wire(){
  for(const button of document.querySelectorAll('[data-clear-search]')){const input=$(button.dataset.clearSearch),update=()=>{button.hidden=input.value.length===0;};input.addEventListener('input',update);button.onclick=()=>{input.value='';input.dispatchEvent(new Event('input',{bubbles:true}));input.focus({preventScroll:true});};update();}
  $('atlas-back-top').onclick=()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});window.addEventListener('scroll',updateAtlasBackTop,{passive:true});updateAtlasBackTop();
  window.NightLensReceivePhoto=async payload=>{if(state.busy)return;try{await importPhoto(photoFromNative(payload));}catch(_){status('照片未能导入，请重新拍摄。',true);}};
- $('camera-button').onclick=()=>{if(!state.busy)requestMapPhoto({nativeBridge:window.NightLensNative,fallbackInput:$('camera-input')});};$('gallery-button').onclick=()=>$('gallery-input').click();$('camera-input').onchange=e=>importPhoto(e.target.files[0]);$('gallery-input').onchange=e=>importPhoto(e.target.files[0]);$('recognize-button').onclick=()=>runRecognition();
+ const browserCamera=mountBrowserCamera({onPhoto:importPhoto,onGallery:()=>$('gallery-input').click()});
+ $('camera-button').onclick=()=>{if(!state.busy)requestMapPhoto({nativeBridge:window.NightLensNative,browserCamera:browserCamera.open,fallbackInput:$('camera-input')});};$('gallery-button').onclick=()=>$('gallery-input').click();$('camera-input').onchange=e=>importPhoto(e.target.files[0]);$('gallery-input').onchange=e=>importPhoto(e.target.files[0]);$('recognize-button').onclick=()=>runRecognition();
  $('terrain-filter').onchange=e=>filterChanged('terrain',e.target.value);$('lord-filter').onchange=e=>filterChanged('nightlord',e.target.value);$('spawn-filter').onchange=e=>filterChanged('spawn',e.target.value);$('spawn-picker-button').onclick=openSpawnPicker;$('spawn-map-terrain').onchange=renderSpawnPickerMap;$('spawn-clear-choice').onclick=()=>{filterChanged('spawn','');$('spawn-dialog').close();};$('spawn-dialog').addEventListener('close',()=>{spawnViewport?.destroy();spawnViewport=null;});
  $('clear-photo').onclick=()=>{state.generation++;state.photo=null;state.aligned=null;state.observations=[];state.selected=null;state.diagnostics=null;state.detectedNightlord=null;state.expeditionForm='unknown';state.formSource=null;state.formNightlord=null;showPhoto();renderCandidates();status('照片已移除，可以重新拍摄。');};
  $('clear-points').onclick=()=>{state.observations=[];state.selected=null;renderCandidates();toast('已清空兴趣点标记');};

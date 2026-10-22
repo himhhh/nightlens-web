@@ -2,6 +2,7 @@ import {CATEGORY_NAMES} from './poi_catalog.js';
 /** Deterministic inference shared by the UI and automated acceptance tests. */
 export const POI_TYPES = ['church', 'mage', 'village', 'greatchurch', 'fort', 'ruins', 'camp', 'marsh', 'forge', 'wuf', 'euf', 'merchant', 'empty', 'other'];
 export const TERRAIN_NAMES = {'Default':'宁姆韦福','Mountaintop':'山顶','Crater':'火山口','Rotted Woods':'腐败森林','Noklateo':'隐城','Great Hollow':'大空洞'};
+export const isSingleFormNightlord=id=>['Heolstor','Straghess'].includes(id);
 export const NIGHTLORD_NAMES = {Gladius:'格拉狄乌斯 · 黑夜野兽',Adel:'艾德雷 · 黑夜之爵',Gnoster:'格诺斯塔 · 黑夜之智',Maris:'玛丽斯 · 深海黑夜',Libra:'利普拉 · 黑夜之魔',Fulghor:'弗格尔 · 黑夜光骑士',Caligo:'卡莉果 · 黑夜雾霾',Heolstor:'布德奇冥 · 黑夜王',Harmonia:'哈尔莫妮亚 · 安定者',Straghess:'史柴格斯 · 废弃物之王'};
 export const TYPE_NAMES = {...CATEGORY_NAMES,unknown:'未确认'};
 

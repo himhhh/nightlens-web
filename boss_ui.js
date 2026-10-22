@@ -1,4 +1,4 @@
-import {NIGHTLORD_NAMES} from './core.js';
+import {NIGHTLORD_NAMES,isSingleFormNightlord} from './core.js';
 import {getBossCombat,getBossEncounter,getCombatDataLabel,getCombatSources,getCombatVariantLabel,DAMAGE_TYPES,STATUS_TYPES,formatNegation,formatStatusResistance,scaleBossForPlayers} from './boss_combat.js';
 import {escapeHTML as esc,sourceLink,DAMAGE_NAMES,damageIcon} from './ui_helpers.js';
 function records(data,keys,options){const seen=new Set();return (Array.isArray(keys)?keys:[keys]).flatMap(key=>getBossCombat(data,key,options)).filter(b=>{if(seen.has(b.id))return false;seen.add(b.id);return true;});}
@@ -39,8 +39,8 @@ export function bossDetailsHTML(data,keys,getName=name=>name,variants={},options
 
 export function finalNightlordHTML(pattern,data,{form='unknown',formSource}={}){
  const id=pattern?.nightlord,name=NIGHTLORD_NAMES[id];if(!name)return '<p>暂无最终首领记录。</p>';
- const mode=id==='Heolstor'?'normal':form,key=mode==='everdark'?id+'_everdark':id;
- const options=id==='Heolstor'?'':'<details class="expedition-form"><summary>'+(mode==='unknown'?'照片未识别形态 · 可补拍或手动修正':formSource==='portrait-color'?'已自动识别形态 · 识别有误？':'已选定形态 · 修改')+'</summary><div class="expedition-form-options"><button data-expedition-form="normal" aria-pressed="'+(mode==='normal')+'">普通夜王</button><button data-expedition-form="everdark" aria-pressed="'+(mode==='everdark')+'">永夜王</button></div></details>';
+ const single=isSingleFormNightlord(id),mode=single?'normal':form,key=mode==='everdark'?id+'_everdark':id;
+ const options=single?'':'<details class="expedition-form"><summary>'+(mode==='unknown'?'照片未识别形态 · 可补拍或手动修正':formSource==='portrait-color'?'已自动识别形态 · 识别有误？':'已选定形态 · 修改')+'</summary><div class="expedition-form-options"><button data-expedition-form="normal" aria-pressed="'+(mode==='normal')+'">普通夜王</button><button data-expedition-form="everdark" aria-pressed="'+(mode==='everdark')+'">永夜王</button></div></details>';
  const known=mode!=='unknown'&&getBossCombat(data,key).length;
- return options+'<section class="final-nightlord"><img src="assets/icons/nightlord-'+id+'.png" alt=""><div><span class="encounter-kind">最终 Boss · '+(mode==='everdark'?'永夜王':mode==='normal'?'普通夜王':'形态待识别')+'</span>'+(known?bossLinkHTML(data,key,name):'<strong>'+esc(name)+'</strong><p class="data-note">'+(mode==='unknown'?'头像配色不清晰，暂不推断形态抗性。可补拍包含左下角头像的照片。':'该永夜形态资料尚未收录，不套用普通形态。')+'</p>')+'</div></section>';
+ return options+'<section class="final-nightlord"><img src="assets/icons/nightlord-'+id+'.png" alt=""><div><span class="encounter-kind">最终 Boss'+(single?'':' · '+(mode==='everdark'?'永夜王':mode==='normal'?'普通夜王':'形态待识别'))+'</span>'+(known?bossLinkHTML(data,key,name):'<strong>'+esc(name)+'</strong><p class="data-note">'+(mode==='unknown'?'头像配色不清晰，暂不推断形态抗性。可补拍包含左下角头像的照片。':'该永夜形态资料尚未收录，不套用普通形态。')+'</p>')+'</div></section>';
 }

@@ -2,6 +2,7 @@ import {projectPoint, validateQuad, homographyFromPoints, TERRAIN_NAMES} from '.
 import {classifyLandmarks,loadNetFromBytes} from './poi_cnn.js';
 import {matchNightlord,loadNightlordTemplates} from './nightlord.js';
 import {assetRetryURL,imageRetryDelay} from './image_recovery.js';
+import {TERRAIN_REGIONS,chooseVerifiedTerrain,ordinaryTerrainConfirmed} from './terrain_verification.js';
 let runtimePromise;
 const imageCache=new Map();
 const pause=()=>new Promise(resolve=>setTimeout(resolve,15));
@@ -39,16 +40,18 @@ function hullArea(points){
  const lo=[],hi=[];for(const p of sorted){while(lo.length>=2&&cross(lo.at(-2),lo.at(-1),p)<=0)lo.pop();lo.push(p);}for(const p of sorted.slice().reverse()){while(hi.length>=2&&cross(hi.at(-2),hi.at(-1),p)<=0)hi.pop();hi.push(p);}const hull=[...lo.slice(0,-1),...hi.slice(0,-1)];return Math.abs(hull.reduce((sum,p,i)=>{const q=hull[(i+1)%hull.length];return sum+p.x*q.y-p.y*q.x;},0))/2;
 }
 /** ORB/Hamming/RANSAC only establishes geometry, never a map pattern ID. */
-export function estimateAlignment(cv,photo,reference){
+export function estimateAlignment(cv,photo,reference,options={}){
  const allocated=[];const keep=o=>{allocated.push(o);return o;};
  try{
   if(Math.min(photo.cols,photo.rows)<200)return {ok:false,reason:'照片分辨率太低，请让完整地图占据更多画面'};
-  const src=keep(grayMat(cv,photo)),dst=keep(grayMat(cv,reference));
+  const src=options.sourceFeatures?.gray||keep(grayMat(cv,photo)),dst=keep(grayMat(cv,reference));
   const statsMean=keep(new cv.Mat()),statsStd=keep(new cv.Mat());cv.meanStdDev(src,statsMean,statsStd);
   if(statsStd.data64F[0]<9)return {ok:false,reason:'画面缺少清晰的地图纹理，请重新拍摄'};
   const orb=keep(new cv.ORB(2600,1.2,8,23,0,2,0,23,12));
-  const aKeys=keep(new cv.KeyPointVector()),bKeys=keep(new cv.KeyPointVector()),aDesc=keep(new cv.Mat()),bDesc=keep(new cv.Mat()),empty=keep(new cv.Mat());
-  orb.detectAndCompute(src,empty,aKeys,aDesc);orb.detectAndCompute(dst,empty,bKeys,bDesc);
+  const aKeys=options.sourceFeatures?.keys||keep(new cv.KeyPointVector()),bKeys=keep(new cv.KeyPointVector()),aDesc=options.sourceFeatures?.descriptors||keep(new cv.Mat()),bDesc=keep(new cv.Mat()),empty=keep(new cv.Mat());
+  const region=options.referenceRegion;let referenceMask=empty;
+  if(region){referenceMask=keep(cv.Mat.zeros(dst.rows,dst.cols,cv.CV_8UC1));cv.rectangle(referenceMask,new cv.Point(region.x,region.y),new cv.Point(region.x+region.width,region.y+region.height),new cv.Scalar(255),-1);}
+  if(!options.sourceFeatures)orb.detectAndCompute(src,empty,aKeys,aDesc);orb.detectAndCompute(dst,referenceMask,bKeys,bDesc);
   if(aDesc.rows<20||bDesc.rows<20)return {ok:false,reason:'可辨认地标不足，请避开反光并拍清地图'};
   const matcher=keep(new cv.BFMatcher(cv.NORM_HAMMING,false)),knn=keep(new cv.DMatchVectorVector());matcher.knnMatch(aDesc,bDesc,knn,2);
   const sourcePoints=[],destPoints=[];
@@ -65,7 +68,8 @@ export function estimateAlignment(cv,photo,reference){
   let inliers=0,error=0;const inlierPoints=[];
   for(let i=0;i<mask.rows;i++)if(mask.data[i]){inliers++;const p={x:sourcePoints[2*i],y:sourcePoints[2*i+1]},q={x:destPoints[2*i],y:destPoints[2*i+1]},v=projectPoint(matrix,p);error+=Math.hypot(v.x-q.x,v.y-q.y);inlierPoints.push(q);}
   const coverage=hullArea(inlierPoints)/(reference.cols*reference.rows),ratio=inliers/(sourcePoints.length/2);
-  if(inliers<18||ratio<.27||coverage<.035||error/Math.max(inliers,1)>4)return {ok:false,reason:'有效地标分布过于集中，请拍摄完整地图或手动对齐',inliers,coverage};
+  const verificationCoverage=region?coverage*reference.cols*reference.rows/(region.width*region.height):coverage;
+  if(inliers<18||ratio<.27||verificationCoverage<.035||error/Math.max(inliers,1)>4)return {ok:false,reason:'有效地标分布过于集中，请拍摄完整地图或手动对齐',inliers,coverage};
   const inverse=keep(new cv.Mat());cv.invert(h,inverse);
   const quad=[{x:0,y:0},{x:reference.cols,y:0},{x:reference.cols,y:reference.rows},{x:0,y:reference.rows}].map(p=>projectPoint(Array.from(inverse.data64F),p));
   if(!validateQuad(quad)||quad.some(p=>p.x< -photo.cols*.35||p.x>photo.cols*1.35||p.y< -photo.rows*.35||p.y>photo.rows*1.35))return {ok:false,reason:'地图边缘不完整或对齐不稳定，请拍摄完整地图或手动对齐'};
@@ -80,17 +84,34 @@ async function localModel(cv){
 }
 export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual,options={}){
  onProgress?.('正在启动本机识别引擎…');const cv=await loadOpenCV();await pause();
- const photo=cv.imread(photoCanvas);let warped,h;
+ const photo=cv.imread(photoCanvas);let warped,h,sourceFeatures;const references=new Map();
  try{
   const mapTypes=terrain&&terrain!=='Auto'?[terrain]:Object.keys(TERRAIN_NAMES),alignments=[];
+  if(!manual){
+   sourceFeatures={gray:grayMat(cv,photo),keys:new cv.KeyPointVector(),descriptors:new cv.Mat()};
+   const orb=new cv.ORB(2600,1.2,8,23,0,2,0,23,12),empty=new cv.Mat();
+   try{orb.detectAndCompute(sourceFeatures.gray,empty,sourceFeatures.keys,sourceFeatures.descriptors);}finally{orb.delete();empty.delete();}
+  }
   for(let i=0;i<mapTypes.length;i++){
    const name=mapTypes[i];onProgress?.(`正在自动判断地图 ${i+1} / ${mapTypes.length}…`);await pause();
    const image=await loadImage(mapPath(name)),canvas=document.createElement('canvas');canvas.width=canvas.height=1000;canvas.getContext('2d').drawImage(image,0,0,1000,1000);
-   const reference=cv.imread(canvas);let result;try{result=manual?{ok:true,matrix:homographyFromPoints(manual.from,manual.to),manual:true}:estimateAlignment(cv,photo,reference);}finally{reference.delete();}
+   const reference=cv.imread(canvas);references.set(name,reference);const result=manual?{ok:true,matrix:homographyFromPoints(manual.from,manual.to),manual:true}:estimateAlignment(cv,photo,reference,{sourceFeatures});
    if(result.ok){const quality=result.manual?100000:result.inliers*Math.pow(result.inliers/Math.max(result.matches,1),1.3)*Math.sqrt(result.coverage);alignments.push({...result,terrain:name,quality});}
   }
-  alignments.sort((a,b)=>b.quality-a.quality);const alignment=alignments[0];
+  alignments.sort((a,b)=>b.quality-a.quality);let alignment=alignments[0];
   if(!alignment)return {ok:false,reason:'没有找到足够清晰的地图地标，请拍摄完整地图并避开反光'};
+  if(mapTypes.length>1){
+   const evidence=[];let anyChangedTerrain=false;
+   for(const name of mapTypes.filter(n=>n!=='Default')){
+    onProgress?.('正在核验'+TERRAIN_NAMES[name]+'的特有区域…');await pause();
+    const checks=TERRAIN_REGIONS[name].map(referenceRegion=>estimateAlignment(cv,photo,references.get(name),{sourceFeatures,referenceRegion}));
+    const confirmed=checks.every(check=>check.ok);if(confirmed)anyChangedTerrain=true;
+    evidence.push({terrain:name,confirmed,checks:checks.map(({ok,inliers,matches,coverage,meanError})=>({ok,inliers,matches,coverage,meanError}))});
+   }
+   const normalChecks=Object.entries(TERRAIN_REGIONS).filter(([name])=>!['Default','Great Hollow'].includes(name)).map(([,regions])=>estimateAlignment(cv,photo,references.get('Default'),{sourceFeatures,referenceRegion:regions[0]}));
+   evidence.push({terrain:'Default',confirmed:ordinaryTerrainConfirmed(normalChecks,anyChangedTerrain),checks:normalChecks.map(({ok,inliers,matches,coverage,meanError})=>({ok,inliers,matches,coverage,meanError}))});
+   alignment=chooseVerifiedTerrain(alignments,evidence);if(!alignment.ok)return alignment;
+  }
   h=cv.matFromArray(3,3,cv.CV_64F,alignment.matrix);warped=new cv.Mat();cv.warpPerspective(photo,warped,h,new cv.Size(1000,1000),cv.INTER_LINEAR,cv.BORDER_CONSTANT,new cv.Scalar());
   const alignedCanvas=document.createElement('canvas');cv.imshow(alignedCanvas,warped);
   const pool=(options.patterns||[]).filter(p=>p.terrain===alignment.terrain);
@@ -100,6 +121,6 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
   let nightlord;try{nightlord=matchNightlord(cv,warped,await loadNightlordTemplates(cv));}catch(error){nightlord={id:null,method:'portrait-template',reason:'夜王图标资源无法读取：'+error.message};}
   const net=await localModel(cv),observations=await classifyLandmarks(cv,net,warped,points,pool,onProgress);
   return {...alignment,observations,nightlord,alignedCanvas,engine:'local-poi-cnn',mapCandidates:alignments.map(a=>({terrain:a.terrain,inliers:a.inliers,quality:a.quality}))};
- }finally{photo.delete();warped?.delete();h?.delete();}
+ }finally{photo.delete();warped?.delete();h?.delete();for(const reference of references.values())reference.delete();if(sourceFeatures){sourceFeatures.gray.delete();sourceFeatures.keys.delete();sourceFeatures.descriptors.delete();}}
 }
 export function isLocalIconMatch(location,roiOrigin,width,height,point){return Math.hypot(roiOrigin.x+location.x+width/2-point.x,roiOrigin.y+location.y+height/2-point.y)<=20;}
