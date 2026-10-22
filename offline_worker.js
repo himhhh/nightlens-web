@@ -68,14 +68,14 @@ self.addEventListener('message',event=>{
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);if(url.origin!==self.location.origin||event.request.method!=='GET')return;
  event.respondWith((async()=>{
-  const cache=await caches.open(CACHE),retry=url.searchParams.has('__nl_img_retry')&&/\/assets\/.+\.(png|jpe?g|webp)$/i.test(url.pathname);
-  const cached=await cache.match(event.request,{ignoreSearch:retry});if(cached)return cached;
+  const cache=await caches.open(CACHE),retry=url.searchParams.has('__nl_img_retry')&&/\/assets\/.+\.(png|jpe?g|webp)$/i.test(url.pathname),versionedUI=url.searchParams.has('__nl_asset')&&/\.(js|css)$/i.test(url.pathname);
+  const cached=await cache.match(event.request,{ignoreSearch:retry||versionedUI});if(cached)return cached;
   try{return await fetch(event.request);}catch(error){
    if(event.request.mode==='navigate'){
     const current=await cache.match(absoluteOfflineURL('./index.html'));if(current)return current;
    }
    // Preserve the last complete version while a new download is incomplete.
-   for(const key of await caches.keys())if(key.startsWith('nightlens-')&&key!==CACHE){const older=await caches.open(key),saved=await older.match(event.request,{ignoreSearch:retry})||(event.request.mode==='navigate'?await older.match(absoluteOfflineURL('./index.html')):undefined);if(saved)return saved;}
+   for(const key of await caches.keys())if(key.startsWith('nightlens-')&&key!==CACHE){const older=await caches.open(key),saved=await older.match(event.request,{ignoreSearch:retry||versionedUI})||(event.request.mode==='navigate'?await older.match(absoluteOfflineURL('./index.html')):undefined);if(saved)return saved;}
    throw error;
   }
  })());

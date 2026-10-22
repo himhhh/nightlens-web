@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#101714"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="description" content="拍摄 PS5 游戏地图，在手机本地筛选黑夜君临地图布局。包含 DLC 大空洞、终圈与水晶组合。">
 <link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="assets/icons/app-192.png"><link rel="icon" href="assets/icons/app-192.png">
-<title>黑夜地图镜 · NightLens</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="crystal_map.css"><link rel="stylesheet" href="intelligence.css"><link rel="stylesheet" href="boss_catalog.css"><link rel="stylesheet" href="weapon_catalog.css"><link rel="stylesheet" href="map_viewport.css">
+<title>黑夜地图镜 · NightLens</title><link rel="stylesheet" href="style.css?__nl_asset=c4cd6c6b6b7f"><link rel="stylesheet" href="crystal_map.css"><link rel="stylesheet" href="intelligence.css"><link rel="stylesheet" href="boss_catalog.css"><link rel="stylesheet" href="weapon_catalog.css"><link rel="stylesheet" href="map_viewport.css">
 </head>
 <body>
 <svg class="svg-library" aria-hidden="true"><defs>
@@ -21,8 +21,7 @@
 <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 1v6m0 10v6M1 12h6m10 0h6"/></symbol>
 </defs></svg>
 <div class="app-shell">
-<header class="masthead"><a class="brand" href="#" aria-label="黑夜地图镜首页"><span class="brand-mark"><svg><use href="#i-moon"/></svg></span><span>黑夜地图镜<small>N I G H T L E N S</small></span></a><button class="version-pill" id="about-button" aria-label="版本 0.8，查看说明">0.8</button></header>
-<aside id="offline-panel" class="offline-panel" hidden aria-label="离线资源下载"><div class="offline-heading"><strong id="offline-label" role="status">正在连接离线下载</strong><span id="offline-percent">0%</span><button type="button" id="offline-retry" class="text-button" hidden>重试下载</button></div><progress id="offline-progress" max="100" value="0" aria-label="离线资源已完成百分比"></progress><p id="offline-detail">首次约 51MB，请保持页面打开。</p></aside>
+<header class="masthead"><a class="brand" href="#" aria-label="黑夜地图镜首页"><span class="brand-mark"><svg><use href="#i-moon"/></svg></span><span>黑夜地图镜<small>N I G H T L E N S</small></span></a><div class="version-control" id="version-control"><button type="button" class="version-pill" id="version-status" aria-expanded="false" aria-controls="version-menu" aria-label="版本 0.8，查看版本与离线状态"><span>0.8</span><span id="offline-compact" class="offline-compact" hidden><svg class="offline-ring" viewBox="0 0 20 20" aria-hidden="true"><circle class="offline-ring-track" cx="10" cy="10" r="7"/><circle class="offline-ring-fill" id="offline-ring-fill" cx="10" cy="10" r="7" pathLength="100" stroke-dasharray="0 100"/><path class="offline-check" d="m5 10 3 3 7-7"/><path class="offline-alert" d="M10 5v6m0 4h.01"/></svg><span id="offline-compact-label">0%</span></span></button><div id="version-menu" class="version-menu" hidden aria-label="版本与离线状态"><aside id="offline-panel" class="offline-panel" hidden aria-label="离线资源下载"><div class="offline-heading"><strong id="offline-label" role="status">正在连接离线下载</strong><span id="offline-percent">0%</span></div><progress id="offline-progress" max="100" value="0" aria-label="离线资源已完成百分比"></progress><p id="offline-detail">首次约 51MB，请保持页面打开。</p><button type="button" id="offline-retry" class="text-button" hidden>重试下载</button></aside><button type="button" class="version-about" id="about-button">版本 0.8 · 使用说明<span aria-hidden="true">↗</span></button></div></div></header>
 <main>
 <section id="view-scan" class="view active" aria-label="识别地图">
 <div class="intro"><div class="eyebrow">YOUR NEXT EXPEDITION, REVEALED</div><h1>看清黑夜里的<br><em>每一种可能。</em></h1></div>
@@ -66,5 +65,5 @@
 <dialog id="zoom-dialog" class="zoom-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭">×</button></form><p class="micro">在地图内双指缩放、拖动查看；复原只影响这张地图。</p><div class="map-zoom-controls"><button id="zoom-map-out" aria-label="缩小地图">−</button><span class="map-scale" id="zoom-map-scale">100%</span><button id="zoom-map-in" aria-label="放大地图">＋</button><button id="zoom-map-reset">复原大小</button></div><div class="map-viewport large-map-viewport" id="zoom-scroll"><div class="map-viewport-scene" id="zoom-stage"><canvas id="zoom-canvas" width="1000" height="1000"></canvas><div class="intel-overlay" id="zoom-intel-overlay"></div></div></div></dialog>
 <button type="button" id="atlas-back-top" class="atlas-back-top" aria-label="回到图鉴顶部" title="回到顶部" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 11 6-6 6 6M12 5v15"/></svg><span>回顶部</span></button>
 <div id="toast" role="status" aria-live="polite" hidden></div>
-<script type="module" src="app.js"></script>
+<script type="module" src="app.js?__nl_asset=710059ad6652"></script>
 </body></html>
