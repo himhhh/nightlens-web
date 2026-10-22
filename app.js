@@ -18,6 +18,7 @@ import {renderBossCatalog,BOSS_CATALOG_CATEGORIES} from './boss_catalog.js';
 import {eventText,featureDetailsHTML} from './map_events.js';
 import {castleMapMarkers,compactEncounterLabel} from './map_labels.js';
 import {requestMapPhoto,photoFromNative} from './ui_helpers.js';
+import {connectOffline,offlinePresentation} from './offline_ui.js';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const STORAGE='nightlens.demo.v2';
@@ -293,10 +294,18 @@ function wire(){
  $('export-button').onclick=exportSession;$('reset-all').onclick=()=>{state.filters={terrain:'Default',nightlord:'',spawn:''};state.autoTerrain=true;state.autoNightlord=true;state.manualMode=false;state.observations=[];state.crystals={};state.photo=null;state.aligned=null;state.selected=null;state.diagnostics=null;state.detectedNightlord=null;state.expeditionForm='unknown';state.formSource=null;state.formNightlord=null;state.generation++;setBusy(false);status('本机记录已清空，可以开始新一局。');try{localStorage.removeItem(STORAGE);}catch{}renderFilters();renderCandidates();showPhoto();renderCrystals();toast('已清空本机记录');};
  for(const dialog of document.querySelectorAll('dialog')){dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});}
 }
-async function installOffline(){
+function installOffline(){
  if(window.NightLensNative){$('cache-status').textContent='原生安装包已包含地图、数据与识别引擎，可离线使用。';return;}
  if(!('serviceWorker'in navigator)||!window.isSecureContext){$('cache-status').textContent='当前为局域网预览。通过 HTTPS 入口打开并添加主屏幕后，可缓存离线资源。';return;}
- try{await navigator.serviceWorker.register('sw.js');await navigator.serviceWorker.ready;$('cache-status').textContent='离线资源正在准备；状态变为“已就绪”后可断网使用。';navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='offline-ready')$('cache-status').textContent='离线资源已就绪，可添加到主屏幕后断网使用。';});const registrations=await caches.keys();for(const key of registrations)if(key.startsWith('nightlens-')){const cache=await caches.open(key);if(await cache.match('./offline-ready.flag'))$('cache-status').textContent='离线资源已就绪，可添加到主屏幕后断网使用。';}}catch{$('cache-status').textContent='未能准备离线缓存，联网时仍可使用。';}
+ $('offline-panel').hidden=false;
+ const download=connectOffline({serviceWorker:navigator.serviceWorker,onStatus:snapshot=>{
+  const model=offlinePresentation(snapshot);$('offline-panel').dataset.state=snapshot.state;
+  $('offline-label').textContent=model.label;$('offline-percent').textContent=model.percent+'%';$('offline-progress').value=model.percent;
+  $('offline-detail').textContent=model.detail;$('offline-retry').hidden=!model.retry;
+  $('cache-status').textContent=model.label+' · '+model.percent+'%。'+model.detail;
+ }});
+ $('offline-retry').onclick=()=>void download.retry();
+ document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')download.resume();});
 }
 async function init(){try{const responses=await Promise.all([fetch('assets/data/patterns.json'),fetch('assets/data/crystals.json'),fetch('assets/data/map-intel.json'),fetch('assets/data/boss-combat.json'),fetch('assets/data/weapons.json'),fetch('assets/data/spells.json'),fetch('assets/data/nightfarers.json'),fetch('assets/data/weapon-scaling.json')]);for(const r of responses)if(!r.ok)throw Error('数据资源未就绪');[state.data,state.crystalData,state.mapIntel,state.combat,state.weapons,state.spells,state.nightfarers,state.weaponScaling]=await Promise.all(responses.map(r=>r.json()));state.intelIndex=createMapIntelIndex(state.mapIntel);await restoreSession();wire();renderFilters();renderCandidates();renderCrystals();await installOffline();window.NightLens={state:()=>({filters:{...state.filters},observations:state.observations,candidates:visibleCandidates().map(p=>p.id),decision:evidenceSummary(),autoTerrain:state.autoTerrain,autoNightlord:state.autoNightlord,nightlordDetection:state.detectedNightlord,effectiveNightlord:effectiveNightlord(),crystals:state.crystals,diagnostics:state.diagnostics?{...state.diagnostics}:null,atlasTab:state.atlasTab,view:state.view,expeditionForm:state.expeditionForm,formSource:state.formSource,planKind:state.planKind,selected:state.selected?.id,weaponCount:state.weapons?.coverage.weapons,spellCount:state.spells?.spells.length,nightfarerCount:state.nightfarers?.characters.length,weaponCharacter:state.weaponCharacter,weaponLevel:state.weaponLevel,mapZoom:{main:mainViewport?.getState(),detail:detailViewport?.getState(),tactical:tacticalViewport?.getState(),crystal:crystalViewport?.getState(),large:largeViewport?.getState()},busy:state.busy,dataCount:state.data.patterns.length}),ready:true};}catch(e){status('启动失败：'+e.message+'。请刷新页面或重新启动 App。',true);$('cache-status').textContent='数据加载失败';}}
 installImageRecovery();
