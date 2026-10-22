@@ -11,7 +11,10 @@ def prepare(root):
     revision=hashlib.sha256(b''.join(p.name.encode()+p.read_bytes() for p in modules)).hexdigest()[:12]
     folder=root/'releases'/revision
     folder.mkdir(parents=True,exist_ok=True)
-    for path in modules:shutil.copy2(path,folder/path.name)
+    for path in modules:
+        target=folder/path.name
+        if path.suffix=='.css':target.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
+        else:shutil.copy2(path,target)
     index=root/'index.html';html=index.read_text()
     for path in modules:
         name=re.escape(path.name)
