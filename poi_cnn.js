@@ -113,12 +113,12 @@ export async function classifyLandmarks(cv,net,aligned,points,patterns,onProgres
      finally{sample.delete();gray.delete();shape.delete();}
     }
     item=mergeLandmarkViews(views,point,possible)||visibleEmptyLandmark(cv,standard,background,point,views,possible);
-    if(item&&item.type!=='empty'&&options.badges?.length){
-     const proof=matchLandmarkBadge(cv,aligned,point,item.type,options.badges);
-     if(proof&&possible.includes(proof.rawType)){
-      if(!item.rawType||item.rawType===proof.rawType){const descriptor=describePOI(proof.rawType);item={...item,rawType:descriptor.rawType,attribute:descriptor.attribute,label:descriptor.label,attributeVerification:proof};}
-      else{delete item.rawType;delete item.attribute;item.score=item.categoryScore*.85;item.label=item.label.split(' · ')[0]+'（属性冲突）';item.attributeConflict=true;}
-     }
+   }
+   if(item&&item.type!=='empty'&&options.badges?.length){
+    const proof=matchLandmarkBadge(cv,aligned,point,item.type,options.badges);
+    if(proof&&possible.includes(proof.rawType)&&(proof.method!=='public-badge-color-contrast'||item.rawType===proof.rawType)){
+     if(!item.rawType||item.rawType===proof.rawType){const descriptor=describePOI(proof.rawType);item={...item,rawType:descriptor.rawType,attribute:descriptor.attribute,label:descriptor.label,attributeVerification:proof};}
+     else{delete item.rawType;delete item.attribute;item.score=item.categoryScore*.85;item.label=item.label.split(' · ')[0]+'（属性冲突）';item.attributeConflict=true;}
     }
    }
    if(item)result.push(item);

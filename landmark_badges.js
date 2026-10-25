@@ -26,9 +26,10 @@ function colorAgreement(template,sample){
 }
 export function matchLandmarkBadge(cv,aligned,point,type,templates){
  const available=templates.filter(t=>t.type===type);if(available.length<2||![3,4].includes(aligned.channels()))return null;
- const x=Math.round(point.x)-3,y=Math.round(point.y)-3;
- if(x<0||y<0||x+38>aligned.cols||y+38>aligned.rows)return null;
- const area=aligned.roi(new cv.Rect(x,y,38,38)),rgb=new cv.Mat(),gray=new cv.Mat(),ranked=[];
+ // The badge is beside the building, not down by nearby blue grace markers.
+ const x=Math.round(point.x)+4,y=Math.round(point.y)-3;
+ if(x<0||y<0||x+30>aligned.cols||y+26>aligned.rows)return null;
+ const area=aligned.roi(new cv.Rect(x,y,30,26)),rgb=new cv.Mat(),gray=new cv.Mat(),ranked=[];
  try{
   if(area.channels()===4)cv.cvtColor(area,rgb,cv.COLOR_RGBA2RGB);else area.copyTo(rgb);cv.cvtColor(rgb,gray,cv.COLOR_RGB2GRAY);
   for(const template of available){
@@ -46,8 +47,17 @@ export function matchLandmarkBadge(cv,aligned,point,type,templates){
    }finally{scaled.delete();sample.delete();}
   }
   ranked.sort((a,b)=>b.score-a.score);const first=ranked[0],margin=first?first.score-(ranked[1]?.score||0):0;
-  if(!first||first.score<.65||first.shapeScore<.55||first.colorScore<.65||margin<.1)return null;
-  return {...first,margin,method:'public-badge-shape-color'};
+  if(!first)return null;
+  if(first.score>=.65&&first.shapeScore>=.55&&first.colorScore>=.65&&margin>=.1)return {...first,margin,method:'public-badge-shape-color'};
+  // Compare ALL reference colors at this SAME physical badge, rather than
+  // comparing different landmarks found elsewhere in each template's search.
+  const sample=rgb.roi(new cv.Rect(first.box.x-x,first.box.y-y,first.side,first.side));let rivalColor=0;
+  try{for(const template of available.filter(t=>t.rawType!==first.rawType)){const scaled=new cv.Mat();try{cv.resize(template.rgb,scaled,new cv.Size(first.side,first.side),0,0,cv.INTER_AREA);rivalColor=Math.max(rivalColor,colorAgreement(scaled,sample));}finally{scaled.delete();}}}finally{sample.delete();}
+  const colorMargin=first.colorScore-rivalColor;
+  if(first.shapeScore<.45||first.colorScore<.8||colorMargin<.2||margin<.1)return null;
+  // This is corroboration only: the caller must already have a consistent CNN
+  // attribute. Similar red hues cannot use this route without a color gap.
+  return {...first,margin,colorMargin,method:'public-badge-color-contrast'};
  }finally{area.delete();rgb.delete();gray.delete();}
 }
 let promise;

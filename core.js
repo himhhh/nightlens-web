@@ -38,7 +38,11 @@ export function filterPatterns(patterns, filters={}, observations=[]) {
 }
 function verifiedBadge(observation){
  const proof=observation.attributeVerification,actual=describePOI(observation.rawType);
- return !!proof&&!!actual.attribute&&actual.type===observation.type&&actual.attribute===observation.attribute&&proof.rawType===observation.rawType&&proof.attribute===observation.attribute&&proof.method==='public-badge-shape-color'&&proof.score>=.65&&proof.shapeScore>=.55&&proof.colorScore>=.65&&proof.margin>=.1&&observation.categoryScore>=.8&&observation.categoryMargin>=.2;
+ const compatible=!!proof&&!!actual.attribute&&actual.type===observation.type&&actual.attribute===observation.attribute&&proof.rawType===observation.rawType&&proof.attribute===observation.attribute&&observation.categoryScore>=.8&&observation.categoryMargin>=.2;
+ if(!compatible)return false;
+ const shape=proof.method==='public-badge-shape-color'&&proof.score>=.65&&proof.shapeScore>=.55&&proof.colorScore>=.65&&proof.margin>=.1;
+ const color=proof.method==='public-badge-color-contrast'&&proof.shapeScore>=.45&&proof.colorScore>=.8&&proof.colorMargin>=.2&&proof.margin>=.1&&observation.categoryScore>=.85&&observation.categoryMargin>=.5&&observation.attributeScore>=.8&&Number.isInteger(observation.attributeSupport)&&observation.attributeSupport>=3&&observation.attributeSupport<=observation.viewSupport&&observation.viewSupport<=observation.viewCount&&observation.attributeSupport/observation.viewSupport>=2/3;
+ return shape||color;
 }
 function stableAttributeDifference(observation, rival) {
  const actual=describePOI(observation.rawType),other=rival.pois.find(p=>p.id===observation.id),expected=describePOI(other?.rawType);

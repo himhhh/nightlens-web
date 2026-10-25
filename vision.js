@@ -120,7 +120,7 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
   if(!pool.length)throw Error('缺少当前地图的据点分类数据');
   onProgress?.('正在读取左下角夜王头像…');await pause();
   let nightlord;try{nightlord=matchNightlord(cv,warped,await loadNightlordTemplates(cv));}catch(error){nightlord={id:null,method:'portrait-template',reason:'夜王图标资源无法读取：'+error.message};}
-  let badges=[];if(alignment.terrain==='Great Hollow')try{badges=await loadBadgeTemplates(cv);}catch{/* Keep the original CNN path when optional corroboration is unavailable. */}
+  let badges=[];try{badges=await loadBadgeTemplates(cv);}catch{/* Keep the original CNN path when optional corroboration is unavailable. */}
   const net=await localModel(cv),observations=await classifyLandmarks(cv,net,warped,points,pool,onProgress,{reference:references.get(alignment.terrain),badges});
   return {...alignment,observations,nightlord,alignedCanvas,engine:'local-poi-cnn',mapCandidates:alignments.map(a=>({terrain:a.terrain,inliers:a.inliers,quality:a.quality}))};
  }finally{photo.delete();warped?.delete();h?.delete();for(const reference of references.values())reference.delete();if(sourceFeatures){sourceFeatures.gray.delete();sourceFeatures.keys.delete();sourceFeatures.descriptors.delete();}}

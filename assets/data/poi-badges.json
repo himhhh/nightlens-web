@@ -12,7 +12,18 @@
     "ruins_magic": "04e450f8a1bf862a65da5bf895848d02dc176f58e1aa3238710b11004d571901",
     "ruins_sleep": "c0ba8d8b04c9bd01026f35bb48384ce13aad7b12ae1fe2b29b00fe2a55cfd29b",
     "EUF_holy": "1ace0fce1026f5372dd0adc549a6ad9d28cef90bcc57a9981620521eab3c5662",
-    "EUF_rot": "e703071c548194032b7339779e8d7a24ef99d530c68b91fc426f55b7357adc0f"
+    "EUF_rot": "e703071c548194032b7339779e8d7a24ef99d530c68b91fc426f55b7357adc0f",
+    "forge_bleed": "dba5546451a735f2755949d7a47765bca78c56c18a4c5c6bce7e77469983ae6f",
+    "forge_eletric": "d84e18f39da0c2d3d96b3de8a5a719b651b70388fc6f4ca8b3c275f87ea2baab",
+    "forge_fire": "0d97156c4264b39f06f793d5aea0eb64b5819a416d89d7df1ce0dfaf0f1c78ef",
+    "forge_holy": "712de9bf57d9156b9c2cd91c730341cadaa94519b7e9dccd303bc7bc333fe573",
+    "forge_poison": "a44205d39e74e88c4ddaf912d30ade6f5673e211be4b07b1c735cac7011c5da5",
+    "marsh_bleed": "f145e9cca65d4ffc47d6ed193d117924b70f884e9f163f88140a3a8292377d4a",
+    "marsh_frostbite": "86848278665bf883a05e12c18f280ece7574ff35916a4b4171837781e7e7adbc",
+    "marsh_madness": "7ec204d170225c79d66833d248eaf3b240ceee3534883887db9c6034075434c0",
+    "marsh_poison": "4d5513d83d771c2a7294a59330891daa80c6032ffd646b5fc43ff9b100006097",
+    "marsh_rot": "5dcacec7b8a3e5ef383067c7932d8d1970a518c8ab5e21eae0931bce4919d809",
+    "marsh_sleep": "0e217bcb9682fffa73b2fd2638a5c048e9a3723774643fe105fe7819739883c3"
   },
   "templates": [
     {
@@ -122,6 +133,105 @@
       "height": 72,
       "offset": 170748,
       "length": 15768
+    },
+    {
+      "type": "forge",
+      "rawType": "forge_bleed",
+      "attribute": "bleed",
+      "width": 74,
+      "height": 72,
+      "offset": 186516,
+      "length": 15984
+    },
+    {
+      "type": "forge",
+      "rawType": "forge_eletric",
+      "attribute": "lightning",
+      "width": 74,
+      "height": 72,
+      "offset": 202500,
+      "length": 15984
+    },
+    {
+      "type": "forge",
+      "rawType": "forge_fire",
+      "attribute": "fire",
+      "width": 74,
+      "height": 72,
+      "offset": 218484,
+      "length": 15984
+    },
+    {
+      "type": "forge",
+      "rawType": "forge_holy",
+      "attribute": "holy",
+      "width": 74,
+      "height": 72,
+      "offset": 234468,
+      "length": 15984
+    },
+    {
+      "type": "forge",
+      "rawType": "forge_poison",
+      "attribute": "poison",
+      "width": 74,
+      "height": 72,
+      "offset": 250452,
+      "length": 15984
+    },
+    {
+      "type": "marsh",
+      "rawType": "marsh_bleed",
+      "attribute": "bleed",
+      "width": 73,
+      "height": 73,
+      "offset": 266436,
+      "length": 15987
+    },
+    {
+      "type": "marsh",
+      "rawType": "marsh_frostbite",
+      "attribute": "frostbite",
+      "width": 73,
+      "height": 73,
+      "offset": 282423,
+      "length": 15987
+    },
+    {
+      "type": "marsh",
+      "rawType": "marsh_madness",
+      "attribute": "madness",
+      "width": 73,
+      "height": 73,
+      "offset": 298410,
+      "length": 15987
+    },
+    {
+      "type": "marsh",
+      "rawType": "marsh_poison",
+      "attribute": "poison",
+      "width": 73,
+      "height": 73,
+      "offset": 314397,
+      "length": 15987
+    },
+    {
+      "type": "marsh",
+      "rawType": "marsh_rot",
+      "attribute": "rot",
+      "width": 73,
+      "height": 73,
+      "offset": 330384,
+      "length": 15987
+    },
+    {
+      "type": "marsh",
+      "rawType": "marsh_sleep",
+      "attribute": "sleep",
+      "width": 73,
+      "height": 73,
+      "offset": 346371,
+      "length": 15987
     }
   ]
 }
