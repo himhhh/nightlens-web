@@ -43,7 +43,7 @@ export function summarizeEvidence(candidates, observations) {
  const base={manualCount:manual.length,autoCount:evidence.length-manual.length};
  if(candidates.length===1&&manual.length>=2)return {state:'confirmed',...base};
  const automatic=evidence.filter(o=>o.source!=='manual'),strong=automatic.filter(o=>o.score>=.68);
- if(automatic.length>=4&&strong.length>=3){
+ if(automatic.length>=4&&strong.filter(o=>o.type!=='empty').length>=3){
   const first=candidates[0],second=candidates[1],margin=second?first.rankScore-second.rankScore:Infinity;
   const matchFraction=(first.autoMatches||0)/automatic.length;
   const matches=(pattern,o)=>{const q=pattern.pois.find(q=>q.id===o.id);return q?.type===o.type&&(!o.rawType||q.rawType===o.rawType);};

@@ -203,10 +203,21 @@ def build(snapshot, patterns, raw):
                                    positionReason='来源明确为地图上方文字注记，并非商人实际坐标。', day=2))
         if seed.get('Event'):
             event = snapshot['eventInfo'].get(seed['Event'], [seed['Event'], '', ''])
-            anchor = next((e for e in encounters if e.get('rawOccupantLabel') == '@event' and e['positionStatus'] == 'known'), None)
-            features.append(record('event', 'event', ' · '.join(filter(None, event[:2])), 'seedData+poiLabels' if anchor else 'seedData',
+            # The source renderer only uses @event for these three event keys.
+            # Other sentinels include legacy placeholders, not target positions.
+            anchor, anchor_source, position_kind = None, 'seedData', None
+            if seed['Event'] == 'sorcerersrise':
+                towers = [p for p in pattern['pois'] if p.get('rawType') == 'diff_sorcerers']
+                if len(towers) == 1:
+                    anchor, anchor_source, position_kind = towers[0], 'seedData+diff_sorcerers', 'building-slot'
+            elif seed['Event'] in ('mausoleum', 'meteorstrikeDay1', 'meteorstrikeDay2'):
+                anchors = [e for e in encounters if e.get('rawOccupantLabel') == '@event' and e['positionStatus'] == 'known']
+                if len(anchors) == 1:
+                    anchor, anchor_source, position_kind = anchors[0], 'seedData+poiLabels', 'source-recorded-event'
+            features.append(record('event', 'event', ' · '.join(filter(None, event[:2])), anchor_source,
                                    {'x':anchor['x'], 'y':anchor['y']} if anchor else None,
-                                   description=event[2], eventKey=seed['Event'], positionReason='' if anchor else '事件记录没有发生地点。'))
+                                   description=event[2], eventKey=seed['Event'], positionKind=position_kind,
+                                   positionReason='' if anchor else '本来源没有可靠的事件地点绑定；不使用未经核实的占位点。'))
         if seed.get('hasOldGaol'):
             features.append(record('old-gaol', 'old-gaol', '旧监牢', 'seedData',
                                    positionReason='来源仅记录存在旧监牢，未提供经核验的独立坐标或首领绑定。'))
