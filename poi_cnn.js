@@ -1,4 +1,5 @@
 import {describePOI} from './poi_catalog.js';
+import {matchLandmarkBadge} from './landmark_badges.js';
 const CLASS_GROUPS={empty:[0],fort:[1],greatchurch:[2],camp:[3],ruins:[4],forge:[5],marsh:[6],church:[7,8],mage:[9,10,11],village:[12],wuf:[13],euf:[14]};
 const CORNER_PROPERTIES=[null,'bleed','frostbite','blight','madness','rot','poison','sleep','fire','magic','lightning','holy'];
 export function softmax(values){const largest=Math.max(...values),exp=Array.from(values,x=>Math.exp(x-largest)),sum=exp.reduce((a,b)=>a+b,0);return exp.map(v=>v/sum);}
@@ -67,8 +68,20 @@ function visibleEmptyLandmark(cv,standard,reference,point,views,rawTypes){
  try{
   cv.meanStdDev(template,mean,std);if(std.data64F[0]<9)return null;
   cv.cvtColor(sample,gray,cv.COLOR_RGB2GRAY);cv.matchTemplate(gray,template,scores,cv.TM_CCOEFF_NORMED);const match=cv.minMaxLoc(scores);
-  if(match.maxVal<.8||Math.hypot(match.maxLoc.x-12,match.maxLoc.y-12)>6)return null;
-  return {id:point.id,type:'empty',label:'此处无建筑',score:median(confidence)*match.maxVal,source:'auto',method:'visible-empty-terrain',backgroundScore:match.maxVal,viewSupport:confidence.length,viewCount:views.length};
+  const offset={x:match.maxLoc.x-12,y:match.maxLoc.y-12};
+  if(Math.hypot(offset.x,offset.y)>6)return null;
+  // Nearby graces and player markers may cover the outer patch. Verify two
+  // textured INNER patches at the same displacement instead of lowering NCC.
+  const inner=[];
+  for(const side of [20,24]){
+   const half=side/2,area=gray.roi(new cv.Rect(32-half-4,32-half-4,side+8,side+8)),core=reference.roi(new cv.Rect(cx-half,cy-half,side,side)),values=new cv.Mat(),m=new cv.Mat(),s=new cv.Mat();
+   try{cv.meanStdDev(core,m,s);if(s.data64F[0]<9)break;cv.matchTemplate(area,core,values,cv.TM_CCOEFF_NORMED);const found=cv.minMaxLoc(values);inner.push({side,score:found.maxVal,x:found.maxLoc.x-4,y:found.maxLoc.y-4});}
+   finally{area.delete();core.delete();values.delete();m.delete();s.delete();}
+  }
+  const verifiedCenter=confidence.length>=4&&inner.length===2&&inner[0].score>=.85&&inner[1].score>=.8&&match.maxVal>=.6&&inner.every(p=>Math.hypot(p.x,p.y)<=3&&Math.hypot(p.x-offset.x,p.y-offset.y)<=2)&&Math.hypot(inner[0].x-inner[1].x,inner[0].y-inner[1].y)<=2;
+  if(match.maxVal<.8&&!verifiedCenter)return null;
+  const backgroundScore=match.maxVal>=.8?match.maxVal:Math.sqrt(inner[0].score*inner[1].score);
+  return {id:point.id,type:'empty',label:'此处无建筑',score:median(confidence)*backgroundScore,source:'auto',method:'visible-empty-terrain',backgroundScore,viewSupport:confidence.length,viewCount:views.length,...(verifiedCenter?{verifiedCenter:true,backgroundChecks:{context:match.maxVal,inner:inner[0].score,center:inner[1].score}}:{})};
  }finally{sample.delete();template.delete();gray.delete();scores.delete();mean.delete();std.delete();}
 }
 /** Read all visible point patches locally; yield between small inference groups. */
@@ -100,6 +113,13 @@ export async function classifyLandmarks(cv,net,aligned,points,patterns,onProgres
      finally{sample.delete();gray.delete();shape.delete();}
     }
     item=mergeLandmarkViews(views,point,possible)||visibleEmptyLandmark(cv,standard,background,point,views,possible);
+    if(item&&item.type!=='empty'&&options.badges?.length){
+     const proof=matchLandmarkBadge(cv,aligned,point,item.type,options.badges);
+     if(proof&&possible.includes(proof.rawType)){
+      if(!item.rawType||item.rawType===proof.rawType){const descriptor=describePOI(proof.rawType);item={...item,rawType:descriptor.rawType,attribute:descriptor.attribute,label:descriptor.label,attributeVerification:proof};}
+      else{delete item.rawType;delete item.attribute;item.score=item.categoryScore*.85;item.label=item.label.split(' · ')[0]+'（属性冲突）';item.attributeConflict=true;}
+     }
+    }
    }
    if(item)result.push(item);
    if(hollow||i%6===0){onProgress?.(`${hollow?'正在多尺度核对':'正在自动读取'}据点和属性 ${i+1} / ${points.length}…`);await new Promise(resolve=>setTimeout(resolve,0));}

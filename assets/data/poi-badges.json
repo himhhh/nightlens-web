@@ -1,0 +1,127 @@
+{
+  "source": "Public landmark icons; cropped differing badge region",
+  "sources": {
+    "WUF_fire": "adb019d622233647d33b5cc071ec16fc91d3519fe6f6042a08cf476fa8fc27c3",
+    "WUF_magic": "2c498c28b3fbbf694983882c38af3ce6d660ec883e9b383b157a603d233c9bc6",
+    "greatchurch_eletric": "dab101b1a606351619356a0b95166ed00dc33a7ca430636b9fc6037d9895defe",
+    "greatchurch_sleep": "6190ff8b63c8774454106cd807b1916e57bd0191e87d7825ae89ff1cd397c0d5",
+    "greatchurch_holy": "f299b3b0313afa9f4e5a996ce5331fabbcfd7c9fa6f70ddfad3b62dd0bc2ba25",
+    "greatchurch_frostbite": "afa66f7cf58cfafc5bd8e5fe5a6a7188dcb62ff3b81dc3b1f73152938419dcce",
+    "ruins_poison": "ec507b4e7368c189fca0d81d24c4412d82efb11f61872fd552f17da05e776dee",
+    "ruins_bleed": "ca38cd3d042f4cbd9f92fe643553a9fd62b2155ab4b4747627d3b491d9b036b7",
+    "ruins_magic": "04e450f8a1bf862a65da5bf895848d02dc176f58e1aa3238710b11004d571901",
+    "ruins_sleep": "c0ba8d8b04c9bd01026f35bb48384ce13aad7b12ae1fe2b29b00fe2a55cfd29b",
+    "EUF_holy": "1ace0fce1026f5372dd0adc549a6ad9d28cef90bcc57a9981620521eab3c5662",
+    "EUF_rot": "e703071c548194032b7339779e8d7a24ef99d530c68b91fc426f55b7357adc0f"
+  },
+  "templates": [
+    {
+      "type": "wuf",
+      "rawType": "WUF_fire",
+      "attribute": "fire",
+      "width": 62,
+      "height": 61,
+      "offset": 0,
+      "length": 11346
+    },
+    {
+      "type": "wuf",
+      "rawType": "WUF_magic",
+      "attribute": "magic",
+      "width": 62,
+      "height": 61,
+      "offset": 11346,
+      "length": 11346
+    },
+    {
+      "type": "greatchurch",
+      "rawType": "greatchurch_eletric",
+      "attribute": "lightning",
+      "width": 74,
+      "height": 74,
+      "offset": 22692,
+      "length": 16428
+    },
+    {
+      "type": "greatchurch",
+      "rawType": "greatchurch_sleep",
+      "attribute": "sleep",
+      "width": 74,
+      "height": 74,
+      "offset": 39120,
+      "length": 16428
+    },
+    {
+      "type": "greatchurch",
+      "rawType": "greatchurch_holy",
+      "attribute": "holy",
+      "width": 74,
+      "height": 74,
+      "offset": 55548,
+      "length": 16428
+    },
+    {
+      "type": "greatchurch",
+      "rawType": "greatchurch_frostbite",
+      "attribute": "frostbite",
+      "width": 74,
+      "height": 74,
+      "offset": 71976,
+      "length": 16428
+    },
+    {
+      "type": "ruins",
+      "rawType": "ruins_poison",
+      "attribute": "poison",
+      "width": 76,
+      "height": 73,
+      "offset": 88404,
+      "length": 16644
+    },
+    {
+      "type": "ruins",
+      "rawType": "ruins_bleed",
+      "attribute": "bleed",
+      "width": 76,
+      "height": 73,
+      "offset": 105048,
+      "length": 16644
+    },
+    {
+      "type": "ruins",
+      "rawType": "ruins_magic",
+      "attribute": "magic",
+      "width": 76,
+      "height": 73,
+      "offset": 121692,
+      "length": 16644
+    },
+    {
+      "type": "ruins",
+      "rawType": "ruins_sleep",
+      "attribute": "sleep",
+      "width": 76,
+      "height": 73,
+      "offset": 138336,
+      "length": 16644
+    },
+    {
+      "type": "euf",
+      "rawType": "EUF_holy",
+      "attribute": "holy",
+      "width": 73,
+      "height": 72,
+      "offset": 154980,
+      "length": 15768
+    },
+    {
+      "type": "euf",
+      "rawType": "EUF_rot",
+      "attribute": "rot",
+      "width": 73,
+      "height": 72,
+      "offset": 170748,
+      "length": 15768
+    }
+  ]
+}

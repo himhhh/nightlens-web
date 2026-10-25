@@ -2,7 +2,7 @@ import {renderSpellCatalog,spellDetailsHTML,SPELL_EFFECTS} from './spell_catalog
 import {renderWeaponCatalog,weaponDetailsHTML,WEAPON_ELEMENTS} from './weapon_catalog.js';
 import {installImageRecovery} from './image_recovery.js';
 import {recommendationsHTML} from './weapon_recommendations.js';
-import {filterPatterns,recommendPoint,summarizeEvidence,resolveNightlordFilter,normalizeObservations,isSingleFormNightlord,TYPE_NAMES,TERRAIN_NAMES,NIGHTLORD_NAMES,POI_TYPES} from './core.js';
+import {filterPatterns,recommendPoint,summarizeEvidence,selectVisibleCandidates,resolveNightlordFilter,normalizeObservations,isSingleFormNightlord,TYPE_NAMES,TERRAIN_NAMES,NIGHTLORD_NAMES,POI_TYPES} from './core.js';
 import {filterCrystalGroups} from './crystals.js';
 import {createCrystalMapView} from './crystal_map.js';
 import {crystalMarkersHTML,crystalSummaryText} from './crystal_ui.js';
@@ -42,7 +42,7 @@ function effectiveNightlord(){return resolveNightlordFilter({autoNightlord:state
 function nightlordConflict(){return !state.autoNightlord&&state.filters.nightlord&&state.detectedNightlord?.id&&state.filters.nightlord!==state.detectedNightlord.id;}
 function candidates(){const filters={...state.filters,nightlord:effectiveNightlord(),...(state.autoTerrain&&!state.aligned?{terrain:''}:{})};return filterPatterns(state.data.patterns,filters,state.observations);}
 function evidenceSummary(all=candidates()){return nightlordConflict()?{state:'nightlord-conflict',autoCount:normalizeObservations(state.observations).filter(o=>o.source!=='manual').length}:summarizeEvidence(all,state.observations);}
-function visibleCandidates(){const all=candidates(),decision=evidenceSummary(all);return decision.state==='recognized'?all.slice(0,1):decision.state==='ambiguous'?all.filter((p,i)=>i<2||decision.alternativeIds?.includes(p.id)||all[0].rankScore-p.rankScore<2):all;}
+function visibleCandidates(){const all=candidates();return selectVisibleCandidates(all,evidenceSummary(all));}
 function renderNightlord(){
  const detected=state.detectedNightlord;
  $('nightlord-status').textContent=nightlordConflict()?`照片读取：${NIGHTLORD_NAMES[detected.id]}；与手选夜王不一致，请切回自动识别或检查照片。`:detected?.id?`照片读取夜王：${NIGHTLORD_NAMES[detected.id]}${state.autoNightlord?' · 已自动筛选':''}`:state.photo?(state.busy?'正在读取夜王头像…':'夜王未识别：请拍全地图左下角的圆形夜王头像。'):'拍照后自动读取地图左下角的夜王头像。';

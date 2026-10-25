@@ -36,14 +36,23 @@ export function filterPatterns(patterns, filters={}, observations=[]) {
   return {...p,rankScore:support,autoMatches:matches,autoCompared:automatic.length};
  }).sort((a,b)=>b.rankScore-a.rankScore||a.id-b.id);
 }
+function verifiedBadge(observation){
+ const proof=observation.attributeVerification,actual=describePOI(observation.rawType);
+ return !!proof&&!!actual.attribute&&actual.type===observation.type&&actual.attribute===observation.attribute&&proof.rawType===observation.rawType&&proof.attribute===observation.attribute&&proof.method==='public-badge-shape-color'&&proof.score>=.65&&proof.shapeScore>=.55&&proof.colorScore>=.65&&proof.margin>=.1&&observation.categoryScore>=.8&&observation.categoryMargin>=.2;
+}
 function stableAttributeDifference(observation, rival) {
  const actual=describePOI(observation.rawType),other=rival.pois.find(p=>p.id===observation.id),expected=describePOI(other?.rawType);
  // Crop votes check stability; they are correlated views of one landmark,
  // never extra independent landmarks or calibrated correctness probabilities.
- return observation.method==='poi-cnn-multiview'&&!!actual.attribute&&actual.attribute===observation.attribute&&actual.type===observation.type&&other?.type===observation.type&&!!expected.attribute&&expected.attribute!==actual.attribute&&
-  observation.score>=.8&&observation.categoryScore>=.9&&observation.categoryMargin>=.5&&observation.attributeScore>=.9&&observation.variantMargin>=.5&&
+ const sameBuilding=!!actual.attribute&&actual.attribute===observation.attribute&&actual.type===observation.type&&other?.type===observation.type&&expected.type===actual.type&&!!expected.attribute&&expected.attribute!==actual.attribute;
+ const stableCrops=observation.method==='poi-cnn-multiview'&&observation.score>=.8&&observation.categoryScore>=.9&&observation.categoryMargin>=.5&&observation.attributeScore>=.9&&observation.variantMargin>=.5&&
   Number.isInteger(observation.viewCount)&&Number.isInteger(observation.viewSupport)&&Number.isInteger(observation.attributeSupport)&&
   observation.viewSupport<=observation.viewCount&&observation.attributeSupport<=observation.viewSupport&&observation.attributeSupport>=4&&observation.attributeSupport/observation.viewSupport>=.75;
+ return sameBuilding&&(stableCrops||verifiedBadge(observation));
+}
+function stableEmptyDifference(observation,rival){
+ const checks=observation.backgroundChecks,other=rival.pois.find(p=>p.id===observation.id);
+ return observation.type==='empty'&&observation.method==='visible-empty-terrain'&&observation.verifiedCenter===true&&observation.score>=.75&&observation.viewSupport>=4&&observation.viewSupport<=observation.viewCount&&checks?.context>=.6&&checks.inner>=.85&&checks.center>=.8&&!!other&&other.type!=='empty'&&other.type!=='other';
 }
 export function summarizeEvidence(candidates, observations) {
  const evidence=normalizeObservations(observations),manual=evidence.filter(o=>o.source==='manual');
@@ -51,7 +60,7 @@ export function summarizeEvidence(candidates, observations) {
  if (!candidates.length) return {state:'conflict',manualCount:manual.length,autoCount:evidence.length-manual.length};
  const base={manualCount:manual.length,autoCount:evidence.length-manual.length};
  if(candidates.length===1&&manual.length>=2)return {state:'confirmed',...base};
- const automatic=evidence.filter(o=>o.source!=='manual'),strong=automatic.filter(o=>o.score>=.68);
+ const automatic=evidence.filter(o=>o.source!=='manual'),strong=automatic.filter(o=>o.score>=.68||verifiedBadge(o));
  if(automatic.length>=4&&strong.filter(o=>o.type!=='empty').length>=3){
   const first=candidates[0],second=candidates[1],margin=second?first.rankScore-second.rankScore:Infinity;
   const matchFraction=(first.autoMatches||0)/automatic.length;
@@ -60,13 +69,13 @@ export function summarizeEvidence(candidates, observations) {
    const differences=strong.filter(o=>matches(first,o)&&!matches(pattern,o)),margin=first.rankScore-pattern.rankScore;
    // A sole elemental difference can decide a layout only when every observed
    // point agrees with it and four OTHER real buildings corroborate both rivals.
-   const stableBadge=(first.autoMatches===automatic.length)&&differences.length===1&&stableAttributeDifference(differences[0],pattern)&&strong.filter(o=>o.id!==differences[0].id&&o.type!=='empty'&&matches(first,o)&&matches(pattern,o)).length>=4;
-   return {id:pattern.id,margin,distinguishing:differences.length,decisivePoint:stableBadge?differences[0].id:null,accepted:(margin>=2&&differences.length>=2)||stableBadge};
+   const diagnostic=(first.autoMatches===automatic.length)&&differences.length===1&&(stableAttributeDifference(differences[0],pattern)||stableEmptyDifference(differences[0],pattern))&&strong.filter(o=>o.id!==differences[0].id&&o.type!=='empty'&&matches(first,o)&&matches(pattern,o)).length>=4;
+   return {id:pattern.id,margin,distinguishing:differences.length,decisivePoint:diagnostic?differences[0].id:null,emptyProof:diagnostic&&differences[0].type==='empty',accepted:(margin>=2&&differences.length>=2)||diagnostic};
   });
   const blockers=rivals.filter(r=>!r.accepted);
   const distinguishing=rivals.length?Math.min(...rivals.map(r=>r.distinguishing)):strong.length;
   const decisivePointIds=[...new Set(rivals.filter(r=>r.decisivePoint!==null).map(r=>r.decisivePoint))];
-  if(matchFraction>=.75&&(first.autoMatches||0)>=4&&!blockers.length)return {state:'recognized',patternId:first.id,margin,matched:first.autoMatches,distinguishing,...(decisivePointIds.length?{confirmation:'stable-attribute',decisivePointIds}:{}),...base};
+  if(matchFraction>=.75&&(first.autoMatches||0)>=4&&!blockers.length)return {state:'recognized',patternId:first.id,margin,matched:first.autoMatches,distinguishing,...(decisivePointIds.length?{confirmation:rivals.some(r=>r.emptyProof)?'verified-landmark':'stable-attribute',decisivePointIds}:{}),...base};
   return {state:'ambiguous',margin,matched:first.autoMatches||0,alternativeIds:blockers.map(r=>r.id),...base};
  }
  return {state:'review',...base};
@@ -82,6 +91,13 @@ export function recommendPoint(patterns, observations=[]) {
   if(entropy>.001&&(!best||entropy>best.entropy))best={id,entropy,counts,point:patterns.flatMap(p=>p.pois).find(p=>p.id===id)};
  }
  return best;
+}
+export function selectVisibleCandidates(candidates,decision){
+ if(decision.state==='recognized')return candidates.slice(0,1);
+ if(decision.state==='ambiguous'&&Array.isArray(decision.alternativeIds)){
+  const remaining=new Set(decision.alternativeIds);return candidates.filter((p,i)=>i===0||remaining.has(p.id));
+ }
+ return candidates;
 }
 export function validateQuad(points, minimumArea=.002) {
  if(points.length!==4||points.some(p=>!Number.isFinite(p.x)||!Number.isFinite(p.y)))return false;
