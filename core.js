@@ -1,4 +1,4 @@
-import {CATEGORY_NAMES} from './poi_catalog.js';
+import {CATEGORY_NAMES,describePOI} from './poi_catalog.js';
 /** Deterministic inference shared by the UI and automated acceptance tests. */
 export const POI_TYPES = ['church', 'mage', 'village', 'greatchurch', 'fort', 'ruins', 'camp', 'marsh', 'forge', 'wuf', 'euf', 'merchant', 'empty', 'other'];
 export const TERRAIN_NAMES = {'Default':'宁姆韦福','Mountaintop':'山顶','Crater':'火山口','Rotted Woods':'腐败森林','Noklateo':'隐城','Great Hollow':'大空洞'};
@@ -36,6 +36,15 @@ export function filterPatterns(patterns, filters={}, observations=[]) {
   return {...p,rankScore:support,autoMatches:matches,autoCompared:automatic.length};
  }).sort((a,b)=>b.rankScore-a.rankScore||a.id-b.id);
 }
+function stableAttributeDifference(observation, rival) {
+ const actual=describePOI(observation.rawType),other=rival.pois.find(p=>p.id===observation.id),expected=describePOI(other?.rawType);
+ // Crop votes check stability; they are correlated views of one landmark,
+ // never extra independent landmarks or calibrated correctness probabilities.
+ return observation.method==='poi-cnn-multiview'&&!!actual.attribute&&actual.attribute===observation.attribute&&actual.type===observation.type&&other?.type===observation.type&&!!expected.attribute&&expected.attribute!==actual.attribute&&
+  observation.score>=.8&&observation.categoryScore>=.9&&observation.categoryMargin>=.5&&observation.attributeScore>=.9&&observation.variantMargin>=.5&&
+  Number.isInteger(observation.viewCount)&&Number.isInteger(observation.viewSupport)&&Number.isInteger(observation.attributeSupport)&&
+  observation.viewSupport<=observation.viewCount&&observation.attributeSupport<=observation.viewSupport&&observation.attributeSupport>=4&&observation.attributeSupport/observation.viewSupport>=.75;
+}
 export function summarizeEvidence(candidates, observations) {
  const evidence=normalizeObservations(observations),manual=evidence.filter(o=>o.source==='manual');
  if (!evidence.length) return {state:'no-evidence',manualCount:0,autoCount:0};
@@ -47,10 +56,17 @@ export function summarizeEvidence(candidates, observations) {
   const first=candidates[0],second=candidates[1],margin=second?first.rankScore-second.rankScore:Infinity;
   const matchFraction=(first.autoMatches||0)/automatic.length;
   const matches=(pattern,o)=>{const q=pattern.pois.find(q=>q.id===o.id);return q?.type===o.type&&(!o.rawType||q.rawType===o.rawType);};
-  const rivals=candidates.slice(1).map(pattern=>({id:pattern.id,margin:first.rankScore-pattern.rankScore,distinguishing:strong.filter(o=>matches(first,o)&&!matches(pattern,o)).length}));
-  const blockers=rivals.filter(r=>r.margin<2||r.distinguishing<2);
+  const rivals=candidates.slice(1).map(pattern=>{
+   const differences=strong.filter(o=>matches(first,o)&&!matches(pattern,o)),margin=first.rankScore-pattern.rankScore;
+   // A sole elemental difference can decide a layout only when every observed
+   // point agrees with it and four OTHER real buildings corroborate both rivals.
+   const stableBadge=(first.autoMatches===automatic.length)&&differences.length===1&&stableAttributeDifference(differences[0],pattern)&&strong.filter(o=>o.id!==differences[0].id&&o.type!=='empty'&&matches(first,o)&&matches(pattern,o)).length>=4;
+   return {id:pattern.id,margin,distinguishing:differences.length,decisivePoint:stableBadge?differences[0].id:null,accepted:(margin>=2&&differences.length>=2)||stableBadge};
+  });
+  const blockers=rivals.filter(r=>!r.accepted);
   const distinguishing=rivals.length?Math.min(...rivals.map(r=>r.distinguishing)):strong.length;
-  if(matchFraction>=.75&&(first.autoMatches||0)>=4&&!blockers.length)return {state:'recognized',patternId:first.id,margin,matched:first.autoMatches,distinguishing,...base};
+  const decisivePointIds=[...new Set(rivals.filter(r=>r.decisivePoint!==null).map(r=>r.decisivePoint))];
+  if(matchFraction>=.75&&(first.autoMatches||0)>=4&&!blockers.length)return {state:'recognized',patternId:first.id,margin,matched:first.autoMatches,distinguishing,...(decisivePointIds.length?{confirmation:'stable-attribute',decisivePointIds}:{}),...base};
   return {state:'ambiguous',margin,matched:first.autoMatches||0,alternativeIds:blockers.map(r=>r.id),...base};
  }
  return {state:'review',...base};
