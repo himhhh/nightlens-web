@@ -1,0 +1,37 @@
+/* A floating close button over a separately scrolling detail body. */
+dialog.detail-sheet{
+ position:fixed;
+ top:calc(env(safe-area-inset-top,0px) + 24px);
+ bottom:auto;
+ left:env(safe-area-inset-left,0px);
+ right:env(safe-area-inset-right,0px);
+ width:min(680px,calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px) - 32px));
+ max-height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 48px);
+ margin:0 auto;
+ padding:0;
+ overflow:hidden;
+ overscroll-behavior:contain;
+}
+dialog.detail-sheet[open]{display:flex;flex-direction:column;}
+dialog.detail-sheet>form[method=dialog]{
+ position:absolute;top:8px;right:10px;z-index:2;
+ display:block;width:44px;height:44px;min-height:0;margin:0;padding:0;
+ background:transparent;border:0;
+}
+dialog.detail-sheet>form .dialog-close{
+ position:static;display:grid;place-items:center;width:44px;height:44px;
+ min-width:44px;min-height:44px;padding:0;line-height:1;
+ border:1px solid var(--line);border-radius:50%;background:var(--panel2);
+ color:var(--ink);font-size:28px;touch-action:manipulation;
+}
+dialog.detail-sheet>[id$="-content"]{
+ flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;
+ padding:24px 20px 26px;overscroll-behavior-y:contain;
+ touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch;
+}
+@media(max-width:600px){
+ dialog.detail-sheet>[id$="-content"]{padding:24px 16px 24px;}
+}
+
+/* Keep the first label beside the floating control without a full-width bar. */
+dialog.detail-sheet>[id$="-content"]>:first-child{padding-right:52px;}
