@@ -9,8 +9,8 @@ const ELEMENTS=['magic','fire','lightning','holy'];const PHYSICAL=['standard','s
 const RANGED_TYPES=new Set(['Bow','Greatbow','Crossbow','Ballista']);
 // Nightreign's official tiers: Rare is purple; Legendary is gold.
 const RECOMMENDED_RARITIES=new Set(['Rare','Legendary']);
-const KINDS=[['melee','近战'],['ranged','远程'],['sorcery','魔法'],['incantation','祷告'],['caster','法杖／圣印记'],['skill','战技']];
-const empty=()=>({choices:[],weapons:[],melee:[],ranged:[],sorceries:[],incantations:[],casters:[],skills:[]});
+const KINDS=[['melee','近战'],['ranged','远程'],['sorcery','魔法'],['incantation','祷告'],['staff','法杖'],['seal','圣印记'],['skill','战技']];
+const empty=()=>({choices:[],weapons:[],melee:[],ranged:[],sorceries:[],incantations:[],casters:[],staffs:[],seals:[],skills:[]});
 function damageRatings(bodies){
  return [...PHYSICAL,...ELEMENTS].flatMap(key=>{
   const vals=bodies.map(b=>b.damageNegation?.[key]);
@@ -50,7 +50,7 @@ function spellRecommendations(spells,weapons,ratings,specials,stages){
   tools.sort((a,b)=>b.spells.length-a.spells.length||a.v.requiredLevel-b.v.requiredLevel||a.w.id-b.w.id);
   casters.push(...tools.slice(0,2));
  }
- return {sorceries,incantations,casters};
+ return {sorceries,incantations,casters,staffs:casters.filter(c=>c.w.type==='Glintstone Staff'),seals:casters.filter(c=>c.w.type==='Sacred Seal')};
 }
 function specialWeaknesses(combat,keys,bodies,ratings){
  const rawKey=Array.isArray(keys)?keys[0]:keys,everdark=String(rawKey).endsWith('_everdark'),identity=String(rawKey).replace(/_everdark$/,'');const profile=combat.specialNightlordWeaknesses?.[identity];
@@ -118,7 +118,7 @@ function overallMatchHTML(match){
 function recommendedCards(r,kind,weapons){
  if(kind==='skill')return recommendedSkillsHTML(r.skills||[],weapons);
  if(kind==='melee'||kind==='ranged')return r[kind].map(c=>weaponCardHTML(c.w,c.v)+overallMatchHTML(c.match)).join('');
- if(kind==='caster')return r.casters.map(c=>'<div class="recommended-caster">'+weaponCardHTML(c.w,c.v)+'<p class="data-note">法术表可出现：</p><div class="recommended-spell-links">'+c.spells.map(s=>'<button type="button" data-spell-id="'+s.id+'">'+esc(s.nameZh)+'</button>').join('')+'</div></div>').join('');
+ if(kind==='staff'||kind==='seal')return r[kind==='staff'?'staffs':'seals'].map(c=>'<div class="recommended-caster">'+weaponCardHTML(c.w,c.v)+'<p class="data-note">法术表可出现：</p><div class="recommended-spell-links">'+c.spells.map(s=>'<button type="button" data-spell-id="'+s.id+'">'+esc(s.nameZh)+'</button>').join('')+'</div></div>').join('');
  const items=kind==='sorcery'?r.sorceries:r.incantations;
  return items.map(c=>'<div>'+spellCardHTML(c.spell)+'<p class="recommend-match">'+esc(c.special?'含本战特化克制属性':c.spell.elements.filter(e=>[...ELEMENTS,...PHYSICAL].includes(e)).map(e=>WEAPON_ELEMENTS[e]).join('／'))+(c.negation!=null?' · 减伤参考 '+c.negation+'%':'')+(c.coverage!=null?' · '+(c.common?'三场共同弱项':c.coverage+'/3 场相对弱项'):'')+'</p></div>').join('');
 }
@@ -130,6 +130,7 @@ function overallSummaryHTML(r,combat,getName,pattern,form){
 }
 export function recommendationsHTML(pattern,combat,weapons,{form='unknown',stage='overall',kind='melee',spells,skills,getName=x=>x}={}){
  if(kind==='weapon')kind='melee';
+ if(kind==='caster')kind='staff';
  if(isSingleFormNightlord(pattern.nightlord))form='normal';
  const defs=[{id:'overall',label:'整局推荐'},...expeditionStages(pattern,form)];
  return '<section class="weapon-recommendations"><div class="section-heading"><h2>武器推荐</h2></div><p class="data-note">武器品质：仅紫色（稀有）／金色（传说），含弓弩与法器。</p><div class="recommend-tabs" role="tablist" aria-label="战斗阶段">'+defs.map(d=>'<button data-plan-stage="'+d.id+'" aria-selected="'+(stage===d.id)+'">'+d.label+'</button>').join('')+'</div><div class="recommend-kinds" role="group" aria-label="推荐类别">'+KINDS.map(([id,label])=>'<button type="button" data-plan-kind="'+id+'" aria-pressed="'+(kind===id)+'">'+label+'</button>').join('')+'</div>'+defs.map(d=>{

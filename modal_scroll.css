@@ -1,4 +1,4 @@
-/* A fixed close bar and a separately scrolling body for inventory details. */
+/* A floating close button over a separately scrolling detail body. */
 dialog.detail-sheet{
  position:fixed;
  top:calc(env(safe-area-inset-top,0px) + 24px);
@@ -14,9 +14,9 @@ dialog.detail-sheet{
 }
 dialog.detail-sheet[open]{display:flex;flex-direction:column;}
 dialog.detail-sheet>form[method=dialog]{
- display:flex;justify-content:flex-end;align-items:center;flex:0 0 auto;
- min-height:60px;margin:0;padding:8px 10px;
- background:var(--panel);border-bottom:1px solid var(--line);
+ position:absolute;top:8px;right:10px;z-index:2;
+ display:block;width:44px;height:44px;min-height:0;margin:0;padding:0;
+ background:transparent;border:0;
 }
 dialog.detail-sheet>form .dialog-close{
  position:static;display:grid;place-items:center;width:44px;height:44px;
@@ -26,9 +26,12 @@ dialog.detail-sheet>form .dialog-close{
 }
 dialog.detail-sheet>[id$="-content"]{
  flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;
- padding:12px 20px 26px;overscroll-behavior-y:contain;
+ padding:24px 20px 26px;overscroll-behavior-y:contain;
  touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch;
 }
 @media(max-width:600px){
- dialog.detail-sheet>[id$="-content"]{padding:10px 16px 24px;}
+ dialog.detail-sheet>[id$="-content"]{padding:24px 16px 24px;}
 }
+
+/* Keep the first label beside the floating control without a full-width bar. */
+dialog.detail-sheet>[id$="-content"]>:first-child{padding-right:52px;}
