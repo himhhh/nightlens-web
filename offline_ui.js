@@ -33,5 +33,5 @@ export function connectOffline({serviceWorker,onStatus,timeoutMs=45000}){
   }catch{show({state:'error',reason:'network',percent:0});}
  }
  void retry();
- return {retry,prepare(){request(registration?.active||serviceWorker.controller,'offline-prepare');},resume(){check();request(registration?.active||serviceWorker.controller);},dispose(){disposed=true;clearTimeout(timer);clearInterval(updateTimer);serviceWorker.removeEventListener('message',receive);serviceWorker.removeEventListener('controllerchange',changed);}};
+ return {async retry(){await retry();request(registration?.active||serviceWorker.controller,'offline-prepare');},prepare(){request(registration?.active||serviceWorker.controller,'offline-prepare');},resume(){check();request(registration?.active||serviceWorker.controller);},dispose(){disposed=true;clearTimeout(timer);clearInterval(updateTimer);serviceWorker.removeEventListener('message',receive);serviceWorker.removeEventListener('controllerchange',changed);}};
 }
