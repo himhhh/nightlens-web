@@ -7,7 +7,7 @@ import {loadBadgeTemplates} from './landmark_badges.js';
 let runtimePromise;
 const imageCache=new Map();
 const pause=()=>new Promise(resolve=>setTimeout(resolve,15));
-export const VISION_REVISION='2026.10.26.1';
+export const VISION_REVISION='2026.10.27.1';
 export function alignmentFailure(attempts,photo){
  const engineError=attempts.some(a=>a.debug),bestMatches=Math.max(0,...attempts.map(a=>a.matches||0)),bestInliers=Math.max(0,...attempts.map(a=>a.inliers||0));
  return {ok:false,failureCode:engineError?'engine-error':'no-alignment',reason:engineError?'地图识别引擎执行异常，请重新打开页面后重试':'未能自动定位地图，请重试；仍失败可在说明页导出验收记录。',alignmentAttempts:attempts,photoSize:[photo.width,photo.height],bestMatches,bestInliers,visionRevision:VISION_REVISION};
@@ -87,6 +87,44 @@ export function estimateAlignment(cv,photo,reference,options={}){
  }catch(error){return {ok:false,reason:'无法自动对齐，可使用四点校正后继续',debug:String(error)};}
  finally{for(const item of allocated.reverse())try{item.delete();}catch{/* release remaining objects */}}
 }
+/** Verify texture after global rectification. Regional extraction keeps UI and
+ * dense markers elsewhere from consuming the region's feature budget. */
+export function verifyTerrainRegion(cv,aligned,reference,region){
+ const rect=new cv.Rect(region.x,region.y,region.width,region.height),photoPatch=aligned.roi(rect),referencePatch=reference.roi(rect);
+ try{
+  const result=estimateAlignment(cv,photoPatch,referencePatch);
+  if(!result.ok)return result;
+  let maxDrift=0;
+  for(const x of [.2,.5,.8])for(const y of [.2,.5,.8]){
+   const point={x:region.width*x,y:region.height*y},mapped=projectPoint(result.matrix,point);
+   maxDrift=Math.max(maxDrift,Math.hypot(mapped.x-point.x,mapped.y-point.y));
+  }
+  // Both patches already share map coordinates. Matching an icon elsewhere
+  // inside the region must not count as support for this terrain.
+  return {...result,ok:Number.isFinite(maxDrift)&&maxDrift<=12,maxDrift,method:'rectified-regional-orb'};
+ }finally{photoPatch.delete();referencePatch.delete();}
+}
+export async function verifyTerrainCandidates(cv,photo,alignments,references,onProgress){
+ const evidence=[];
+ async function checksFor(terrain,regions){
+  const geometry=alignments.find(a=>a.terrain===terrain)||alignments[0];
+  if(!geometry)return regions.map(()=>({ok:false}));
+  const h=cv.matFromArray(3,3,cv.CV_64F,geometry.matrix),aligned=new cv.Mat();
+  try{
+   cv.warpPerspective(photo,aligned,h,new cv.Size(1000,1000),cv.INTER_LINEAR,cv.BORDER_CONSTANT,new cv.Scalar());
+   return regions.map(region=>verifyTerrainRegion(cv,aligned,references.get(terrain),region));
+  }finally{h.delete();aligned.delete();}
+ }
+ for(const [terrain,regions]of Object.entries(TERRAIN_REGIONS).filter(([name])=>name!=='Default')){
+  onProgress?.('正在核验'+TERRAIN_NAMES[terrain]+'的特有区域…');await pause();
+  const checks=await checksFor(terrain,regions);evidence.push({terrain,confirmed:checks.every(check=>check.ok),checks});
+ }
+ onProgress?.('正在核验普通地形的各个变化区域…');await pause();
+ const regions=Object.entries(TERRAIN_REGIONS).filter(([name])=>!['Default','Great Hollow'].includes(name)).map(([,regions])=>regions[0]);
+ const checks=await checksFor('Default',regions);
+ evidence.push({terrain:'Default',confirmed:ordinaryTerrainConfirmed(checks,evidence.some(item=>item.confirmed)),checks});
+ return chooseVerifiedTerrain(alignments,evidence);
+}
 let modelPromise;
 async function localModel(cv){
  if(!modelPromise)modelPromise=(async()=>{const response=await fetch('assets/models/poi-cnn.onnx');if(!response.ok)throw Error('本地据点识别模型未载入');return loadNetFromBytes(cv,new Uint8Array(await response.arrayBuffer()));})().catch(error=>{modelPromise=null;throw error;});
@@ -111,16 +149,8 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
   alignments.sort((a,b)=>b.quality-a.quality);let alignment=alignments[0];
   if(!alignment)return alignmentFailure(alignmentAttempts,{width:photo.cols,height:photo.rows});
   if(mapTypes.length>1){
-   const evidence=[];let anyChangedTerrain=false;
-   for(const name of mapTypes.filter(n=>n!=='Default')){
-    onProgress?.('正在核验'+TERRAIN_NAMES[name]+'的特有区域…');await pause();
-    const checks=TERRAIN_REGIONS[name].map(referenceRegion=>estimateAlignment(cv,photo,references.get(name),{sourceFeatures,referenceRegion}));
-    const confirmed=checks.every(check=>check.ok);if(confirmed)anyChangedTerrain=true;
-    evidence.push({terrain:name,confirmed,checks:checks.map(({ok,inliers,matches,coverage,meanError})=>({ok,inliers,matches,coverage,meanError}))});
-   }
-   const normalChecks=Object.entries(TERRAIN_REGIONS).filter(([name])=>!['Default','Great Hollow'].includes(name)).map(([,regions])=>estimateAlignment(cv,photo,references.get('Default'),{sourceFeatures,referenceRegion:regions[0]}));
-   evidence.push({terrain:'Default',confirmed:ordinaryTerrainConfirmed(normalChecks,anyChangedTerrain),checks:normalChecks.map(({ok,inliers,matches,coverage,meanError})=>({ok,inliers,matches,coverage,meanError}))});
-   alignment=chooseVerifiedTerrain(alignments,evidence);if(!alignment.ok)return {...alignment,failureCode:'terrain-unconfirmed',alignmentAttempts,visionRevision:VISION_REVISION};
+   alignment=await verifyTerrainCandidates(cv,photo,alignments,references,onProgress);
+   if(!alignment.ok)return {...alignment,failureCode:'terrain-unconfirmed',alignmentAttempts,visionRevision:VISION_REVISION};
   }
   h=cv.matFromArray(3,3,cv.CV_64F,alignment.matrix);warped=new cv.Mat();cv.warpPerspective(photo,warped,h,new cv.Size(1000,1000),cv.INTER_LINEAR,cv.BORDER_CONSTANT,new cv.Scalar());
   const alignedCanvas=document.createElement('canvas');cv.imshow(alignedCanvas,warped);
