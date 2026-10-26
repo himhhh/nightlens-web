@@ -10,11 +10,11 @@ const pause=()=>new Promise(resolve=>setTimeout(resolve,15));
 export const VISION_REVISION='2026.10.26.1';
 export function alignmentFailure(attempts,photo){
  const engineError=attempts.some(a=>a.debug),bestMatches=Math.max(0,...attempts.map(a=>a.matches||0)),bestInliers=Math.max(0,...attempts.map(a=>a.inliers||0));
- return {ok:false,failureCode:engineError?'engine-error':'no-alignment',reason:engineError?'地图识别引擎执行异常，请重新打开页面后重试':'未能自动定位地图（A01，最高匹配 '+bestMatches+'，有效地标 '+bestInliers+'）。请复制识别诊断以便排查',alignmentAttempts:attempts,photoSize:[photo.width,photo.height],bestMatches,bestInliers,visionRevision:VISION_REVISION};
+ return {ok:false,failureCode:engineError?'engine-error':'no-alignment',reason:engineError?'地图识别引擎执行异常，请重新打开页面后重试':'未能自动定位地图，请重试；仍失败可在说明页导出验收记录。',alignmentAttempts:attempts,photoSize:[photo.width,photo.height],bestMatches,bestInliers,visionRevision:VISION_REVISION};
 }
 export function recognitionException(error){
  const detail=String(error?.message||error),failureCode=/初始化超时|未能启动|引擎未载入/.test(detail)?'engine-load':/内存|memory|out of bounds|BindingError|Aborted/i.test(detail)?'engine-error':/载入|加载|资源|fetch|network/i.test(detail)?'resource-error':'processing-error';
- return {ok:false,failureCode,reason:failureCode==='engine-load'?'识别引擎尚未就绪，请检查网络后重试':failureCode==='engine-error'?'识别引擎执行异常，请重新打开页面后重试':failureCode==='resource-error'?'识别资源未能载入，请在右上角检查资源状态后重试':'识别处理未完成，请复制识别诊断以便排查',detail,visionRevision:VISION_REVISION};
+ return {ok:false,failureCode,reason:failureCode==='engine-load'?'识别引擎尚未就绪，请检查网络后重试':failureCode==='engine-error'?'识别引擎执行异常，请重新打开页面后重试':failureCode==='resource-error'?'识别资源未能载入，请在右上角检查资源状态后重试':'识别处理未完成，可在说明页导出验收记录以便排查',detail,visionRevision:VISION_REVISION};
 }
 export function loadOpenCV(){
  if(runtimePromise)return runtimePromise;
