@@ -7,6 +7,15 @@ import {loadBadgeTemplates} from './landmark_badges.js';
 let runtimePromise;
 const imageCache=new Map();
 const pause=()=>new Promise(resolve=>setTimeout(resolve,15));
+export const VISION_REVISION='2026.10.26.1';
+export function alignmentFailure(attempts,photo){
+ const engineError=attempts.some(a=>a.debug),bestMatches=Math.max(0,...attempts.map(a=>a.matches||0)),bestInliers=Math.max(0,...attempts.map(a=>a.inliers||0));
+ return {ok:false,failureCode:engineError?'engine-error':'no-alignment',reason:engineError?'地图识别引擎执行异常，请重新打开页面后重试':'未能自动定位地图（A01，最高匹配 '+bestMatches+'，有效地标 '+bestInliers+'）。请复制识别诊断以便排查',alignmentAttempts:attempts,photoSize:[photo.width,photo.height],bestMatches,bestInliers,visionRevision:VISION_REVISION};
+}
+export function recognitionException(error){
+ const detail=String(error?.message||error),failureCode=/初始化超时|未能启动|引擎未载入/.test(detail)?'engine-load':/内存|memory|out of bounds|BindingError|Aborted/i.test(detail)?'engine-error':/载入|加载|资源|fetch|network/i.test(detail)?'resource-error':'processing-error';
+ return {ok:false,failureCode,reason:failureCode==='engine-load'?'识别引擎尚未就绪，请检查网络后重试':failureCode==='engine-error'?'识别引擎执行异常，请重新打开页面后重试':failureCode==='resource-error'?'识别资源未能载入，请在右上角检查资源状态后重试':'识别处理未完成，请复制识别诊断以便排查',detail,visionRevision:VISION_REVISION};
+}
 export function loadOpenCV(){
  if(runtimePromise)return runtimePromise;
  runtimePromise=new Promise((resolve,reject)=>{
@@ -87,7 +96,7 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
  onProgress?.('正在启动本机识别引擎…');const cv=await loadOpenCV();await pause();
  const photo=cv.imread(photoCanvas);let warped,h,sourceFeatures;const references=new Map();
  try{
-  const mapTypes=terrain&&terrain!=='Auto'?[terrain]:Object.keys(TERRAIN_NAMES),alignments=[];
+  const mapTypes=terrain&&terrain!=='Auto'?[terrain]:Object.keys(TERRAIN_NAMES),alignments=[],alignmentAttempts=[];
   if(!manual){
    sourceFeatures={gray:grayMat(cv,photo),keys:new cv.KeyPointVector(),descriptors:new cv.Mat()};
    const orb=new cv.ORB(2600,1.2,8,23,0,2,0,23,12),empty=new cv.Mat();
@@ -96,11 +105,11 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
   for(let i=0;i<mapTypes.length;i++){
    const name=mapTypes[i];onProgress?.(`正在自动判断地图 ${i+1} / ${mapTypes.length}…`);await pause();
    const image=await loadImage(mapPath(name)),canvas=document.createElement('canvas');canvas.width=canvas.height=1000;canvas.getContext('2d').drawImage(image,0,0,1000,1000);
-   const reference=cv.imread(canvas);references.set(name,reference);const result=manual?{ok:true,matrix:homographyFromPoints(manual.from,manual.to),manual:true}:estimateAlignment(cv,photo,reference,{sourceFeatures});
+   const reference=cv.imread(canvas);references.set(name,reference);const result=manual?{ok:true,matrix:homographyFromPoints(manual.from,manual.to),manual:true}:estimateAlignment(cv,photo,reference,{sourceFeatures});alignmentAttempts.push({terrain:name,...result});
    if(result.ok){const quality=result.manual?100000:result.inliers*Math.pow(result.inliers/Math.max(result.matches,1),1.3)*Math.sqrt(result.coverage);alignments.push({...result,terrain:name,quality});}
   }
   alignments.sort((a,b)=>b.quality-a.quality);let alignment=alignments[0];
-  if(!alignment)return {ok:false,reason:'没有找到足够清晰的地图地标，请拍摄完整地图并避开反光'};
+  if(!alignment)return alignmentFailure(alignmentAttempts,{width:photo.cols,height:photo.rows});
   if(mapTypes.length>1){
    const evidence=[];let anyChangedTerrain=false;
    for(const name of mapTypes.filter(n=>n!=='Default')){
@@ -111,7 +120,7 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
    }
    const normalChecks=Object.entries(TERRAIN_REGIONS).filter(([name])=>!['Default','Great Hollow'].includes(name)).map(([,regions])=>estimateAlignment(cv,photo,references.get('Default'),{sourceFeatures,referenceRegion:regions[0]}));
    evidence.push({terrain:'Default',confirmed:ordinaryTerrainConfirmed(normalChecks,anyChangedTerrain),checks:normalChecks.map(({ok,inliers,matches,coverage,meanError})=>({ok,inliers,matches,coverage,meanError}))});
-   alignment=chooseVerifiedTerrain(alignments,evidence);if(!alignment.ok)return alignment;
+   alignment=chooseVerifiedTerrain(alignments,evidence);if(!alignment.ok)return {...alignment,failureCode:'terrain-unconfirmed',alignmentAttempts,visionRevision:VISION_REVISION};
   }
   h=cv.matFromArray(3,3,cv.CV_64F,alignment.matrix);warped=new cv.Mat();cv.warpPerspective(photo,warped,h,new cv.Size(1000,1000),cv.INTER_LINEAR,cv.BORDER_CONSTANT,new cv.Scalar());
   const alignedCanvas=document.createElement('canvas');cv.imshow(alignedCanvas,warped);
@@ -122,7 +131,7 @@ export async function recognizePhoto(photoCanvas,terrain,slots,onProgress,manual
   let nightlord;try{nightlord=matchNightlord(cv,warped,await loadNightlordTemplates(cv));}catch(error){nightlord={id:null,method:'portrait-template',reason:'夜王图标资源无法读取：'+error.message};}
   let badges=[];try{badges=await loadBadgeTemplates(cv);}catch{/* Keep the original CNN path when optional corroboration is unavailable. */}
   const net=await localModel(cv),observations=await classifyLandmarks(cv,net,warped,points,pool,onProgress,{reference:references.get(alignment.terrain),badges});
-  return {...alignment,observations,nightlord,alignedCanvas,engine:'local-poi-cnn',mapCandidates:alignments.map(a=>({terrain:a.terrain,inliers:a.inliers,quality:a.quality}))};
+  return {...alignment,observations,nightlord,alignedCanvas,engine:'local-poi-cnn',alignmentAttempts,visionRevision:VISION_REVISION,mapCandidates:alignments.map(a=>({terrain:a.terrain,inliers:a.inliers,quality:a.quality}))};
  }finally{photo.delete();warped?.delete();h?.delete();for(const reference of references.values())reference.delete();if(sourceFeatures){sourceFeatures.gray.delete();sourceFeatures.keys.delete();sourceFeatures.descriptors.delete();}}
 }
 export function isLocalIconMatch(location,roiOrigin,width,height,point){return Math.hypot(roiOrigin.x+location.x+width/2-point.x,roiOrigin.y+location.y+height/2-point.y)<=20;}
