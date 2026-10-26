@@ -71,7 +71,7 @@ function renderFinalCombat(){if(!state.selected)return;const form=formForPattern
 function renderWeaponDetails(id){currentWeaponId=Number(id);$('weapon-content').innerHTML=weaponDetailsHTML(state.weapons,currentWeaponId,{nightfarers:state.nightfarers,scaling:state.weaponScaling,character:state.weaponCharacter,level:state.weaponLevel})+weaponSkillLinksHTML(state.skills,currentWeaponId);}
 function openWeapon(id){renderWeaponDetails(id);if(!$('weapon-dialog').open)$('weapon-dialog').showModal();$('weapon-dialog').scrollTop=0;}
 function openSpell(id){$('spell-content').innerHTML=spellDetailsHTML(state.spells,id,state.weapons);if(!$('spell-dialog').open)$('spell-dialog').showModal();$('spell-dialog').scrollTop=0;}
-function openSkill(id){$('skill-content').innerHTML=skillDetailsHTML(state.skills,id,state.weapons);if(!$('skill-dialog').open)$('skill-dialog').showModal();$('skill-dialog').scrollTop=0;}
+function openSkill(id){if($('weapon-dialog').open)$('weapon-dialog').close();$('skill-content').innerHTML=skillDetailsHTML(state.skills,id,state.weapons);if(!$('skill-dialog').open)$('skill-dialog').showModal();$('skill-dialog').scrollTop=0;}
 function renderSkillResults(){const result=renderSkillCatalog(state.skills,{query:$('skill-search').value,category:$('skill-category-filter').value,element:$('skill-element-filter').value,limit:state.skillLimit},state.weapons);$('skill-catalog-grid').innerHTML=result.html;$('skill-catalog-summary').textContent='显示 '+result.items.length+' / '+result.count+' 项 · 共收录 '+result.total+' 项战技';$('skill-more').hidden=result.items.length>=result.count;}
 
 function renderFilters(){
