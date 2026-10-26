@@ -1,0 +1,3 @@
+dialog.update-dialog.detail-sheet{width:min(480px,calc(100% - 32px));}
+.update-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:24px;flex-wrap:wrap;}
+.update-actions .button{min-height:44px;flex:1 1 120px;}

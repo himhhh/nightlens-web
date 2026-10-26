@@ -1,3 +1,4 @@
+import {mountUpdateNotice} from './update_notice.js';
 import {renderSkillCatalog,skillDetailsHTML,weaponSkillLinksHTML,SKILL_CATEGORIES,skillEffects} from './skill_catalog.js';
 import {mountDetailDialogs} from './modal_scroll.js';
 import {renderSpellCatalog,spellDetailsHTML,SPELL_EFFECTS} from './spell_catalog.js';
@@ -327,19 +328,21 @@ function wire(){
 function installOffline(){
  if(window.NightLensNative){$('cache-status').textContent='原生安装包已包含地图、数据与识别引擎，可离线使用。';return;}
  if(!('serviceWorker'in navigator)||!window.isSecureContext){$('cache-status').textContent='当前为局域网预览。通过 HTTPS 入口打开并添加主屏幕后，可缓存离线资源。';return;}
+ const updateNotice=mountUpdateNotice({pageRelease:new URL(import.meta.url).pathname.match(/releases\/([^/]+)\//)?.[1],onPrepare:()=>download.prepare()});
  $('offline-panel').hidden=false;
  $('offline-compact').hidden=false;
  const download=connectOffline({serviceWorker:navigator.serviceWorker,onStatus:snapshot=>{
+  updateNotice.update(snapshot);
   const model=offlinePresentation(snapshot);$('offline-panel').dataset.state=snapshot.state;
   const version=$('version-status');version.dataset.offlineState=snapshot.state;
   version.setAttribute('aria-label',`版本 0.9，${model.label}${snapshot.state==='ready'?'':'，'+model.percent+'%'}，点击查看详情`);
-  $('offline-compact-label').textContent=snapshot.state==='error'?'重试':model.percent+'%';
+  $('offline-compact-label').textContent=snapshot.state==='update-available'?'更新':snapshot.state==='error'?'重试':model.percent+'%';
   $('offline-ring-fill').setAttribute('stroke-dasharray',`${model.percent} 100`);
   $('offline-label').textContent=model.label;$('offline-percent').textContent=model.percent+'%';$('offline-progress').value=model.percent;
-  $('offline-detail').textContent=model.detail;$('offline-retry').hidden=!model.retry;
+  $('offline-detail').textContent=model.detail;$('offline-retry').hidden=!model.retry;$('offline-retry').textContent=snapshot.state==='update-available'?'更新离线资源':'重试下载';
   $('cache-status').textContent=model.label+' · '+model.percent+'%。'+model.detail;
  }});
- $('offline-retry').onclick=()=>void download.retry();
+ $('offline-retry').onclick=()=>{$('offline-panel').dataset.state==='update-available'?download.prepare():void download.retry();};
  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')download.resume();});
 }
 async function init(){try{const responses=await Promise.all([fetch('assets/data/patterns.json'),fetch('assets/data/crystals.json'),fetch('assets/data/map-intel.json'),fetch('assets/data/boss-combat.json'),fetch('assets/data/weapons.json'),fetch('assets/data/spells.json'),fetch('assets/data/nightfarers.json'),fetch('assets/data/weapon-scaling.json'),fetch('assets/data/skills.json')]);for(const r of responses)if(!r.ok)throw Error('数据资源未就绪');[state.data,state.crystalData,state.mapIntel,state.combat,state.weapons,state.spells,state.nightfarers,state.weaponScaling,state.skills]=await Promise.all(responses.map(r=>r.json()));state.intelIndex=createMapIntelIndex(state.mapIntel);await restoreSession();wire();renderFilters();renderCandidates();renderCrystals();await installOffline();window.NightLens={state:()=>({filters:{...state.filters},observations:state.observations,candidates:visibleCandidates().map(p=>p.id),decision:evidenceSummary(),automaticRecognition:state.automaticRecognition,detectedTerrain:state.detectedTerrain,autoTerrain:state.autoTerrain,autoNightlord:state.autoNightlord,nightlordDetection:state.detectedNightlord,effectiveNightlord:effectiveNightlord(),crystals:state.crystals,diagnostics:state.diagnostics?{...state.diagnostics}:null,atlasTab:state.atlasTab,view:state.view,expeditionForm:state.expeditionForm,formSource:state.formSource,planKind:state.planKind,selected:state.selected?.id,weaponCount:state.weapons?.coverage.weapons,spellCount:state.spells?.spells.length,skillCount:state.skills?.skills.length,nightfarerCount:state.nightfarers?.characters.length,weaponCharacter:state.weaponCharacter,weaponLevel:state.weaponLevel,mapZoom:{main:mainViewport?.getState(),detail:detailViewport?.getState(),tactical:tacticalViewport?.getState(),crystal:crystalViewport?.getState(),large:largeViewport?.getState()},busy:state.busy,dataCount:state.data.patterns.length}),ready:true};}catch(e){status('启动失败：'+e.message+'。请刷新页面或重新启动 App。',true);$('cache-status').textContent='数据加载失败';}}

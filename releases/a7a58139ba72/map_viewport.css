@@ -1,0 +1,25 @@
+/* The caller chooses the viewport size/aspect ratio and positions controls. */
+.map-viewport {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: contain;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.map-viewport-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+.map-viewport-scene > canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.map-viewport-dragging,
+.map-viewport-dragging * { cursor: grabbing; }
+.map-viewport [data-map-control] { touch-action: manipulation; }
